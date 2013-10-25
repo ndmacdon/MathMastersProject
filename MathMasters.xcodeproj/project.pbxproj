@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A0510FF18063BC8009476AF /* fish-fish2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A0510FE18063BC8009476AF /* fish-fish2 copy.png */; };
+		9A05110318063CC0009476AF /* fish-fish4 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110218063CC0009476AF /* fish-fish4 copy.png */; };
+		9A05110518063CD0009476AF /* fish-fish5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110418063CD0009476AF /* fish-fish5 copy.png */; };
+		9A05110718063CD5009476AF /* fish-fish6 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110618063CD5009476AF /* fish-fish6 copy.png */; };
+		9A05110918063CE3009476AF /* fish-fish7 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110818063CE3009476AF /* fish-fish7 copy.png */; };
+		9A24ABEF18069BDB0061D40E /* MakingCentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */; };
+		9A24ABF018069BDB0061D40E /* MakingCentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */; };
+		9A24ABF51806AAAB0061D40E /* Dime.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF21806AAAB0061D40E /* Dime.png */; };
+		9A24ABF61806AAAB0061D40E /* Nickel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF31806AAAB0061D40E /* Nickel.png */; };
+		9A24ABF71806AAAB0061D40E /* Quarter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF41806AAAB0061D40E /* Quarter.png */; };
+		9A24ABF91806B0CB0061D40E /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF81806B0CB0061D40E /* yellow.png */; };
+		9A4881C9181924FD00E9347B /* three_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4881C8181924FD00E9347B /* three_stars.png */; };
+		9A55087D18194AA200B322DA /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55087B18194AA200B322DA /* OptionsViewController.m */; };
+		9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A55087E18194AB900B322DA /* OptionsViewController.xib */; };
+		9A55088218194AB900B322DA /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55088018194AB900B322DA /* GlobalVariables.m */; };
+		9A7E025218068AAD00CE98DF /* fish-fish3 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E025118068AAD00CE98DF /* fish-fish3 copy.png */; };
+		9A7E025418068AB800CE98DF /* fish-fish1 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E025318068AB800CE98DF /* fish-fish1 copy.png */; };
+		9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */; };
+		9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */; };
+		9A7EF1171819E2E0000C81E6 /* three-stars_white_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */; };
+		9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF11B181A0857000C81E6 /* background-spring.png */; };
+		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
+		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
+		9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95505A180179F400DFF8E4 /* CoreGraphics.framework */; };
+		9A955061180179F400DFF8E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A95505F180179F400DFF8E4 /* InfoPlist.strings */; };
+		9A955063180179F400DFF8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A955062180179F400DFF8E4 /* main.m */; };
+		9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A955066180179F400DFF8E4 /* AppDelegate.m */; };
+		9A955069180179F400DFF8E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A955068180179F400DFF8E4 /* Default.png */; };
+		9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506A180179F400DFF8E4 /* Default@2x.png */; };
+		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
+		9A955070180179F400DFF8E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* ViewController.m */; };
+		9A955073180179F400DFF8E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* ViewController.xib */; };
+		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
+		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
+		9AB941151801AF91003F79FE /* white-star-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* white-star-hi.png */; };
+		9AB941171801B002003F79FE /* Star (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941161801B002003F79FE /* Star (1).png */; };
+		9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FC180E99D90028C05C /* quarter1.png */; };
+		9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FE180E9A740028C05C /* quarter2.png */; };
+		9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3F501180E9C5E0028C05C /* LogInViewController.m */; };
+		9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F502180E9C5E0028C05C /* LogInViewController.xib */; };
+		9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE820918036F370051DFC0 /* FishToFishViewController.m */; };
+		9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A0510FE18063BC8009476AF /* fish-fish2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish2 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish2 copy.png"; sourceTree = "<group>"; };
+		9A05110218063CC0009476AF /* fish-fish4 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish4 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish4 copy.png"; sourceTree = "<group>"; };
+		9A05110418063CD0009476AF /* fish-fish5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish5 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish5 copy.png"; sourceTree = "<group>"; };
+		9A05110618063CD5009476AF /* fish-fish6 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish6 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish6 copy.png"; sourceTree = "<group>"; };
+		9A05110818063CE3009476AF /* fish-fish7 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish7 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish7 copy.png"; sourceTree = "<group>"; };
+		9A24ABEC18069BDA0061D40E /* MakingCentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakingCentsViewController.h; sourceTree = "<group>"; };
+		9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakingCentsViewController.m; sourceTree = "<group>"; };
+		9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakingCentsViewController.xib; sourceTree = "<group>"; };
+		9A24ABF21806AAAB0061D40E /* Dime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dime.png; path = "Pictures for math masters/MakingCents/Dime.png"; sourceTree = "<group>"; };
+		9A24ABF31806AAAB0061D40E /* Nickel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Nickel.png; path = "Pictures for math masters/MakingCents/Nickel.png"; sourceTree = "<group>"; };
+		9A24ABF41806AAAB0061D40E /* Quarter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Quarter.png; path = "Pictures for math masters/MakingCents/Quarter.png"; sourceTree = "<group>"; };
+		9A24ABF81806B0CB0061D40E /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow.png; path = "Pictures for math masters/MakingCents/yellow.png"; sourceTree = "<group>"; };
+		9A4881C8181924FD00E9347B /* three_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = three_stars.png; path = "Pictures for math masters/CountingStars/three_stars.png"; sourceTree = "<group>"; };
+		9A55087B18194AA200B322DA /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		9A55087C18194AA200B322DA /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		9A55087E18194AB900B322DA /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
+		9A55087F18194AB900B322DA /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
+		9A55088018194AB900B322DA /* GlobalVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
+		9A7E025118068AAD00CE98DF /* fish-fish3 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish3 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish3 copy.png"; sourceTree = "<group>"; };
+		9A7E025318068AB800CE98DF /* fish-fish1 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fish-fish1 copy.png"; path = "Pictures for math masters/FishToFish/fish-fish1 copy.png"; sourceTree = "<group>"; };
+		9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardCountingStarsViewController.xib; sourceTree = "<group>"; };
+		9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCountingStarsViewController.h; sourceTree = "<group>"; };
+		9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
+		9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three-stars_white_design.png"; path = "Pictures for math masters/CountingStars/three-stars_white_design.png"; sourceTree = "<group>"; };
+		9A7EF11B181A0857000C81E6 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-spring.png"; path = "Pictures for math masters/backgrounds/background-spring.png"; sourceTree = "<group>"; };
+		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9A95505A180179F400DFF8E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathMasters-Info.plist"; sourceTree = "<group>"; };
+		9A955060180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A955062180179F400DFF8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A955064180179F400DFF8E4 /* MathMasters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathMasters-Prefix.pch"; sourceTree = "<group>"; };
+		9A955065180179F400DFF8E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A955066180179F400DFF8E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A955068180179F400DFF8E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9A95506A180179F400DFF8E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9A95506C180179F400DFF8E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9A95506E180179F400DFF8E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9A95506F180179F400DFF8E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
+		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
+		9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
+		9AB941141801AF91003F79FE /* white-star-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "white-star-hi.png"; path = "Pictures for math masters/CountingStars/white-star-hi.png"; sourceTree = "<group>"; };
+		9AB941161801B002003F79FE /* Star (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star (1).png"; path = "Pictures for math masters/CountingStars/Star (1).png"; sourceTree = "<group>"; };
+		9AC3F4FC180E99D90028C05C /* quarter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter1.png; path = "Pictures for math masters/MakingCents/quarter1.png"; sourceTree = "<group>"; };
+		9AC3F4FE180E9A740028C05C /* quarter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter2.png; path = "Pictures for math masters/MakingCents/quarter2.png"; sourceTree = "<group>"; };
+		9AC3F500180E9C5E0028C05C /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		9AC3F501180E9C5E0028C05C /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		9AC3F502180E9C5E0028C05C /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		9AFE820818036F370051DFC0 /* FishToFishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishToFishViewController.h; sourceTree = "<group>"; };
+		9AFE820918036F370051DFC0 /* FishToFishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishToFishViewController.m; sourceTree = "<group>"; };
+		9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FishToFishViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A955050180179F300DFF8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */,
+				9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */,
+				9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A0510F618063B02009476AF /* CountingStarsImages */ = {
+			isa = PBXGroup;
+			children = (
+				9A4881C8181924FD00E9347B /* three_stars.png */,
+				9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */,
+				9AB941161801B002003F79FE /* Star (1).png */,
+				9AB941141801AF91003F79FE /* white-star-hi.png */,
+			);
+			name = CountingStarsImages;
+			sourceTree = "<group>";
+		};
+		9A0510F718063B2F009476AF /* FishToFishImages */ = {
+			isa = PBXGroup;
+			children = (
+				9A05110818063CE3009476AF /* fish-fish7 copy.png */,
+				9A05110618063CD5009476AF /* fish-fish6 copy.png */,
+				9A05110418063CD0009476AF /* fish-fish5 copy.png */,
+				9A05110218063CC0009476AF /* fish-fish4 copy.png */,
+				9A7E025118068AAD00CE98DF /* fish-fish3 copy.png */,
+				9A0510FE18063BC8009476AF /* fish-fish2 copy.png */,
+				9A7E025318068AB800CE98DF /* fish-fish1 copy.png */,
+			);
+			name = FishToFishImages;
+			sourceTree = "<group>";
+		};
+		9A24ABF11806AA950061D40E /* MakingCentsImages */ = {
+			isa = PBXGroup;
+			children = (
+				9AC3F4FE180E9A740028C05C /* quarter2.png */,
+				9AC3F4FC180E99D90028C05C /* quarter1.png */,
+				9A24ABF21806AAAB0061D40E /* Dime.png */,
+				9A24ABF81806B0CB0061D40E /* yellow.png */,
+				9A24ABF31806AAAB0061D40E /* Nickel.png */,
+				9A24ABF41806AAAB0061D40E /* Quarter.png */,
+			);
+			name = MakingCentsImages;
+			sourceTree = "<group>";
+		};
+		9A7EF11A181A01C6000C81E6 /* backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				9A7EF11B181A0857000C81E6 /* background-spring.png */,
+			);
+			name = backgrounds;
+			sourceTree = "<group>";
+		};
+		9A95504A180179F300DFF8E4 = {
+			isa = PBXGroup;
+			children = (
+				9A95505C180179F400DFF8E4 /* MathMasters */,
+				9A955055180179F300DFF8E4 /* Frameworks */,
+				9A955054180179F300DFF8E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A955054180179F300DFF8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A955053180179F300DFF8E4 /* MathMasters.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A955055180179F300DFF8E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A955056180179F300DFF8E4 /* UIKit.framework */,
+				9A955058180179F300DFF8E4 /* Foundation.framework */,
+				9A95505A180179F400DFF8E4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A95505C180179F400DFF8E4 /* MathMasters */ = {
+			isa = PBXGroup;
+			children = (
+				9A955065180179F400DFF8E4 /* AppDelegate.h */,
+				9A955066180179F400DFF8E4 /* AppDelegate.m */,
+				9AC3F500180E9C5E0028C05C /* LogInViewController.h */,
+				9AC3F501180E9C5E0028C05C /* LogInViewController.m */,
+				9AC3F502180E9C5E0028C05C /* LogInViewController.xib */,
+				9A95506E180179F400DFF8E4 /* ViewController.h */,
+				9A95506F180179F400DFF8E4 /* ViewController.m */,
+				9A955071180179F400DFF8E4 /* ViewController.xib */,
+				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
+				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
+				9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */,
+				9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */,
+				9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */,
+				9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */,
+				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
+				9AFE820918036F370051DFC0 /* FishToFishViewController.m */,
+				9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */,
+				9A24ABEC18069BDA0061D40E /* MakingCentsViewController.h */,
+				9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */,
+				9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */,
+				9A55087C18194AA200B322DA /* OptionsViewController.h */,
+				9A55087B18194AA200B322DA /* OptionsViewController.m */,
+				9A55087E18194AB900B322DA /* OptionsViewController.xib */,
+				9A55087F18194AB900B322DA /* GlobalVariables.h */,
+				9A55088018194AB900B322DA /* GlobalVariables.m */,
+				9A95505D180179F400DFF8E4 /* Supporting Files */,
+			);
+			path = MathMasters;
+			sourceTree = "<group>";
+		};
+		9A95505D180179F400DFF8E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A7EF11A181A01C6000C81E6 /* backgrounds */,
+				9A24ABF11806AA950061D40E /* MakingCentsImages */,
+				9A0510F718063B2F009476AF /* FishToFishImages */,
+				9A0510F618063B02009476AF /* CountingStarsImages */,
+				9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */,
+				9A95505F180179F400DFF8E4 /* InfoPlist.strings */,
+				9A955062180179F400DFF8E4 /* main.m */,
+				9A955064180179F400DFF8E4 /* MathMasters-Prefix.pch */,
+				9A955068180179F400DFF8E4 /* Default.png */,
+				9A95506A180179F400DFF8E4 /* Default@2x.png */,
+				9A95506C180179F400DFF8E4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A955052180179F300DFF8E4 /* MathMasters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A955076180179F400DFF8E4 /* Build configuration list for PBXNativeTarget "MathMasters" */;
+			buildPhases = (
+				9A95504F180179F300DFF8E4 /* Sources */,
+				9A955050180179F300DFF8E4 /* Frameworks */,
+				9A955051180179F300DFF8E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathMasters;
+			productName = MathMasters;
+			productReference = 9A955053180179F300DFF8E4 /* MathMasters.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A95504B180179F300DFF8E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = CMPT275_team12;
+			};
+			buildConfigurationList = 9A95504E180179F300DFF8E4 /* Build configuration list for PBXProject "MathMasters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A95504A180179F300DFF8E4;
+			productRefGroup = 9A955054180179F300DFF8E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A955052180179F300DFF8E4 /* MathMasters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A955051180179F300DFF8E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A955061180179F400DFF8E4 /* InfoPlist.strings in Resources */,
+				9A955069180179F400DFF8E4 /* Default.png in Resources */,
+				9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */,
+				9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */,
+				9A955073180179F400DFF8E4 /* ViewController.xib in Resources */,
+				9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */,
+				9AB941151801AF91003F79FE /* white-star-hi.png in Resources */,
+				9AB941171801B002003F79FE /* Star (1).png in Resources */,
+				9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */,
+				9A0510FF18063BC8009476AF /* fish-fish2 copy.png in Resources */,
+				9A05110318063CC0009476AF /* fish-fish4 copy.png in Resources */,
+				9A05110518063CD0009476AF /* fish-fish5 copy.png in Resources */,
+				9A05110718063CD5009476AF /* fish-fish6 copy.png in Resources */,
+				9A05110918063CE3009476AF /* fish-fish7 copy.png in Resources */,
+				9A7E025218068AAD00CE98DF /* fish-fish3 copy.png in Resources */,
+				9A7E025418068AB800CE98DF /* fish-fish1 copy.png in Resources */,
+				9A24ABF018069BDB0061D40E /* MakingCentsViewController.xib in Resources */,
+				9A24ABF51806AAAB0061D40E /* Dime.png in Resources */,
+				9A24ABF61806AAAB0061D40E /* Nickel.png in Resources */,
+				9A24ABF71806AAAB0061D40E /* Quarter.png in Resources */,
+				9A24ABF91806B0CB0061D40E /* yellow.png in Resources */,
+				9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */,
+				9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */,
+				9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */,
+				9A4881C9181924FD00E9347B /* three_stars.png in Resources */,
+				9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */,
+				9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */,
+				9A7EF1171819E2E0000C81E6 /* three-stars_white_design.png in Resources */,
+				9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A95504F180179F300DFF8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A955063180179F400DFF8E4 /* main.m in Sources */,
+				9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */,
+				9A955070180179F400DFF8E4 /* ViewController.m in Sources */,
+				9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */,
+				9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */,
+				9A24ABEF18069BDB0061D40E /* MakingCentsViewController.m in Sources */,
+				9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */,
+				9A55087D18194AA200B322DA /* OptionsViewController.m in Sources */,
+				9A55088218194AB900B322DA /* GlobalVariables.m in Sources */,
+				9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9A95505F180179F400DFF8E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A955060180179F400DFF8E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A955071180179F400DFF8E4 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A955072180179F400DFF8E4 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A955074180179F400DFF8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9A955075180179F400DFF8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A955077180179F400DFF8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathMasters/MathMasters-Prefix.pch";
+				INFOPLIST_FILE = "MathMasters/MathMasters-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A955078180179F400DFF8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathMasters/MathMasters-Prefix.pch";
+				INFOPLIST_FILE = "MathMasters/MathMasters-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A95504E180179F300DFF8E4 /* Build configuration list for PBXProject "MathMasters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A955074180179F400DFF8E4 /* Debug */,
+				9A955075180179F400DFF8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A955076180179F400DFF8E4 /* Build configuration list for PBXNativeTarget "MathMasters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A955077180179F400DFF8E4 /* Debug */,
+				9A955078180179F400DFF8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A95504B180179F300DFF8E4 /* Project object */;
+}
