@@ -81,7 +81,7 @@
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A95505A180179F400DFF8E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathMasters-Info.plist"; sourceTree = "<group>"; };
+		9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MathMasters-Info.plist"; sourceTree = "<group>"; };
 		9A955060180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A955062180179F400DFF8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A955064180179F400DFF8E4 /* MathMasters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathMasters-Prefix.pch"; sourceTree = "<group>"; };
