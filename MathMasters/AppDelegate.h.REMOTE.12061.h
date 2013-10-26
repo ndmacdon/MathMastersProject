@@ -1,4 +1,4 @@
-//TESTEST Hey this is a branch
+//TESTEST MY BRANCH STUFF
 //  AppDelegate.h
 //  MathMasters
 //
@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+
+
+@class LogInViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) LogInViewController *logInViewController;
 
 
 @end

@@ -12,7 +12,7 @@
 {
     GlobalVariables * NewSingle;
 }
-@synthesize global_difficulty_Level;
+@synthesize global_difficulty_Level, currentUser;
 
 +(GlobalVariables*)singleObj
 {

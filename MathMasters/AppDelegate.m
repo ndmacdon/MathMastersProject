@@ -7,28 +7,29 @@
 //  BACK version of the original oct 23
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
-#import "LogInViewController.h"
 
 @implementation AppDelegate
 @synthesize window;
-@synthesize logInViewController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.logInViewController = [[LogInViewController alloc] initWithNibName:@"LogInViewController" bundle:nil];
-    self.window.rootViewController = self.logInViewController;
-    /*
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];  // self.viewController is the main screen
-    self.window.rootViewController = navigationViewController; // set root to navigationViewController
-     */
-    [self.window makeKeyAndVisible];
+    
+    // Load the MainViewController:
+    //self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    //UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];  // self.viewController is the main screen
+    //self.window.rootViewController = navigationViewController; // set root to navigationViewController
      
+    //[self.window makeKeyAndVisible];
+    
+    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

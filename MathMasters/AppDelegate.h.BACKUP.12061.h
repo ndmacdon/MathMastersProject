@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //TESTEST Hey this is a branch
+=======
+//TESTEST MY BRANCH STUFF
+>>>>>>> master
 //  AppDelegate.h
 //  MathMasters
 //
