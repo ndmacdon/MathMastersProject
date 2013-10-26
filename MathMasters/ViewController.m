@@ -8,9 +8,16 @@
 
 #import "ViewController.h"
 #import "GlobalVariables.h"
+#import "DBManager.h"
 
 @implementation ViewController
-@synthesize countingStarsViewController, hardCountingViewController,fishtoFishViewController, makingCentsViewController, optionsViewController;
+@synthesize countingStarsViewController,
+    hardCountingViewController,
+    fishtoFishViewController,
+    makingCentsViewController,
+    optionsViewController,
+    loginViewController,
+    createAccountViewController;
 
 
 -(IBAction)options_Clicked:(id)sender
@@ -65,7 +72,34 @@
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
     optionsSingle.global_difficulty_Level = 1;
+    
 	// self.difficulty_Level = [NSNumber numberWithInt:1]; // set to default difficulty of normal(1)
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    // We must push the view here because the viewDidLoad
+    // method occurs before the view is 'ready' for pushing...
+    
+    // If USERS table has ZERO rows:
+    if([[DBManager getSharedInstance]countRowsOF:@"USERS"] == 0) {
+        
+        // IF we can push the CreateAccountViewController:
+        if(!self.createAccountViewController) {
+            self.createAccountViewController = [[CreateAccountViewController alloc] init];
+        }
+        [self.navigationController pushViewController:self.createAccountViewController animated:YES];
+    }
+    // ELSE USERS table has MORE THAN ZERO rows:
+    else if(optionsSingle.currentUser == NULL) {
+        // IF we can push the LoginViewController:
+        if(!self.loginViewController) {
+            self.loginViewController = [[LogInViewController alloc] init];
+        }
+        [self.navigationController pushViewController:self.loginViewController animated:YES];
+        
+    }
+    self.navigationItem.hidesBackButton = YES; // Disable back button.
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,3 +109,12 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+

@@ -7,12 +7,14 @@
 //
 
 #import "LogInViewController.h"
-#import "ViewController.h"
+#import "GlobalVariables.h"
 
+@interface  LogInViewController ()
+
+@end
 
 @implementation LogInViewController
 @synthesize passwordTextField, usernameTextField;
-//@synthesize viewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,23 +25,37 @@
     return self;
 }
 
--(IBAction)loginButtonClicked:(id)sender
-{
-    ViewController *viewController = [[ViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+-(IBAction)login:(id)sender {
+    BOOL success = FALSE;
+    NSString *alertString = @"Login Failed";
     
-    [self presentViewController:navController animated:YES completion:^{}];
-    
+    // Attempt to login:
+    success = [[DBManager getSharedInstance]login:usernameTextField.text password:passwordTextField.text];
+
+    // IF login failed:
+    if (!success) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:alertString message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else {
+        // SET GLOBAL VARIABLE CURRENT USER..
+        optionsSingle = [GlobalVariables singleObj];
+        optionsSingle.currentUser = usernameTextField.text;
+        // Pop back to the Main-Menu:
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }
 }
 
 - (void)viewDidLoad
-{
+{   // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
     self.passwordTextField.delegate = self;  //allows keyboard to be dismissed for user&pass textfields
     self.usernameTextField.delegate = self;
     [self.passwordTextField resignFirstResponder];
     [self.usernameTextField resignFirstResponder];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.hidesBackButton = YES; // Disable back button.
 }
 
 - (void)didReceiveMemoryWarning

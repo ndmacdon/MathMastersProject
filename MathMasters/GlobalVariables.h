@@ -11,9 +11,10 @@
 @interface GlobalVariables : NSObject
 {
     int global_difficulty_level; // normal (1) and Hard (2)
+    NSString *currentUser;
 }
 @property (nonatomic) int global_difficulty_Level;
-
+@property (nonatomic)NSString *currentUser;
 +(GlobalVariables*)singleObj;
 
 @end
