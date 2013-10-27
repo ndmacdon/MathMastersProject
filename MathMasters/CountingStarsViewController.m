@@ -32,7 +32,6 @@
     
     randomInteger = arc4random() % 10 + 1 ;   // equals a random integer from 1 - 10
     starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
-    
 }
 
 - (void)didReceiveMemoryWarning

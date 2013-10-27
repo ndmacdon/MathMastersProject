@@ -11,6 +11,7 @@
 
 @interface CountingStarsViewController : UIViewController
 {
+    IBOutlet UIButton *tutorialBack;
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
     NSInteger randomInteger;

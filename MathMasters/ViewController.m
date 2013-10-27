@@ -16,7 +16,7 @@
 @implementation ViewController
 @synthesize countingStarsViewController,
     hardCountingViewController,
-    fishtoFishViewController,
+    fishToFishViewController,
     makingCentsViewController,
     optionsViewController,
     loginViewController,

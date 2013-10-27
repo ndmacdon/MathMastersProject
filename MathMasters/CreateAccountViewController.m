@@ -141,7 +141,16 @@
 }
 
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event //if user clicks bg, textfield dismiss
+{
+    [self.view endEditing:YES];
+}
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField  // if user clicks return, dismiss keyboard
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end
 
