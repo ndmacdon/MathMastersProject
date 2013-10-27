@@ -15,7 +15,10 @@
 
 @implementation LogInViewController
 @synthesize passwordTextField, usernameTextField;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,14 +52,18 @@
 }
 
 - (void)viewDidLoad
-{
+{   // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
     self.passwordTextField.delegate = self;  //allows keyboard to be dismissed for user&pass textfields
     self.usernameTextField.delegate = self;
     [self.passwordTextField resignFirstResponder];
     [self.usernameTextField resignFirstResponder];
+<<<<<<< HEAD
     
     self.navigationItem.hidesBackButton = YES; // Disable back button.
+=======
+   
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,34 +1,35 @@
 //
 //  HardCountingStarsViewController.h
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-24.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+// Brief Description : header file of Hard Version of Counting Stars Game
 
 #import <UIKit/UIKit.h>
 
 @interface HardCountingStarsViewController : UIViewController
 {
-    IBOutlet UILabel *Hard_Stars_User_Must_Count;
-    IBOutlet UILabel *Hard_Display_User_Correct;
-    NSInteger hard_random_Integer;
-    NSInteger hard_total_Guessed;
-    NSInteger hard_total_Correct;
+    IBOutlet UILabel *hardStarsUserMustCount;
+    IBOutlet UILabel *hardDisplayUserCorrect;
+    NSInteger hardRandomInteger;
+    NSInteger hardTotalGuessed;
+    NSInteger hardTotalCorrect;
     
-    UIImage *hard_btnImage;
+    UIImage *hardBtnImage;
     
 }
 
--(IBAction)hard_star_Clicked:(id)sender;
--(IBAction)Hard_Is_User_Correct:(id)sender;
+-(IBAction)hard_star_clicked:(id)sender;
+-(IBAction)hard_is_user_correct:(id)sender;
 
-@property(nonatomic,strong) IBOutlet UILabel *Hard_Stars_User_Must_Count;
-@property(nonatomic,strong) IBOutlet UILabel *Hard_Display_User_Correct;
-@property(nonatomic) NSInteger hard_random_Integer;
-@property(nonatomic) NSInteger hard_total_Guessed;
-@property(nonatomic) NSInteger hard_total_Correct;
-@property(nonatomic,strong) UIImage *hard_btnImage;
+@property(nonatomic,strong) IBOutlet UILabel *hardStarsUserMustCount;
+@property(nonatomic,strong) IBOutlet UILabel *hardDisplayUserCorrect;
+@property(nonatomic) NSInteger hardRandomInteger;
+@property(nonatomic) NSInteger hardTotalGuessed;
+@property(nonatomic) NSInteger hardTotalCorrect;
+@property(nonatomic,strong) UIImage *hardBtnImage;
 
 
 @end

@@ -1,54 +1,55 @@
 //
 //  HardCountingStarsViewController.m
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-24.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Implementation file of Hard Version of Counting Stars Game
 
 #import "HardCountingStarsViewController.h"
 
 
 @implementation HardCountingStarsViewController
-@synthesize Hard_Display_User_Correct, Hard_Stars_User_Must_Count, hard_random_Integer, hard_btnImage,hard_total_Guessed,hard_total_Correct;
+@synthesize hardDisplayUserCorrect, hardStarsUserMustCount, hardRandomInteger, hardBtnImage,hardTotalCorrect,hardTotalGuessed;
 
 
 
--(IBAction)Hard_Is_User_Correct:(id)sender
+-(IBAction)hard_is_user_correct:(id)sender  // if user clicks done button, will determine if correct 
 {
-    if(hard_total_Guessed == hard_random_Integer)
+    if(hardTotalGuessed == hardRandomInteger) // if correct generate new value
     {
-        Hard_Display_User_Correct.text = [NSString stringWithFormat:@"Correct !!!"];
+        hardDisplayUserCorrect.text = [NSString stringWithFormat:@"Correct !!!"];
         
-        NSInteger random_temp = arc4random() % 18 + 1 ;
-        while(random_temp % 3 != 0)
+        NSInteger randomTemp = arc4random() % 18 + 1 ;  // create random integer between 1 - 18
+        while(randomTemp % 3 != 0)  // make sure that integer is divisible by 3
         {
-            random_temp = arc4random() %18 +1;
+            randomTemp = arc4random() %18 +1;
         }
-        hard_random_Integer = random_temp;
-        Hard_Stars_User_Must_Count.text=[NSString stringWithFormat:@"Count %d Stars",hard_random_Integer];
+        hardRandomInteger = randomTemp;
+        hardStarsUserMustCount.text=[NSString stringWithFormat:@"Count %d Stars",hardRandomInteger];
         
     }
-    else
+    else // if user is wrong display "Try Again"
     {
-        Hard_Display_User_Correct.text = [NSString stringWithFormat:@" Try Again !"];
+        hardDisplayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
     }
 }
 
 
--(void)AddTotalGuessed
+-(void)AddTotalGuessed // increment hardTotalGuessed by 3
 {
-    hard_total_Guessed+=3;
+    hardTotalGuessed+=3;
 }
 
--(void)AddTotalCorrect
+-(void)AddTotalCorrect //  increment hardTotalCorrect by 1
 {
-    hard_total_Correct++;
+    hardTotalCorrect++;
 }
 
--(void)SubtractTotalGuessed
+-(void)SubtractTotalGuessed // decrement hardTotalGuessed by 3
 {
-    hard_total_Guessed-= 3;
+    hardTotalGuessed-= 3;
 }
 
 
@@ -57,19 +58,20 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        hard_random_Integer = arc4random() % 18 + 1 ;
-        while(hard_random_Integer % 3 != 0)
-        {
-            hard_random_Integer = arc4random() % 18 + 1;
-        }
+
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewDidLoad   // before showing interface to user, initialize some values
 {
     [super viewDidLoad];
-    Hard_Stars_User_Must_Count.text =[NSString stringWithFormat:@"Count %d Stars", hard_random_Integer];
+    hardRandomInteger = arc4random() % 18 + 1 ;  // generate integer between 1 - 18
+    while(hardRandomInteger % 3 != 0) // make sure divisible by 3
+    {
+        hardRandomInteger = arc4random() % 18 + 1;
+    }
+    hardStarsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", hardRandomInteger];
 
 }
 
@@ -79,20 +81,23 @@
    
 }
 
--(IBAction)hard_star_Clicked:(id)sender
-{
-    if([[sender backgroundImageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"three_stars.png"]])
+// if user clicks star buttons on interface, will change image of button depending on current image
+-(IBAction)hard_star_clicked:(id)sender  
+{ 
+    // if button's current image is colored stars
+    if([[sender backgroundImageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"threeStarsColor.png"]])
     {
-        [self SubtractTotalGuessed];
-        hard_btnImage = [UIImage imageNamed:@"three-stars_white_design.png"];
-        [sender setBackgroundImage:hard_btnImage forState:UIControlStateNormal];
+        [self SubtractTotalGuessed];  // decrement hardTotalGuessed by 3
+        hardBtnImage = [UIImage imageNamed:@"threeStarsWhite.png"];
+        [sender setBackgroundImage:hardBtnImage forState:UIControlStateNormal]; // set image of current button to white stars
     }
     
+    // if button's current image is white stars
     else
     {
-        [self AddTotalGuessed];
-        hard_btnImage = [UIImage imageNamed:@"three_stars.png"];
-        [sender setBackgroundImage:hard_btnImage forState:UIControlStateNormal];
+        [self AddTotalGuessed];  // increment hardTotalGuessed by 3
+        hardBtnImage = [UIImage imageNamed:@"threeStarsColor.png"];
+        [sender setBackgroundImage:hardBtnImage forState:UIControlStateNormal]; // set image of current button to colored stars
     }
 
 }

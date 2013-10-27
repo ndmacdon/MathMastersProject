@@ -18,7 +18,7 @@
 		9A24ABF61806AAAB0061D40E /* Nickel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF31806AAAB0061D40E /* Nickel.png */; };
 		9A24ABF71806AAAB0061D40E /* Quarter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF41806AAAB0061D40E /* Quarter.png */; };
 		9A24ABF91806B0CB0061D40E /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF81806B0CB0061D40E /* yellow.png */; };
-		9A4881C9181924FD00E9347B /* three_stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4881C8181924FD00E9347B /* three_stars.png */; };
+		9A4881C9181924FD00E9347B /* threeStarsColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4881C8181924FD00E9347B /* threeStarsColor.png */; };
 		9A55087D18194AA200B322DA /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55087B18194AA200B322DA /* OptionsViewController.m */; };
 		9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A55087E18194AB900B322DA /* OptionsViewController.xib */; };
 		9A55088218194AB900B322DA /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55088018194AB900B322DA /* GlobalVariables.m */; };
@@ -26,7 +26,7 @@
 		9A7E025418068AB800CE98DF /* fish-fish1 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E025318068AB800CE98DF /* fish-fish1 copy.png */; };
 		9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */; };
 		9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */; };
-		9A7EF1171819E2E0000C81E6 /* three-stars_white_design.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */; };
+		9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */; };
 		9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF11B181A0857000C81E6 /* background-spring.png */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
@@ -41,8 +41,8 @@
 		9A955073180179F400DFF8E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* ViewController.xib */; };
 		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
 		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
-		9AB941151801AF91003F79FE /* white-star-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* white-star-hi.png */; };
-		9AB941171801B002003F79FE /* Star (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941161801B002003F79FE /* Star (1).png */; };
+		9AB941151801AF91003F79FE /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* whiteStar.png */; };
+		9AB941171801B002003F79FE /* yellowStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941161801B002003F79FE /* yellowStar.png */; };
 		9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FC180E99D90028C05C /* quarter1.png */; };
 		9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FE180E9A740028C05C /* quarter2.png */; };
 		9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3F501180E9C5E0028C05C /* LogInViewController.m */; };
@@ -68,7 +68,7 @@
 		9A24ABF31806AAAB0061D40E /* Nickel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Nickel.png; path = "Pictures for math masters/MakingCents/Nickel.png"; sourceTree = "<group>"; };
 		9A24ABF41806AAAB0061D40E /* Quarter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Quarter.png; path = "Pictures for math masters/MakingCents/Quarter.png"; sourceTree = "<group>"; };
 		9A24ABF81806B0CB0061D40E /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow.png; path = "Pictures for math masters/MakingCents/yellow.png"; sourceTree = "<group>"; };
-		9A4881C8181924FD00E9347B /* three_stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = three_stars.png; path = "Pictures for math masters/CountingStars/three_stars.png"; sourceTree = "<group>"; };
+		9A4881C8181924FD00E9347B /* threeStarsColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = threeStarsColor.png; path = "Pictures for math masters/CountingStars/threeStarsColor.png"; sourceTree = "<group>"; };
 		9A55087B18194AA200B322DA /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		9A55087C18194AA200B322DA /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		9A55087E18194AB900B322DA /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
@@ -79,13 +79,13 @@
 		9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardCountingStarsViewController.xib; sourceTree = "<group>"; };
 		9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCountingStarsViewController.h; sourceTree = "<group>"; };
 		9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
-		9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three-stars_white_design.png"; path = "Pictures for math masters/CountingStars/three-stars_white_design.png"; sourceTree = "<group>"; };
+		9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = threeStarsWhite.png; path = "Pictures for math masters/CountingStars/threeStarsWhite.png"; sourceTree = "<group>"; };
 		9A7EF11B181A0857000C81E6 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-spring.png"; path = "Pictures for math masters/backgrounds/background-spring.png"; sourceTree = "<group>"; };
 		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A95505A180179F400DFF8E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MathMasters-Info.plist"; sourceTree = "<group>"; };
+		9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathMasters-Info.plist"; sourceTree = "<group>"; };
 		9A955060180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A955062180179F400DFF8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A955064180179F400DFF8E4 /* MathMasters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathMasters-Prefix.pch"; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
 		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
 		9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
-		9AB941141801AF91003F79FE /* white-star-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "white-star-hi.png"; path = "Pictures for math masters/CountingStars/white-star-hi.png"; sourceTree = "<group>"; };
-		9AB941161801B002003F79FE /* Star (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star (1).png"; path = "Pictures for math masters/CountingStars/Star (1).png"; sourceTree = "<group>"; };
+		9AB941141801AF91003F79FE /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteStar.png; path = "Pictures for math masters/CountingStars/whiteStar.png"; sourceTree = "<group>"; };
+		9AB941161801B002003F79FE /* yellowStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellowStar.png; path = "Pictures for math masters/CountingStars/yellowStar.png"; sourceTree = "<group>"; };
 		9AC3F4FC180E99D90028C05C /* quarter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter1.png; path = "Pictures for math masters/MakingCents/quarter1.png"; sourceTree = "<group>"; };
 		9AC3F4FE180E9A740028C05C /* quarter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter2.png; path = "Pictures for math masters/MakingCents/quarter2.png"; sourceTree = "<group>"; };
 		9AC3F500180E9C5E0028C05C /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
@@ -136,10 +136,10 @@
 		9A0510F618063B02009476AF /* CountingStarsImages */ = {
 			isa = PBXGroup;
 			children = (
-				9A4881C8181924FD00E9347B /* three_stars.png */,
-				9A7EF1161819E2E0000C81E6 /* three-stars_white_design.png */,
-				9AB941161801B002003F79FE /* Star (1).png */,
-				9AB941141801AF91003F79FE /* white-star-hi.png */,
+				9A4881C8181924FD00E9347B /* threeStarsColor.png */,
+				9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */,
+				9AB941161801B002003F79FE /* yellowStar.png */,
+				9AB941141801AF91003F79FE /* whiteStar.png */,
 			);
 			name = CountingStarsImages;
 			sourceTree = "<group>";
@@ -320,8 +320,8 @@
 				9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */,
 				9A955073180179F400DFF8E4 /* ViewController.xib in Resources */,
 				9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */,
-				9AB941151801AF91003F79FE /* white-star-hi.png in Resources */,
-				9AB941171801B002003F79FE /* Star (1).png in Resources */,
+				9AB941151801AF91003F79FE /* whiteStar.png in Resources */,
+				9AB941171801B002003F79FE /* yellowStar.png in Resources */,
 				9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */,
 				9A0510FF18063BC8009476AF /* fish-fish2 copy.png in Resources */,
 				9A05110318063CC0009476AF /* fish-fish4 copy.png in Resources */,
@@ -338,10 +338,10 @@
 				9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */,
 				9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */,
 				9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */,
-				9A4881C9181924FD00E9347B /* three_stars.png in Resources */,
+				9A4881C9181924FD00E9347B /* threeStarsColor.png in Resources */,
 				9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */,
 				9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */,
-				9A7EF1171819E2E0000C81E6 /* three-stars_white_design.png in Resources */,
+				9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */,
 				9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */,
 				EB8C09B5181B6D4F005CB751 /* CreateAccountViewController.xib in Resources */,
 			);

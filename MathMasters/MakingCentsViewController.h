@@ -1,9 +1,8 @@
 //
 //  MakingCentsViewController.h
 //  MathMasters
-//
-//  Created by Ryan Wong on 2013-10-10.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
 
 #import <UIKit/UIKit.h>

@@ -14,6 +14,7 @@
 #import "DBManager.h"
 
 @implementation ViewController
+<<<<<<< HEAD
 @synthesize countingStarsViewController,
     hardCountingViewController,
     fishtoFishViewController,
@@ -21,6 +22,9 @@
     optionsViewController,
     loginViewController,
     createAccountViewController;
+=======
+@synthesize countingStarsViewController, hardCountingViewController,fishToFishViewController, makingCentsViewController, optionsViewController;
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 
 
 -(IBAction)options_clicked:(id)sender
@@ -51,6 +55,7 @@
         }
         [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
     }
+    
 }
 -(IBAction)fishtofish_clicked:(id)sender
 {
@@ -75,8 +80,14 @@
     
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
+<<<<<<< HEAD
+    optionsSingle.global_difficulty_Level = 1;
+    
+	// self.difficulty_Level = [NSNumber numberWithInt:1]; // set to default difficulty of normal(1)
+=======
     optionsSingle.globalDifficultyLevel = 1;   // initialize difficultyLevel to 1 ( normal )
 	
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -112,3 +123,12 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
