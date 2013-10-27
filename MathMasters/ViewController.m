@@ -1,19 +1,22 @@
 //
 //  ViewController.m
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-06.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+
+// Brief Description : Header file of View Controller, is the main menu and navigation controller of application that contains buttons to multiple games and options menu
+
 
 #import "ViewController.h"
 #import "GlobalVariables.h"
 
 @implementation ViewController
-@synthesize countingStarsViewController, hardCountingViewController,fishtoFishViewController, makingCentsViewController, optionsViewController;
+@synthesize countingStarsViewController, hardCountingViewController,fishToFishViewController, makingCentsViewController, optionsViewController;
 
 
--(IBAction)options_Clicked:(id)sender
+-(IBAction)options_clicked:(id)sender
 {
     if(!self.optionsViewController)
     {
@@ -22,11 +25,12 @@
     [self.navigationController pushViewController:self.optionsViewController animated:YES];
 }
 
--(IBAction)cstars_Clicked:(id)sender
+-(IBAction)cstars_clicked:(id)sender
 {
-    if(optionsSingle.global_difficulty_Level ==1)
+    
+    if(optionsSingle.globalDifficultyLevel ==1)
     {
-        if(!self.countingStarsViewController) // if not created already ...create it
+        if(!self.countingStarsViewController)
         {
             self.countingStarsViewController = [[CountingStarsViewController alloc] init];
         }
@@ -40,17 +44,18 @@
         }
         [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
     }
+    
 }
--(IBAction)fishtoFish_Clicked:(id)sender
+-(IBAction)fishtofish_clicked:(id)sender
 {
     
-    if(!self.fishtoFishViewController)
+    if(!self.fishToFishViewController)
     {
-        self.fishtoFishViewController = [[FishToFishViewController alloc] init];
+        self.fishToFishViewController = [[FishToFishViewController alloc] init];
     }
-    [self.navigationController pushViewController:self.fishtoFishViewController animated:YES];
+    [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
 }
--(IBAction)makingCents_Clicked:(id)sender
+-(IBAction)makingcents_clicked:(id)sender
 {
     if(!self.makingCentsViewController)
     {
@@ -64,14 +69,14 @@
     
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
-    optionsSingle.global_difficulty_Level = 1;
-	// self.difficulty_Level = [NSNumber numberWithInt:1]; // set to default difficulty of normal(1)
+    optionsSingle.globalDifficultyLevel = 1;   // initialize difficultyLevel to 1 ( normal )
+	
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ 
 }
 
 @end

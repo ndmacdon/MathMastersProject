@@ -1,10 +1,13 @@
 //
 //  ViewController.h
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-06.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+
+// Brief Description : Header file of View Controller, is the main menu and navigation controller of application that contains buttons to multiple games and options menu
+
 
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
@@ -15,21 +18,25 @@
 #import "OptionsViewController.h"
 
 
+
 @interface ViewController : UIViewController
 {
-    GlobalVariables *optionsSingle;
+    GlobalVariables *optionsSingle;  // used to keep track of difficulty level
 
 }
--(IBAction)cstars_Clicked:(id)sender;
--(IBAction)fishtoFish_Clicked:(id)sender;
--(IBAction)makingCents_Clicked:(id)sender;
--(IBAction)options_Clicked:(id)sender;
+-(IBAction)cstars_clicked:(id)sender; // if button clicked go to counting stars game
+-(IBAction)fishtofish_clicked:(id)sender;
+-(IBAction)makingcents_clicked:(id)sender;
+-(IBAction)options_clicked:(id)sender; // if option button clicked go to options menu
 
+// normal version of counting stars
 @property (nonatomic,strong) CountingStarsViewController *countingStarsViewController;
+// hard version of counting stars
 @property(nonatomic,strong) HardCountingStarsViewController * hardCountingViewController;
-@property (nonatomic,strong) FishToFishViewController *fishtoFishViewController;
+@property (nonatomic,strong) FishToFishViewController *fishToFishViewController;
 @property(nonatomic,strong) MakingCentsViewController * makingCentsViewController;
 @property(nonatomic,strong) OptionsViewController *optionsViewController;
+
 
 
 @end

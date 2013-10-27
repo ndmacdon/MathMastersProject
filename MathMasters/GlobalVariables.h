@@ -1,18 +1,19 @@
 //
 //  GlobalVariables.h
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-24.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Used to set and get global variables like globalDifficultyLevel
 
 #import <Foundation/Foundation.h>
 
 @interface GlobalVariables : NSObject
 {
-    int global_difficulty_level; // normal (1) and Hard (2)
+    int globalDifficultyLevel; // normal (1) and Hard (2)
 }
-@property (nonatomic) int global_difficulty_Level;
+@property (nonatomic) int globalDifficultyLevel;
 
 +(GlobalVariables*)singleObj;
 

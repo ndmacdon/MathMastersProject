@@ -1,10 +1,11 @@
 //
 //  GlobalVariables.m
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-24.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Used to set and get global variables like globalDifficultyLevel
 
 #import "GlobalVariables.h"
 
@@ -12,9 +13,9 @@
 {
     GlobalVariables * NewSingle;
 }
-@synthesize global_difficulty_Level;
+@synthesize globalDifficultyLevel;
 
-+(GlobalVariables*)singleObj
++(GlobalVariables*)singleObj  // only one GlobalVariables object can be created
 {
     static GlobalVariables *single = nil;
     @synchronized(self)

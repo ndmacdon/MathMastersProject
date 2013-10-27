@@ -1,38 +1,38 @@
 //
 //  CountingStarsViewController.h
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-06.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Normal Version of Counting Stars Game
 
 #import <UIKit/UIKit.h>
 
 @interface CountingStarsViewController : UIViewController
 {
-    IBOutlet UILabel *Stars_User_Must_Count;
-    IBOutlet UILabel *Display_User_Correct;
-    NSInteger random_Integer;
-    NSInteger total_Guessed;
-    NSInteger total_Correct;
-    
+    IBOutlet UILabel *starsUserMustCount;
+    IBOutlet UILabel *displayUserCorrect;
+    NSInteger randomInteger;
+    NSInteger totalGuessed;
+    NSInteger totalCorrect;
     UIImage *btnImage;
 }
 
--(IBAction)star_Clicked:(id)sender;
+-(IBAction)star_clicked:(id)sender;
+-(IBAction)is_user_correct:(id)sender;
+
+-(void)add_total_guessed;
+-(void)subtract_total_guessed;
+-(void)add_total_correct;
 
 
 
--(IBAction)is_User_Correct:(id)sender;
--(void)AddTotalGuessed;
--(void)SubtractTotalGuessed;
--(void)AddTotalCorrect;
-
-
-
-@property (nonatomic,strong) IBOutlet UILabel *Stars_User_Must_Count;
-@property(nonatomic) NSInteger random_Integer;
-@property(nonatomic) NSInteger total_Guessed;
+@property (nonatomic,strong) IBOutlet UILabel *starsUserMustCount;
+@property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
+@property(nonatomic) NSInteger randomInteger;
+@property(nonatomic) NSInteger totalGuessed;
+@property(nonatomic) NSInteger totalCorrect;
 @property(nonatomic,strong) UIImage *btnImage;
 
 

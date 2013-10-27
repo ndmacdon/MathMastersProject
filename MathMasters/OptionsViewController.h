@@ -1,10 +1,11 @@
 //
 //  OptionsViewController.h
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-24.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Options interface that contains a difficulty button
 
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
@@ -13,12 +14,13 @@
 {
 
     IBOutlet UIButton * changeDifficultyButton;
-    GlobalVariables *optionsSingle;
+    GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
 
 }
 
 
--(IBAction)change_Difficulty:(id)sender;
+-(IBAction)change_difficulty:(id)sender;
 @property(nonatomic,strong) IBOutlet UIButton *changeDifficultyButton;
-@property(nonatomic,strong) IBOutlet UILabel * testing;
+
+
 @end

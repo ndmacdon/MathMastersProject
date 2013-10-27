@@ -1,15 +1,17 @@
 //
 //  CountingStarsViewController.m
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-06.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
+//  Brief Description: Implementation file of Normal Version of Counting Stars game
 
 #import "CountingStarsViewController.h"
 
+
 @implementation CountingStarsViewController
-@synthesize Stars_User_Must_Count, random_Integer, total_Guessed;
+@synthesize starsUserMustCount, randomInteger, totalGuessed, totalCorrect,displayUserCorrect;
 @synthesize btnImage;
 
 
@@ -18,19 +20,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        random_Integer = arc4random() % 10 + 1 ;
         
     }
     return self;
 }
 
 
-- (void)viewDidLoad
+- (void)viewDidLoad   // Before showing interface to user initialize some values
 {
     [super viewDidLoad];
     
-    Stars_User_Must_Count.text =[NSString stringWithFormat:@"Count %d Stars", random_Integer];
-    
+    randomInteger = arc4random() % 10 + 1 ;   // equals a random integer from 1 - 10
+    starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
     
 }
 
@@ -41,53 +42,54 @@
 }
 
 
--(IBAction)is_User_Correct:(id)sender
+-(IBAction)is_user_correct:(id)sender   // if user clicks done button, will determine if user is correct or wrong
 {
-    if(total_Guessed == random_Integer)
+    if(totalGuessed == randomInteger) 
     {
-        Display_User_Correct.text = [NSString stringWithFormat:@"Correct !!!"];
+        displayUserCorrect.text = [NSString stringWithFormat:@"Correct !!!"];
         
-        NSInteger random_temp = arc4random() % 10 + 1 ;
-        random_Integer = random_temp;
-        Stars_User_Must_Count.text =[NSString stringWithFormat:@"Count %d Stars", random_Integer];
+        NSInteger randomTemp = arc4random() % 10 + 1 ;   
+        randomInteger = randomTemp;
+        starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger]; // generate new value if user is correct
         
     }
-    else
+    else  // user is wrong
     {
-        Display_User_Correct.text = [NSString stringWithFormat:@" Try Again !"];
+        displayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
     }
 }
 
--(void)AddTotalGuessed
+-(void)add_total_guessed  // increment totalGuessed by 1
 {
-    total_Guessed++;
+    totalGuessed++;
 }
 
--(void)AddTotalCorrect
+-(void)subtract_total_guessed  // decrement totalGuessed by 1
 {
-    total_Correct++;
+    totalGuessed--;
 }
 
--(void)SubtractTotalGuessed
+-(void)add_total_correct  // increment totalCorrect by 1
 {
-    total_Guessed--;
+    totalCorrect++;
 }
 
 
--(IBAction)star_Clicked:(id)sender
+// if user clicks stars buttons on interface, will change image depending on current image
+-(IBAction)star_clicked:(id)sender  
 {
-    
-    if([[sender backgroundImageForState:UIControlStateNormal] isEqual: [UIImage imageNamed:@"Star (1).png"]])
+    // if star button clicked is currently a yellow star
+    if([[sender backgroundImageForState:UIControlStateNormal] isEqual: [UIImage  imageNamed:@"yellowStar.png"]]) 
     {
-        [self SubtractTotalGuessed];
-        btnImage = [UIImage imageNamed:@"white-star-hi.png"];
-        [sender setBackgroundImage:btnImage forState:UIControlStateNormal];
+        [self subtract_total_guessed];  // decrement totalGuessed by 1
+        btnImage = [UIImage imageNamed:@"whiteStar.png"];   // set btnImage to white star
+        [sender setBackgroundImage:btnImage forState:UIControlStateNormal];  // set button to white star
     }
-    else
+    else  // if star button clicked is currently a white star
     {
-        [self AddTotalGuessed];
-        btnImage = [UIImage imageNamed:@"Star (1).png"];
-        [sender setBackgroundImage:btnImage forState:UIControlStateNormal];
+        [self add_total_guessed];  // increment totalGuessed by 1
+        btnImage = [UIImage imageNamed:@"yellowStar.png"];  // set btnImage to yellow star
+        [sender setBackgroundImage:btnImage forState:UIControlStateNormal];  // set button to yellow star
     }
 }
 

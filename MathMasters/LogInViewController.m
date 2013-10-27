@@ -1,10 +1,10 @@
 //
 //  LogInViewController.m
 //  MathMasters
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
-//  Created by Ryan Wong on 2013-10-16.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+
 
 #import "LogInViewController.h"
 #import "ViewController.h"
@@ -12,13 +12,13 @@
 
 @implementation LogInViewController
 @synthesize passwordTextField, usernameTextField;
-//@synthesize viewController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -39,13 +39,13 @@
     self.usernameTextField.delegate = self;
     [self.passwordTextField resignFirstResponder];
     [self.usernameTextField resignFirstResponder];
-    // Do any additional setup after loading the view from its nib.
+   
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
