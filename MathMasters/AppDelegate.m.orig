@@ -5,7 +5,10 @@
 //  Ryan W, Nick
 //
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 #import "AppDelegate.h"
 #import "ViewController.h"
 
@@ -15,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+<<<<<<< HEAD
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -27,6 +31,11 @@
     
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+=======
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; 
+    self.logInViewController = [[LogInViewController alloc] initWithNibName:@"LogInViewController" bundle:nil]; // initialize logInViewController
+    self.window.rootViewController = self.logInViewController;
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
     [self.window makeKeyAndVisible];
     
     

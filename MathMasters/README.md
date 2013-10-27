@@ -1,4 +1,0 @@
-MathMastersProject
-==================
-
-Math game.

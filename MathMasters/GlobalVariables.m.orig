@@ -13,7 +13,11 @@
 {
     GlobalVariables * NewSingle;
 }
+<<<<<<< HEAD
+@synthesize global_difficulty_Level, currentUser;
+=======
 @synthesize globalDifficultyLevel;
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 
 +(GlobalVariables*)singleObj  // only one GlobalVariables object can be created
 {

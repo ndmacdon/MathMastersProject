@@ -1,13 +1,12 @@
 <<<<<<< HEAD
 //TESTEST Hey this is a branch
 =======
-//TESTEST MY BRANCH STUFF
->>>>>>> master
+//
+>>>>>>> 59540034bbbfe86fbf6b070a52d1e0394fcd89c2
 //  AppDelegate.h
 //  MathMasters
-//
-//  Created by Ryan Wong on 2013-10-06.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
+//  First Step Conceptions, Team 12
+//  Ryan W, Nick
 //
 
 #import <UIKit/UIKit.h>
