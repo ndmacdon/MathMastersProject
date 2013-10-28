@@ -34,8 +34,8 @@
         hardRandomInteger = randomTemp;
         hardStarsUserMustCount.text=[NSString stringWithFormat:@"Count %d Stars",hardRandomInteger];
         
-        [self add_total_correct];
-        if(self.hardTotalCorrect == 5)
+        [self add_total_correct];  // add one to add_total_correct
+        if(self.hardTotalCorrect == 5) // if user has gotten 5 correct, game ends
         {
             [self.navigationController popViewControllerAnimated:YES];
         }
