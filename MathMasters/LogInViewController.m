@@ -5,6 +5,7 @@
 //  Ryan W, Nick
 //
 
+//  Brief Description : Log In interface of application
 
 #import "LogInViewController.h"
 #import "GlobalVariables.h"

@@ -5,6 +5,8 @@
 //  Ryan W, Nick
 //
 
+//  Brief Description : Log In interface of application
+
 
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"

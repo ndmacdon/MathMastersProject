@@ -13,7 +13,7 @@
 {
     GlobalVariables * NewSingle;
 }
-@synthesize globalDifficultyLevel;
+@synthesize globalDifficultyLevel,globalCurrentGame,currentUser;
 
 +(GlobalVariables*)singleObj  // only one GlobalVariables object can be created
 {

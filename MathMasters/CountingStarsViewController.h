@@ -8,10 +8,13 @@
 //  Brief Description: Normal Version of Counting Stars Game
 
 #import <UIKit/UIKit.h>
+#import "TutorialCountingStarsViewController.h"
 
 @interface CountingStarsViewController : UIViewController
 {
-    IBOutlet UIButton *tutorialBack;
+
+    
+    
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
     NSInteger randomInteger;
@@ -22,6 +25,7 @@
 
 -(IBAction)star_clicked:(id)sender;
 -(IBAction)is_user_correct:(id)sender;
+-(IBAction)normal_tutorial_clicked:(id)sender;
 
 -(void)add_total_guessed;
 -(void)subtract_total_guessed;
@@ -35,6 +39,8 @@
 @property(nonatomic) NSInteger totalGuessed;
 @property(nonatomic) NSInteger totalCorrect;
 @property(nonatomic,strong) UIImage *btnImage;
+
+@property(nonatomic,strong) TutorialCountingStarsViewController * tutorialCountingStarsViewController;
 
 
 
