@@ -82,7 +82,6 @@
 // Display this game's tutorial:
 -(void)viewDidAppear:(BOOL)animated
 {
-    optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
     optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
     
