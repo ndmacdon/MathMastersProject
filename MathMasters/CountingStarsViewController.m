@@ -12,7 +12,7 @@
 
 @implementation CountingStarsViewController
 @synthesize starsUserMustCount, randomInteger, totalGuessed, totalCorrect,displayUserCorrect;
-@synthesize btnImage;
+@synthesize btnImage,tutorialCountingStarsViewController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,13 +25,21 @@
     return self;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
+    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+}
 
 - (void)viewDidLoad   // Before showing interface to user initialize some values
 {
     [super viewDidLoad];
     
+    
     randomInteger = arc4random() % 10 + 1 ;   // equals a random integer from 1 - 10
     starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +64,12 @@
     {
         displayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
     }
+}
+
+-(IBAction)normal_tutorial_clicked:(id)sender
+{
+    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
+    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
 }
 
 -(void)add_total_guessed  // increment totalGuessed by 1

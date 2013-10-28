@@ -22,7 +22,6 @@
     loginViewController,
     createAccountViewController;
 
-
 -(IBAction)options_clicked:(id)sender
 {
     if(!self.optionsViewController)
@@ -35,8 +34,11 @@
 -(IBAction)cstars_clicked:(id)sender
 {
     
+    
     if(optionsSingle.globalDifficultyLevel ==1)
     {
+       
+        optionsSingle.globalCurrentGame =1;
         if(!self.countingStarsViewController)
         {
             self.countingStarsViewController = [[CountingStarsViewController alloc] init];
@@ -45,6 +47,7 @@
     }
     else
     {
+        optionsSingle.globalCurrentGame = 2;
         if(!self.hardCountingViewController)
         {
             self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
@@ -112,3 +115,5 @@
 }
 
 @end
+
+

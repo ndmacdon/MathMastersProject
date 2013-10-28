@@ -41,12 +41,32 @@
 		9A955073180179F400DFF8E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* ViewController.xib */; };
 		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
 		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
+		9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */; };
+		9AA25D11181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */; };
 		9AB941151801AF91003F79FE /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* whiteStar.png */; };
 		9AB941171801B002003F79FE /* yellowStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941161801B002003F79FE /* yellowStar.png */; };
 		9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FC180E99D90028C05C /* quarter1.png */; };
 		9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FE180E9A740028C05C /* quarter2.png */; };
 		9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3F501180E9C5E0028C05C /* LogInViewController.m */; };
 		9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F502180E9C5E0028C05C /* LogInViewController.xib */; };
+		9AF23ABB181DE47F003DA89C /* normal_cs_Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB2181DE47E003DA89C /* normal_cs_Tutorial3.png */; };
+		9AF23ABC181DE47F003DA89C /* normal_cs_Tutorial8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB3181DE47E003DA89C /* normal_cs_Tutorial8.png */; };
+		9AF23ABD181DE47F003DA89C /* normal_cs_Tutorial7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB4181DE47E003DA89C /* normal_cs_Tutorial7.png */; };
+		9AF23ABE181DE47F003DA89C /* normal_cs_Tutorial6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB5181DE47F003DA89C /* normal_cs_Tutorial6.png */; };
+		9AF23ABF181DE47F003DA89C /* normal_cs_Tutorial9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB6181DE47F003DA89C /* normal_cs_Tutorial9.png */; };
+		9AF23AC0181DE47F003DA89C /* normal_cs_Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB7181DE47F003DA89C /* normal_cs_Tutorial5.png */; };
+		9AF23AC1181DE47F003DA89C /* normal_cs_Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB8181DE47F003DA89C /* normal_cs_Tutorial4.png */; };
+		9AF23AC2181DE47F003DA89C /* normal_cs_Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB9181DE47F003DA89C /* normal_cs_Tutorial2.png */; };
+		9AF23AC3181DE47F003DA89C /* normal_cs_Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ABA181DE47F003DA89C /* normal_cs_Tutorial1.png */; };
+		9AF23ACD181DE69B003DA89C /* hard_cs_Tutorial9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC4181DE69A003DA89C /* hard_cs_Tutorial9.png */; };
+		9AF23ACE181DE69B003DA89C /* hard_cs_Tutorial8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC5181DE69A003DA89C /* hard_cs_Tutorial8.png */; };
+		9AF23ACF181DE69B003DA89C /* hard_cs_Tutorial7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC6181DE69A003DA89C /* hard_cs_Tutorial7.png */; };
+		9AF23AD0181DE69B003DA89C /* hard_cs_Tutorial6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC7181DE69A003DA89C /* hard_cs_Tutorial6.png */; };
+		9AF23AD1181DE69B003DA89C /* hard_cs_Tutorial5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC8181DE69B003DA89C /* hard_cs_Tutorial5.png */; };
+		9AF23AD2181DE69B003DA89C /* hard_cs_Tutorial4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AC9181DE69B003DA89C /* hard_cs_Tutorial4.png */; };
+		9AF23AD3181DE69B003DA89C /* hard_cs_Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACA181DE69B003DA89C /* hard_cs_Tutorial3.png */; };
+		9AF23AD4181DE69B003DA89C /* hard_cs_Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACB181DE69B003DA89C /* hard_cs_Tutorial2.png */; };
+		9AF23AD5181DE69B003DA89C /* hard_cs_Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */; };
 		9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE820918036F370051DFC0 /* FishToFishViewController.m */; };
 		9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */; };
 		EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */; };
@@ -100,6 +120,9 @@
 		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
 		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
 		9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
+		9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialCountingStarsViewController.h; sourceTree = "<group>"; };
+		9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialCountingStarsViewController.m; sourceTree = "<group>"; };
+		9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialCountingStarsViewController.xib; sourceTree = "<group>"; };
 		9AB941141801AF91003F79FE /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteStar.png; path = "Pictures for math masters/CountingStars/whiteStar.png"; sourceTree = "<group>"; };
 		9AB941161801B002003F79FE /* yellowStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellowStar.png; path = "Pictures for math masters/CountingStars/yellowStar.png"; sourceTree = "<group>"; };
 		9AC3F4FC180E99D90028C05C /* quarter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter1.png; path = "Pictures for math masters/MakingCents/quarter1.png"; sourceTree = "<group>"; };
@@ -107,6 +130,24 @@
 		9AC3F500180E9C5E0028C05C /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9AC3F501180E9C5E0028C05C /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		9AC3F502180E9C5E0028C05C /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		9AF23AB2181DE47E003DA89C /* normal_cs_Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial3.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial3.png"; sourceTree = "<group>"; };
+		9AF23AB3181DE47E003DA89C /* normal_cs_Tutorial8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial8.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial8.png"; sourceTree = "<group>"; };
+		9AF23AB4181DE47E003DA89C /* normal_cs_Tutorial7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial7.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial7.png"; sourceTree = "<group>"; };
+		9AF23AB5181DE47F003DA89C /* normal_cs_Tutorial6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial6.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial6.png"; sourceTree = "<group>"; };
+		9AF23AB6181DE47F003DA89C /* normal_cs_Tutorial9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial9.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial9.png"; sourceTree = "<group>"; };
+		9AF23AB7181DE47F003DA89C /* normal_cs_Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial5.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial5.png"; sourceTree = "<group>"; };
+		9AF23AB8181DE47F003DA89C /* normal_cs_Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial4.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial4.png"; sourceTree = "<group>"; };
+		9AF23AB9181DE47F003DA89C /* normal_cs_Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial2.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial2.png"; sourceTree = "<group>"; };
+		9AF23ABA181DE47F003DA89C /* normal_cs_Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial1.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial1.png"; sourceTree = "<group>"; };
+		9AF23AC4181DE69A003DA89C /* hard_cs_Tutorial9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial9.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial9.png"; sourceTree = "<group>"; };
+		9AF23AC5181DE69A003DA89C /* hard_cs_Tutorial8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial8.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial8.png"; sourceTree = "<group>"; };
+		9AF23AC6181DE69A003DA89C /* hard_cs_Tutorial7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial7.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial7.png"; sourceTree = "<group>"; };
+		9AF23AC7181DE69A003DA89C /* hard_cs_Tutorial6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial6.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial6.png"; sourceTree = "<group>"; };
+		9AF23AC8181DE69B003DA89C /* hard_cs_Tutorial5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial5.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial5.png"; sourceTree = "<group>"; };
+		9AF23AC9181DE69B003DA89C /* hard_cs_Tutorial4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial4.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial4.png"; sourceTree = "<group>"; };
+		9AF23ACA181DE69B003DA89C /* hard_cs_Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial3.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial3.png"; sourceTree = "<group>"; };
+		9AF23ACB181DE69B003DA89C /* hard_cs_Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial2.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial2.png"; sourceTree = "<group>"; };
+		9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial1.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial1.png"; sourceTree = "<group>"; };
 		9AFE820818036F370051DFC0 /* FishToFishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishToFishViewController.h; sourceTree = "<group>"; };
 		9AFE820918036F370051DFC0 /* FishToFishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishToFishViewController.m; sourceTree = "<group>"; };
 		9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FishToFishViewController.xib; sourceTree = "<group>"; };
@@ -136,10 +177,28 @@
 		9A0510F618063B02009476AF /* CountingStarsImages */ = {
 			isa = PBXGroup;
 			children = (
+				9AF23AB2181DE47E003DA89C /* normal_cs_Tutorial3.png */,
+				9AF23AB3181DE47E003DA89C /* normal_cs_Tutorial8.png */,
+				9AF23AB4181DE47E003DA89C /* normal_cs_Tutorial7.png */,
+				9AF23AB5181DE47F003DA89C /* normal_cs_Tutorial6.png */,
+				9AF23AB6181DE47F003DA89C /* normal_cs_Tutorial9.png */,
+				9AF23AB7181DE47F003DA89C /* normal_cs_Tutorial5.png */,
+				9AF23AB8181DE47F003DA89C /* normal_cs_Tutorial4.png */,
+				9AF23AB9181DE47F003DA89C /* normal_cs_Tutorial2.png */,
+				9AF23ABA181DE47F003DA89C /* normal_cs_Tutorial1.png */,
 				9A4881C8181924FD00E9347B /* threeStarsColor.png */,
 				9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */,
 				9AB941161801B002003F79FE /* yellowStar.png */,
 				9AB941141801AF91003F79FE /* whiteStar.png */,
+				9AF23AC4181DE69A003DA89C /* hard_cs_Tutorial9.png */,
+				9AF23AC5181DE69A003DA89C /* hard_cs_Tutorial8.png */,
+				9AF23AC6181DE69A003DA89C /* hard_cs_Tutorial7.png */,
+				9AF23AC7181DE69A003DA89C /* hard_cs_Tutorial6.png */,
+				9AF23AC8181DE69B003DA89C /* hard_cs_Tutorial5.png */,
+				9AF23AC9181DE69B003DA89C /* hard_cs_Tutorial4.png */,
+				9AF23ACA181DE69B003DA89C /* hard_cs_Tutorial3.png */,
+				9AF23ACB181DE69B003DA89C /* hard_cs_Tutorial2.png */,
+				9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */,
 			);
 			name = CountingStarsImages;
 			sourceTree = "<group>";
@@ -229,6 +288,9 @@
 				9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */,
 				9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */,
 				9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */,
+				9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */,
+				9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */,
+				9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */,
 				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
 				9AFE820918036F370051DFC0 /* FishToFishViewController.m */,
 				9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */,
@@ -344,6 +406,25 @@
 				9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */,
 				9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */,
 				EB8C09B5181B6D4F005CB751 /* CreateAccountViewController.xib in Resources */,
+				9AA25D11181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib in Resources */,
+				9AF23ABB181DE47F003DA89C /* normal_cs_Tutorial3.png in Resources */,
+				9AF23ABC181DE47F003DA89C /* normal_cs_Tutorial8.png in Resources */,
+				9AF23ABD181DE47F003DA89C /* normal_cs_Tutorial7.png in Resources */,
+				9AF23ABE181DE47F003DA89C /* normal_cs_Tutorial6.png in Resources */,
+				9AF23ABF181DE47F003DA89C /* normal_cs_Tutorial9.png in Resources */,
+				9AF23AC0181DE47F003DA89C /* normal_cs_Tutorial5.png in Resources */,
+				9AF23AC1181DE47F003DA89C /* normal_cs_Tutorial4.png in Resources */,
+				9AF23AC2181DE47F003DA89C /* normal_cs_Tutorial2.png in Resources */,
+				9AF23AC3181DE47F003DA89C /* normal_cs_Tutorial1.png in Resources */,
+				9AF23ACD181DE69B003DA89C /* hard_cs_Tutorial9.png in Resources */,
+				9AF23ACE181DE69B003DA89C /* hard_cs_Tutorial8.png in Resources */,
+				9AF23ACF181DE69B003DA89C /* hard_cs_Tutorial7.png in Resources */,
+				9AF23AD0181DE69B003DA89C /* hard_cs_Tutorial6.png in Resources */,
+				9AF23AD1181DE69B003DA89C /* hard_cs_Tutorial5.png in Resources */,
+				9AF23AD2181DE69B003DA89C /* hard_cs_Tutorial4.png in Resources */,
+				9AF23AD3181DE69B003DA89C /* hard_cs_Tutorial3.png in Resources */,
+				9AF23AD4181DE69B003DA89C /* hard_cs_Tutorial2.png in Resources */,
+				9AF23AD5181DE69B003DA89C /* hard_cs_Tutorial1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +447,7 @@
 				9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */,
 				EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */,
 				EB8C09B6181B6D4F005CB751 /* DBManager.m in Sources */,
+				9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

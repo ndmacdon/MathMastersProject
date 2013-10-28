@@ -22,6 +22,7 @@
 
 
 
+
 @interface ViewController : UIViewController
 {
     GlobalVariables *optionsSingle;  // used to keep track of difficulty level

@@ -11,7 +11,7 @@
 
 
 @implementation HardCountingStarsViewController
-@synthesize hardDisplayUserCorrect, hardStarsUserMustCount, hardRandomInteger, hardBtnImage,hardTotalCorrect,hardTotalGuessed;
+@synthesize hardDisplayUserCorrect, hardStarsUserMustCount, hardRandomInteger, hardBtnImage,hardTotalCorrect,hardTotalGuessed, tutorialCountingStarsViewController;
 
 
 
@@ -34,6 +34,12 @@
     {
         hardDisplayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
     }
+}
+
+-(IBAction)hard_tutorial_clicked:(id)sender
+{
+    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
+    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
 }
 
 
@@ -61,6 +67,13 @@
 
     }
     return self;
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    
+    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
+    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+     
 }
 
 - (void)viewDidLoad   // before showing interface to user, initialize some values
