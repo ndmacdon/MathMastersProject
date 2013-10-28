@@ -34,6 +34,11 @@
         hardRandomInteger = randomTemp;
         hardStarsUserMustCount.text=[NSString stringWithFormat:@"Count %d Stars",hardRandomInteger];
         
+        [self add_total_correct];
+        if(self.hardTotalCorrect == 5)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
     else // IF user is wrong display "Try Again"
     {
@@ -48,17 +53,17 @@
 }
 
 
--(void)AddTotalGuessed // increment hardTotalGuessed by 3
+-(void)add_total_guessed // increment hardTotalGuessed by 3
 {
     hardTotalGuessed+=3;
 }
 
--(void)AddTotalCorrect //  increment hardTotalCorrect by 1
+-(void)add_total_correct //  increment hardTotalCorrect by 1
 {
     hardTotalCorrect++;
 }
 
--(void)SubtractTotalGuessed // decrement hardTotalGuessed by 3
+-(void)subtract_total_guessed // decrement hardTotalGuessed by 3
 {
     hardTotalGuessed-= 3;
 }
@@ -77,10 +82,23 @@
 // Display this game's tutorial:
 -(void)viewDidAppear:(BOOL)animated
 {
+    optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
+    BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
+    optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
     
-    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-     
+    // Check if user has viewed this tutorial:
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+    
+    // IF tutorial NOT viewed yet:
+    if (!viewed) {
+        // Mark this tutorial as completed for the current user:
+        [[DBManager getSharedInstance]completeTutorial:optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+        
+        // Show the tutorial:
+        self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
+        [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+        
+    }
 }
 
 - (void)viewDidLoad   // before showing interface to user, initialize some values
@@ -107,7 +125,7 @@
     // if button's current image is colored stars
     if([[sender backgroundImageForState:UIControlStateNormal] isEqual:[UIImage imageNamed:@"threeStarsColor.png"]])
     {
-        [self SubtractTotalGuessed];  // decrement hardTotalGuessed by 3
+        [self subtract_total_guessed];  // decrement hardTotalGuessed by 3
         hardBtnImage = [UIImage imageNamed:@"threeStarsWhite.png"];
         [sender setBackgroundImage:hardBtnImage forState:UIControlStateNormal]; // set image of current button to white stars
     }
@@ -115,7 +133,7 @@
     // if button's current image is white stars
     else
     {
-        [self AddTotalGuessed];  // increment hardTotalGuessed by 3
+        [self add_total_guessed];  // increment hardTotalGuessed by 3
         hardBtnImage = [UIImage imageNamed:@"threeStarsColor.png"];
         [sender setBackgroundImage:hardBtnImage forState:UIControlStateNormal]; // set image of current button to colored stars
     }

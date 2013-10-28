@@ -75,6 +75,13 @@
         randomInteger = randomTemp;
         starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger]; // generate new value if user is correct
         
+        
+        [self add_total_correct];
+        if(self.totalCorrect == 5)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
     }
     else  // user Incorrect
     {

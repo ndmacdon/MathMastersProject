@@ -45,19 +45,13 @@
     if(optionsSingle.globalDifficultyLevel ==1)
     {
         optionsSingle.globalCurrentGame =1;
-        if(!self.countingStarsViewController)
-        {
-            self.countingStarsViewController = [[CountingStarsViewController alloc] init];
-        }
+        self.countingStarsViewController = [[CountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.countingStarsViewController animated:YES] ;
     }
     else
     {
         optionsSingle.globalCurrentGame = 2;
-        if(!self.hardCountingViewController)
-        {
-            self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
-        }
+        self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
     }
 }
