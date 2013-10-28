@@ -30,10 +30,23 @@
     return self;
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+-(void)viewDidAppear:(BOOL)animated {
+    BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
+    optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
+    
+    // Check if user has viewed this tutorial:
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+    
+    // IF tutorial NOT viewed yet:
+    if (!viewed) {
+        // Mark this tutorial as completed for the current user:
+        [[DBManager getSharedInstance]completeTutorial:optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+        
+        // Show the tutorial:
+        self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
+        [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+        
+    }
 }
 
 // Before showing interface to user: initialize some values

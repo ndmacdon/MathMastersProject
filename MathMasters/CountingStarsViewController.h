@@ -16,9 +16,12 @@
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
+#import "DBManager.h"
+#import "GlobalVariables.h"
 
 @interface CountingStarsViewController : UIViewController
 {
+    GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
     NSInteger randomInteger;

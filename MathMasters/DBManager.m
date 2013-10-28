@@ -23,6 +23,7 @@ static sqlite3_stmt *statement = nil;
 
 @implementation DBManager
 
+// Return a handle to the shared instance of the DBManager:
 +(DBManager*)getSharedInstance {
     
     // IF sharedInstance doesn't exist: create it
@@ -64,7 +65,6 @@ static sqlite3_stmt *statement = nil;
             CREATE TABLE IF NOT EXISTS tutorials\
             (username_fk TEXT, \
              tutorial_name_pk TEXT, \
-             complete INTEGER, \
              FOREIGN KEY(username_fk) REFERENCES USERS(username_pk), \
              PRIMARY KEY (username_fk, tutorial_name_pk))";
             
@@ -225,7 +225,7 @@ static sqlite3_stmt *statement = nil;
         
         // Prepare our SQL statement:
         NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT username_fk tutorial_name_pk completed\
+                              @"SELECT username_fk tutorial_name_pk\
                                 FROM tutorials \
                                 WHERE username_fk=\"%@\" AND tutorial_name_pk=\"%@\"", username, tutorial];
         const char *query_stmt = [querySQL UTF8String];
@@ -238,11 +238,11 @@ static sqlite3_stmt *statement = nil;
                 // We don't actually use the name, this is just a good example of query.
                 NSString *name = [[NSString alloc] initWithUTF8String:(const char *)
                                   sqlite3_column_text(statement, 0)];
-                [resultArray addObject:name]; // We could return this NSArray* if we wanted the names...
+                [resultArray addObject:name]; // We could return this NSArray* if we wanted the results...
                 exists = TRUE;
             }
             else {
-                NSLog(@"No tutorial found");
+                NSLog(@"Tutorial Not Played");
                 exists = FALSE;
             }
             sqlite3_reset(statement);
@@ -251,10 +251,33 @@ static sqlite3_stmt *statement = nil;
     return exists;
 }
 
-
+// Mark tutorial as completed in the database:
 -(BOOL) completeTutorial:(NSString*)username tutorial:(NSString*)tutorial {
-    return TRUE;
-}
+        const char *dbpath = [databasePath UTF8String];
+        
+        // IF database opens without error:
+        if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
+            
+            // Prepare our SQL statement:
+            NSString *insertSQL = [NSString stringWithFormat:
+                                   @"INSERT INTO tutorials \
+                                   (username_fk, tutorial_name_pk) \
+                                   VALUES (\"%@\", \"%@\")",
+                                   username, tutorial];
+            const char *insert_stmt = [insertSQL UTF8String];
+            sqlite3_prepare_v2(database, insert_stmt, -1, &statement, NULL);
+            
+            // IF statement executes without error:
+            if (sqlite3_step(statement) == SQLITE_DONE) {
+                return YES;
+            }
+            else {
+                return NO;
+            }
+            sqlite3_reset(statement);
+        }
+        return NO;
+    }
 
 
 @end
