@@ -1,21 +1,26 @@
-//
-//  HardCountingStarsViewController.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description: Implementation file of Hard Version of Counting Stars Game
+/****
+ *
+ * Filename:    HardCountingStarsViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Hard Version of Counting Stars Game.
+ *
+ ****/
 
 #import "HardCountingStarsViewController.h"
-
 
 @implementation HardCountingStarsViewController
 @synthesize hardDisplayUserCorrect, hardStarsUserMustCount, hardRandomInteger, hardBtnImage,hardTotalCorrect,hardTotalGuessed, tutorialCountingStarsViewController;
 
-
-
--(IBAction)hard_is_user_correct:(id)sender  // if user clicks done button, will determine if correct 
+// IF user clicks done button, check correctness
+-(IBAction)hard_is_user_correct:(id)sender
 {
     if(hardTotalGuessed == hardRandomInteger) // if correct generate new value
     {
@@ -30,7 +35,7 @@
         hardStarsUserMustCount.text=[NSString stringWithFormat:@"Count %d Stars",hardRandomInteger];
         
     }
-    else // if user is wrong display "Try Again"
+    else // IF user is wrong display "Try Again"
     {
         hardDisplayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
     }
@@ -68,6 +73,8 @@
     }
     return self;
 }
+
+// Display this game's tutorial:
 -(void)viewDidAppear:(BOOL)animated
 {
     

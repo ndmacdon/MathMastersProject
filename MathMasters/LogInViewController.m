@@ -1,11 +1,18 @@
-//
-//  LogInViewController.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description : Log In interface of application
+/****
+ *
+ * Filename:    LogInViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Primary Log In interface of application.
+ *
+ ****/
 
 #import "LogInViewController.h"
 #import "GlobalVariables.h"
@@ -27,6 +34,7 @@
     return self;
 }
 
+// Attempt to login according to passed credentials:
 -(IBAction)login:(id)sender {
     BOOL success = FALSE;
     NSString *alertString = @"Login Failed";
@@ -40,9 +48,10 @@
         [alert show];
     }
     else {
-        // SET GLOBAL VARIABLE CURRENT USER..
+        // Update Global Session Variable:
         optionsSingle = [GlobalVariables singleObj];
         optionsSingle.currentUser = usernameTextField.text;
+        
         // Pop back to the Main-Menu:
         [self.navigationController popToRootViewControllerAnimated:YES];
         

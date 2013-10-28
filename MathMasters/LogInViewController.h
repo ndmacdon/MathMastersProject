@@ -1,18 +1,24 @@
-//
-//  LogInViewController.h
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description : Log In interface of application
-
+/****
+ *
+ * Filename:    LogInViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Primary Log In interface of application.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
 #import "DBManager.h"
 
-@class ViewController;
+@class MasterViewController;
 
 @interface LogInViewController : UIViewController<UITextFieldDelegate>
 {

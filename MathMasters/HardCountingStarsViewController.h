@@ -1,11 +1,18 @@
-//
-//  HardCountingStarsViewController.h
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-// Brief Description : header file of Hard Version of Counting Stars Game
+/****
+ *
+ * Filename:    HardCountingStarsViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Hard Version of Counting Stars Game.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
@@ -19,7 +26,6 @@
     NSInteger hardTotalCorrect;
     
     UIImage *hardBtnImage;
-    
 }
 
 -(IBAction)hard_star_clicked:(id)sender;

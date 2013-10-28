@@ -1,11 +1,18 @@
-//
-//  OptionsViewController.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description: Options interface that contains a difficulty button
+/****
+ *
+ * Filename:    OptionsViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Options menu interface that controls the difficulty level of games.
+ *
+ ****/
 
 #import "OptionsViewController.h"
 

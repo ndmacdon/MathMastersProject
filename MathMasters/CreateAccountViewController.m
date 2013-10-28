@@ -1,11 +1,20 @@
-//
-//  CreateAccountViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-10-25.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
-#define FIELD_LENGTH 4
+/****
+ *
+ * Filename:    CreateAccountViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Provides a User interface for the account creation process.
+ *
+ ****/
+
+#define MIN_FIELD_LENGTH 4
 #import "CreateAccountViewController.h"
 
 @interface CreateAccountViewController ()
@@ -28,8 +37,7 @@
 {   // Do any additional setup after loading the view from its nib.
     [super viewDidLoad];
     
-    // Allow keyboard to be dismissed for textfields:
-    // TODO: These are not resigning correctly...
+    // Allow keyboard to be dismissed when touch event occurs:
     self.usernameText.delegate = self;
     self.passwordText.delegate = self;
     self.passwordConfirmationText.delegate = self;
@@ -62,7 +70,7 @@
     NSPredicate *testPlace = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stringPlace];
     BOOL matches = [testPlace evaluateWithObject:string];
     
-    // IF the typed character is INVALID:
+    // IF the typed character is INVALID: Prevent it from appearing
     if (!matches) { return NO; }
     else {
         textField.backgroundColor = [UIColor colorWithRed:.8 green:1 blue:.8 alpha:1];
@@ -72,14 +80,15 @@
 
 // Validate our text fields when editing finishes:
 -(void)textFieldDidEndEditing:(UITextField *)textField {
-    [self isLongEnough:textField length:FIELD_LENGTH];
+    [self isLongEnough:textField length:MIN_FIELD_LENGTH];
 }
 
--(BOOL)isLongEnough:(UITextField *)textField length:(int)enough {
+// Is the text of a textField long enough?
+-(BOOL)isLongEnough:(UITextField *)textField length:(int)minLength {
     BOOL islongEnough = TRUE;
     
     // IF textField is longEnough
-    if (textField.text.length < enough) {
+    if (textField.text.length < minLength) {
         textField.backgroundColor = [UIColor colorWithRed:1 green:.8 blue:.8 alpha:1];
         islongEnough = FALSE;
     }
@@ -87,6 +96,7 @@
     return islongEnough;
 }
 
+// Attempts to add a user to the USERS Database:
 -(IBAction)createAccount:(id)sender {
     BOOL success = FALSE;
     
@@ -94,11 +104,12 @@
     
     // We must check this because a user can select the create button
     // before the textFieldDidEndEditing event is called...
-    [self isLongEnough:usernameText length:FIELD_LENGTH];
-    [self isLongEnough:passwordText length:FIELD_LENGTH];
-    [self isLongEnough:passwordConfirmationText length:FIELD_LENGTH];
-    [self isLongEnough:secretText length:FIELD_LENGTH];
+    [self isLongEnough:usernameText length:MIN_FIELD_LENGTH];
+    [self isLongEnough:passwordText length:MIN_FIELD_LENGTH];
+    [self isLongEnough:passwordConfirmationText length:MIN_FIELD_LENGTH];
+    [self isLongEnough:secretText length:MIN_FIELD_LENGTH];
     
+    // Verify that all textField's texts are long enough:
     if (passwordText.text.length < 4) {passwordText.backgroundColor = [UIColor colorWithRed:1 green:.8 blue:.8 alpha:1];}
     if (passwordConfirmationText.text.length < 4) {passwordConfirmationText.backgroundColor = [UIColor colorWithRed:1 green:.8 blue:.8 alpha:1];}
     if (secretText.text.length < 4) {secretText.backgroundColor = [UIColor colorWithRed:1 green:.8 blue:.8 alpha:1];}
@@ -114,8 +125,10 @@
             
             // IF USER with this USERNAME does NOT exist:
             if (![[DBManager getSharedInstance]userExists:usernameText.text]) {
+                
                 // IF password matches passwordConfirmation:
                 if ([passwordText.text isEqualToString:passwordConfirmationText.text]) {
+                    
                     success = [[DBManager getSharedInstance]addUser:usernameText.text password:passwordText.text secret:secretText.text];
                 }
                 else { alertString = @"Your Password does not match your Password Confirmation."; }
@@ -133,20 +146,18 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:alertString message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
-    // ELSE account creation succeeded:
     else {
         // Pop back to the Main-Menu:
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
+// Dismiss text entry when user clicks:
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{ [self.view endEditing:YES]; }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event //if user clicks bg, textfield dismiss
-{
-    [self.view endEditing:YES];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField  // if user clicks return, dismiss keyboard
+// Dismiss text entry when user types return:
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
