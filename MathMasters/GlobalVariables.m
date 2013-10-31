@@ -1,11 +1,18 @@
-//
-//  GlobalVariables.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description: Used to set and get global variables like globalDifficultyLevel
+/****
+ *
+ * Filename:    GlobalVariables.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: Model: Provides accessor for global variables like globalDifficultyLevel.
+ *
+ ****/
 
 #import "GlobalVariables.h"
 

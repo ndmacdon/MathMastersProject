@@ -37,7 +37,7 @@
 		9A955069180179F400DFF8E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A955068180179F400DFF8E4 /* Default.png */; };
 		9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506A180179F400DFF8E4 /* Default@2x.png */; };
 		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
-		9A955070180179F400DFF8E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* ViewController.m */; };
+		9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* MasterViewController.m */; };
 		9A955073180179F400DFF8E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* ViewController.xib */; };
 		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
 		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
@@ -114,8 +114,8 @@
 		9A955068180179F400DFF8E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9A95506A180179F400DFF8E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A95506C180179F400DFF8E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9A95506E180179F400DFF8E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9A95506F180179F400DFF8E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A95506E180179F400DFF8E4 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		9A95506F180179F400DFF8E4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
 		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 				9AC3F500180E9C5E0028C05C /* LogInViewController.h */,
 				9AC3F501180E9C5E0028C05C /* LogInViewController.m */,
 				9AC3F502180E9C5E0028C05C /* LogInViewController.xib */,
-				9A95506E180179F400DFF8E4 /* ViewController.h */,
-				9A95506F180179F400DFF8E4 /* ViewController.m */,
+				9A95506E180179F400DFF8E4 /* MasterViewController.h */,
+				9A95506F180179F400DFF8E4 /* MasterViewController.m */,
 				9A955071180179F400DFF8E4 /* ViewController.xib */,
 				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
 				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
@@ -437,7 +437,7 @@
 			files = (
 				9A955063180179F400DFF8E4 /* main.m in Sources */,
 				9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */,
-				9A955070180179F400DFF8E4 /* ViewController.m in Sources */,
+				9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */,
 				9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */,
 				9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */,
 				9A24ABEF18069BDB0061D40E /* MakingCentsViewController.m in Sources */,

@@ -1,19 +1,25 @@
-//
-//  ViewController.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
+/****
+ *
+ * Filename:    MasterViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Main menu and navigation controller of application.
+ *              Contains links to multiple games and the Options menu.
+ *
+ ****/
 
-
-// Brief Description : Header file of View Controller, is the main menu and navigation controller of application that contains buttons to multiple games and options menu
-
-
-#import "ViewController.h"
+#import "MasterViewController.h"
 #import "GlobalVariables.h"
 #import "DBManager.h"
 
-@implementation ViewController
+@implementation MasterViewController
 @synthesize countingStarsViewController,
     hardCountingViewController,
     fishToFishViewController,
@@ -22,6 +28,7 @@
     loginViewController,
     createAccountViewController;
 
+// Launch OptionsViewController:
 -(IBAction)options_clicked:(id)sender
 {
     if(!self.optionsViewController)
@@ -31,39 +38,35 @@
     [self.navigationController pushViewController:self.optionsViewController animated:YES];
 }
 
+// Launch CountingStars ViewController:
 -(IBAction)cstars_clicked:(id)sender
 {
-    
-    
+    // Check difficulty and launch appropriate version:
     if(optionsSingle.globalDifficultyLevel ==1)
     {
-       
         optionsSingle.globalCurrentGame =1;
-        if(!self.countingStarsViewController)
-        {
-            self.countingStarsViewController = [[CountingStarsViewController alloc] init];
-        }
+        self.countingStarsViewController = [[CountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.countingStarsViewController animated:YES] ;
     }
     else
     {
         optionsSingle.globalCurrentGame = 2;
-        if(!self.hardCountingViewController)
-        {
-            self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
-        }
+        self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
     }
 }
+
+// Launch FishToFish ViewController:
 -(IBAction)fishtofish_clicked:(id)sender
 {
-    
     if(!self.fishToFishViewController)
     {
         self.fishToFishViewController = [[FishToFishViewController alloc] init];
     }
     [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
 }
+
+// Launch MakingCents ViewController:
 -(IBAction)makingcents_clicked:(id)sender
 {
     if(!self.makingCentsViewController)
@@ -75,7 +78,6 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
     optionsSingle.globalDifficultyLevel = 1;   // initialize difficultyLevel to 1 ( normal )
@@ -98,6 +100,7 @@
     }
     // ELSE USERS table has MORE THAN ZERO rows:
     else if(optionsSingle.currentUser == NULL) {
+        
         // IF we can push the LoginViewController:
         if(!self.loginViewController) {
             self.loginViewController = [[LogInViewController alloc] init];
@@ -111,7 +114,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
- 
 }
 
 @end

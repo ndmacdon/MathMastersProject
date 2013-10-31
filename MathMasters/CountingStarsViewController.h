@@ -1,20 +1,27 @@
-//
-//  CountingStarsViewController.h
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-//  Brief Description: Normal Version of Counting Stars Game
+/****
+ *
+ * Filename:    CountingStarsViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Normal Version of Counting Stars Game.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
+#import "DBManager.h"
+#import "GlobalVariables.h"
 
 @interface CountingStarsViewController : UIViewController
 {
-
-    
-    
+    GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
     NSInteger randomInteger;
@@ -31,8 +38,6 @@
 -(void)subtract_total_guessed;
 -(void)add_total_correct;
 
-
-
 @property (nonatomic,strong) IBOutlet UILabel *starsUserMustCount;
 @property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
 @property(nonatomic) NSInteger randomInteger;
@@ -43,7 +48,8 @@
 @property(nonatomic,strong) TutorialCountingStarsViewController * tutorialCountingStarsViewController;
 
 
-
-
-
 @end
+
+
+
+

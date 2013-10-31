@@ -1,31 +1,30 @@
-//
-//  AppDelegate.m
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
+/****
+ *
+ * Filename:    AppDelegate.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: Controller: Handles low level app-initialization and jumpstarts the main navigation page.
+ *
+ ****/
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MasterViewController.h"
 
 @implementation AppDelegate
 @synthesize window;
 
-
+// Initialize all necessary ViewControllers:
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    
-    // Load the MainViewController:
-    //self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    //UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];  // self.viewController is the main screen
-    //self.window.rootViewController = navigationViewController; // set root to navigationViewController
-     
-    //[self.window makeKeyAndVisible];
-    
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];    
+    self.viewController = [[MasterViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
     

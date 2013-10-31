@@ -1,17 +1,27 @@
-//
-//  HardCountingStarsViewController.h
-//  MathMasters
-//  First Step Conceptions, Team 12
-//  Ryan W, Nick
-//
-
-// Brief Description : header file of Hard Version of Counting Stars Game
+/****
+ *
+ * Filename:    HardCountingStarsViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: October 27, 2013
+ *
+ * Description: ViewController: Hard Version of Counting Stars Game.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
+#import "DBManager.h"
+#import "GlobalVariables.h"
 
 @interface HardCountingStarsViewController : UIViewController
 {
+    GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
     IBOutlet UILabel *hardStarsUserMustCount;
     IBOutlet UILabel *hardDisplayUserCorrect;
     NSInteger hardRandomInteger;
@@ -19,12 +29,15 @@
     NSInteger hardTotalCorrect;
     
     UIImage *hardBtnImage;
-    
 }
 
 -(IBAction)hard_star_clicked:(id)sender;
 -(IBAction)hard_is_user_correct:(id)sender;
 -(IBAction)hard_tutorial_clicked:(id)sender;
+
+-(void)add_total_guessed;
+-(void)add_total_correct;
+-(void)subtract_total_guessed;
 
 @property(nonatomic,strong) IBOutlet UILabel *hardStarsUserMustCount;
 @property(nonatomic,strong) IBOutlet UILabel *hardDisplayUserCorrect;
