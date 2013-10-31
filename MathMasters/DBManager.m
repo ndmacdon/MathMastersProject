@@ -8,12 +8,26 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: October 31, 2013
  *
  * Description: Model: A wrapper for the SQLite3 database 'USERS'.
  *              Provides easy access to the database via abstracted queries.
  *
  ****/
+/* Methods we can use to grab data from returned query statements:
+ 
+ SQLITE_API const void *sqlite3_column_blob(sqlite3_stmt*, int iCol);
+ SQLITE_API int sqlite3_column_bytes(sqlite3_stmt*, int iCol);
+ SQLITE_API int sqlite3_column_bytes16(sqlite3_stmt*, int iCol);
+ SQLITE_API double sqlite3_column_double(sqlite3_stmt*, int iCol);
+ SQLITE_API int sqlite3_column_int(sqlite3_stmt*, int iCol);
+ SQLITE_API sqlite3_int64 sqlite3_column_int64(sqlite3_stmt*, int iCol);
+ SQLITE_API const unsigned char *sqlite3_column_text(sqlite3_stmt*, int iCol);
+ SQLITE_API const void *sqlite3_column_text16(sqlite3_stmt*, int iCol);
+ SQLITE_API int sqlite3_column_type(sqlite3_stmt*, int iCol);
+ SQLITE_API sqlite3_value *sqlite3_column_value(sqlite3_stmt*, int iCol);
+ */
+
 
 #import "DBManager.h"
 
@@ -36,8 +50,23 @@ static sqlite3_stmt *statement = nil;
 
 //Create the DB if it doesn't already exist:
 -(BOOL)createDB {
-    NSString *docsDir;
-    NSArray *dirPaths;
+    BOOL created = FALSE;      // Did the DB creation succeed?
+    NSString *docsDir;          // Documents Directory Path.
+    NSArray *dirPaths;          // Handle on directory listings...
+    char *errMsg;               // Check the contents of this if there is an error...
+    const char *dbpath;         // DB file path 'string'.
+    const char *sql_stmt =      // Schema of our DB:
+    "CREATE TABLE IF NOT EXISTS users \
+    (username_pk TEXT PRIMARY KEY, \
+    password TEXT, secret TEXT);\
+    \
+    CREATE TABLE IF NOT EXISTS tutorials\
+    (username_fk TEXT, \
+    tutorial_name_pk TEXT, \
+    FOREIGN KEY(username_fk) REFERENCES USERS(username_pk), \
+    PRIMARY KEY (username_fk, tutorial_name_pk))";
+    // TODO: ADD OTHER TABLES NEEDED HERE....
+    
     
     // Get the documents directory:
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -45,240 +74,175 @@ static sqlite3_stmt *statement = nil;
     
     // Build the path to the database file:
     databasePath = [[NSString alloc] initWithString:[docsDir stringByAppendingPathComponent: @"user.db"]];
-    BOOL isSuccess = YES;
     NSFileManager *filemgr = [NSFileManager defaultManager];
     
     // IF database doesn't exist:
     if ([filemgr fileExistsAtPath: databasePath] == NO) {
-        const char *dbpath = [databasePath UTF8String];
+        dbpath = [databasePath UTF8String];
         
         // IF database opens without error:
         if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-            char *errMsg; // Check the contents of this if there is an error...
             
-            // Prepare our SQL statement:
-            const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS users \
-            (username_pk TEXT PRIMARY KEY, \
-             password TEXT, secret TEXT);\
-            \
-            CREATE TABLE IF NOT EXISTS tutorials\
-            (username_fk TEXT, \
-             tutorial_name_pk TEXT, \
-             FOREIGN KEY(username_fk) REFERENCES USERS(username_pk), \
-             PRIMARY KEY (username_fk, tutorial_name_pk))";
-            
-            // TODO: ADD OTHER TABLES NEEDED HERE....
-            
-            // IF statement executes without error:
+            // IF schema create statement executes WITH error:
             if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) {
-                isSuccess = NO;
                 NSLog(@"Failed to create tables");
             }
+            else { created = TRUE; }
             
             sqlite3_close(database); // Close the database...
-            return isSuccess;
         }
         else {
-            isSuccess = NO;
             NSLog(@"Failed to open/create database");
         }
     }
-    return isSuccess;
+    
+    return created;
 }
 
-// Add a user to the database:
--(BOOL) addUser:(NSString *)username password:(NSString *)password secret:(NSString *)secret {
-    const char *dbpath = [databasePath UTF8String];
+// Query the database with [queryString]:
+// Other methods should use this helper when querying the DB (If possible).
+-(BOOL) query:(NSString *)queryString result:(int)result{
+    const char *dbpath = [databasePath UTF8String]; // Converted SQL query string.
+    BOOL success = FALSE; // Did the query return rows?
+    
+    sqlite3_reset(statement); // Clear any existing results...
     
     // IF database opens without error:
     if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
         
         // Prepare our SQL statement:
-        NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO users \
-                               (username_pk, password, secret) \
-                                VALUES (\"%@\", \"%@\", \"%@\")",
-                               username, password, secret];
-        const char *insert_stmt = [insertSQL UTF8String];
-        sqlite3_prepare_v2(database, insert_stmt, -1, &statement, NULL);
-        
-        // IF statement executes without error:
-        if (sqlite3_step(statement) == SQLITE_DONE) {
-            return YES;
-        }
-        else {
-            return NO;
-        }
-        sqlite3_reset(statement);
-    }
-    return NO;
-}
-
-// Does a user with [username] exist in the DB:
--(BOOL) userExists:(NSString*)username {
-    const char *dbpath = [databasePath UTF8String];
-    BOOL exists = FALSE;
-    
-    // IF database opens without error:
-    if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
-        // Prepare our SQL statement:
-        NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT username_pk \
-                                FROM users \
-                                WHERE username_pk=\"%@\"", username];
-        const char *query_stmt = [querySQL UTF8String];
-        NSMutableArray *resultArray = [[NSMutableArray alloc]init];
+        const char *query_stmt = [queryString UTF8String];
         
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
             
             // IF query returns some row:
-            if (sqlite3_step(statement) == SQLITE_ROW) {
-                // We don't actually use the name, this is just a good example of query.
-                NSString *name = [[NSString alloc] initWithUTF8String:(const char *)
-                                  sqlite3_column_text(statement, 0)];
-                [resultArray addObject:name]; // We could return this NSArray* if we wanted the names...
-                exists = TRUE;
-            }
-            else {
-                NSLog(@"User not found");
-                exists = FALSE;
-            }
-            sqlite3_reset(statement);
+            if (sqlite3_step(statement) == result)
+            { success = TRUE; }
+            else { NSLog(@"Query returned no rows."); }
         }
+        else {
+            NSLog(@"Query caused an error on database."); }
     }
+    else { NSLog(@"Database failed to open."); }
+    
+    sqlite3_close(database); // Close the database...
+    return success;
+}
+
+// Add a user to the database:
+-(BOOL) addUser:(NSString *)username password:(NSString *)password secret:(NSString *)secret {
+    BOOL added = FALSE; // Was the user added?
+    NSString *insertSQL = [NSString stringWithFormat:
+                           @"INSERT INTO users \
+                           (username_pk, password, secret) \
+                           VALUES (\"%@\", \"%@\", \"%@\")",
+                           username, password, secret];
+     
+    // IF statement executes without error:
+    if ([self query:insertSQL result:SQLITE_DONE]) {
+        added = TRUE;
+    }
+    else { NSLog(@"Unable to add user"); }
+    
+    sqlite3_reset(statement);
+    return added;
+}
+
+// Does a user with [username] exist in the DB:
+-(BOOL) userExists:(NSString*)username {
+    BOOL exists = FALSE; // Does [username] exist in the database?
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"SELECT username_pk \
+                          FROM users \
+                          WHERE username_pk=\"%@\"", username];
+    
+    // IF query returns some row:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        exists = TRUE;
+    }
+    else { NSLog(@"User not found"); }
+    
+    sqlite3_reset(statement);
     return exists;
 }
 
 // Returns the count of rows of the passed table:
 -(int) countRowsOF:(NSString *)table {
-    const char *dbpath = [databasePath UTF8String];
-    int rows = 0;
+    int rows = 0; // Number of rows in [table] SQLTable:
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"SELECT count(*) AS 'NumUsers' \
+                          FROM \"%@\"", table];
     
-    // IF database opens without error:
-    if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
-        // Prepare our SQL statement:
-        NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT count(*) AS 'NumUsers' \
-                                FROM \"%@\"", table];
-        const char *query_stmt = [querySQL UTF8String];
-        
-        if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
-            
-            // IF query returns some row:
-            if (sqlite3_step(statement) == SQLITE_ROW) {
-                NSString *rowString = [[NSString alloc] initWithUTF8String:(const char *)
-                                  sqlite3_column_text(statement, 0)];
-                rows = [rowString intValue];
-            }
-            else {
-                NSLog(@"Unable to return count");
-            }
-            sqlite3_reset(statement);
-        }
+    // IF query returns result:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        NSString *rowString = [[NSString alloc] initWithUTF8String:(const char *)
+                               sqlite3_column_text(statement, 0)];
+        rows = [rowString intValue];
     }
+    else { NSLog(@"Unable to query count"); }
+    
+    sqlite3_reset(statement); // Reset the returned results...
     return rows;
 }
 
+// Attempt to login [username] with [password]:
 -(BOOL) login:(NSString*)username password:(NSString*)password {
-    const char *dbpath = [databasePath UTF8String];
     BOOL loginSuccess = FALSE; // Did the user login?
-    
-    // IF database opens without error:
-    if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
-        // Prepare our SQL statement:
-        NSString *querySQL = [NSString stringWithFormat:
+    NSString *querySQL = [NSString stringWithFormat:
                               @"SELECT username_pk password\
                                 FROM users\
                                 WHERE username_pk=\"%@\" AND password=\"%@\"", username, password];
-        const char *query_stmt = [querySQL UTF8String];
-        NSMutableArray *resultArray = [[NSMutableArray alloc]init];
-        
-        if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
-            
-            // IF query returns some row:
-            if (sqlite3_step(statement) == SQLITE_ROW) {
-                NSString *name = [[NSString alloc] initWithUTF8String:(const char *)
-                                  sqlite3_column_text(statement, 0)];
-                [resultArray addObject:name]; // We could return this NSArray* if we wanted the names...
-                loginSuccess = TRUE;
-            }
-            else {
-                NSLog(@"User not found");
-                loginSuccess = FALSE;
-            }
-            sqlite3_reset(statement);
-        }
+
+    // IF query returns some row:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        loginSuccess = TRUE;
     }
+    else { NSLog(@"User not found"); }
+    
+    sqlite3_reset(statement); // Reset the returned results...
     return loginSuccess;
 }
 
+// Has [username] completed [tutorial]?
 -(BOOL) hasCompletedTutorial:(NSString*)username tutorial:(NSString*)tutorial {
-    const char *dbpath = [databasePath UTF8String];
-    BOOL exists = FALSE;
+    BOOL exists = FALSE; // Is there a record of the user completing this tutorial?
+    // Prepare our SQL statement:
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"SELECT username_fk tutorial_name_pk\
+                            FROM tutorials \
+                            WHERE username_fk=\"%@\" AND tutorial_name_pk=\"%@\"", username, tutorial];
     
-    // IF database opens without error:
-    if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-        
-        // Prepare our SQL statement:
-        NSString *querySQL = [NSString stringWithFormat:
-                              @"SELECT username_fk tutorial_name_pk\
-                                FROM tutorials \
-                                WHERE username_fk=\"%@\" AND tutorial_name_pk=\"%@\"", username, tutorial];
-        const char *query_stmt = [querySQL UTF8String];
-        NSMutableArray *resultArray = [[NSMutableArray alloc]init];
-        
-        if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
-            
-            // IF query returns some row:
-            if (sqlite3_step(statement) == SQLITE_ROW) {
-                // We don't actually use the name, this is just a good example of query.
-                NSString *name = [[NSString alloc] initWithUTF8String:(const char *)
-                                  sqlite3_column_text(statement, 0)];
-                [resultArray addObject:name]; // We could return this NSArray* if we wanted the results...
-                exists = TRUE;
-            }
-            else {
-                NSLog(@"Tutorial Not Played");
-                exists = FALSE;
-            }
-            sqlite3_reset(statement);
+    // IF query returns any result:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        exists  = TRUE;
         }
+    else {
+        NSLog(@"User has not completed tutorial: %@", tutorial);
     }
+    
+    sqlite3_reset(statement); // Reset the returned results...
     return exists;
 }
-
+ 
+ 
 // Mark tutorial as completed in the database:
 -(BOOL) completeTutorial:(NSString*)username tutorial:(NSString*)tutorial {
-        const char *dbpath = [databasePath UTF8String];
-        
-        // IF database opens without error:
-        if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
-            
-            // Prepare our SQL statement:
-            NSString *insertSQL = [NSString stringWithFormat:
-                                   @"INSERT INTO tutorials \
-                                   (username_fk, tutorial_name_pk) \
-                                   VALUES (\"%@\", \"%@\")",
-                                   username, tutorial];
-            const char *insert_stmt = [insertSQL UTF8String];
-            sqlite3_prepare_v2(database, insert_stmt, -1, &statement, NULL);
-            
-            // IF statement executes without error:
-            if (sqlite3_step(statement) == SQLITE_DONE) {
-                return YES;
-            }
-            else {
-                return NO;
-            }
-            sqlite3_reset(statement);
-        }
-        return NO;
+    BOOL completed = FALSE; // Did the update succeed?
+    NSString *insertSQL = [NSString stringWithFormat:
+                           @"INSERT INTO tutorials \
+                           (username_fk, tutorial_name_pk) \
+                           VALUES (\"%@\", \"%@\")",
+                           username, tutorial];
+    
+    
+    if ([self query:insertSQL result:SQLITE_DONE]) {
+        completed = TRUE;
     }
-
+    else { NSLog(@"Tutorial could not be marked 'Completed'"); }
+    
+    sqlite3_reset(statement);
+    return completed;
+}
 
 @end
 
