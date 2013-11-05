@@ -61,6 +61,8 @@
 		9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */; };
 		9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */; };
 		9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF11B181A0857000C81E6 /* background-spring.png */; };
+		9A87BA691828CE32005BFB01 /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */; };
+		9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
 		9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95505A180179F400DFF8E4 /* CoreGraphics.framework */; };
@@ -71,7 +73,7 @@
 		9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506A180179F400DFF8E4 /* Default@2x.png */; };
 		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
 		9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* MasterViewController.m */; };
-		9A955073180179F400DFF8E4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* ViewController.xib */; };
+		9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* MasterViewController.xib */; };
 		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
 		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
 		9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */; };
@@ -167,6 +169,9 @@
 		9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
 		9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = threeStarsWhite.png; path = "Pictures for math masters/CountingStars/threeStarsWhite.png"; sourceTree = "<group>"; };
 		9A7EF11B181A0857000C81E6 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-spring.png"; path = "Pictures for math masters/backgrounds/background-spring.png"; sourceTree = "<group>"; };
+		9A87BA661828CE32005BFB01 /* HardApplesToOrangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardApplesToOrangesViewController.h; sourceTree = "<group>"; };
+		9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardApplesToOrangesViewController.m; sourceTree = "<group>"; };
+		9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardApplesToOrangesViewController.xib; sourceTree = "<group>"; };
 		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,7 +187,7 @@
 		9A95506C180179F400DFF8E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9A95506E180179F400DFF8E4 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		9A95506F180179F400DFF8E4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
 		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
 		9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
@@ -380,7 +385,7 @@
 				9AC3F502180E9C5E0028C05C /* LogInViewController.xib */,
 				9A95506E180179F400DFF8E4 /* MasterViewController.h */,
 				9A95506F180179F400DFF8E4 /* MasterViewController.m */,
-				9A955071180179F400DFF8E4 /* ViewController.xib */,
+				9A955071180179F400DFF8E4 /* MasterViewController.xib */,
 				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
 				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
 				9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */,
@@ -393,6 +398,9 @@
 				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
 				9AFE820918036F370051DFC0 /* FishToFishViewController.m */,
 				9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */,
+				9A87BA661828CE32005BFB01 /* HardApplesToOrangesViewController.h */,
+				9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */,
+				9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */,
 				9A24ABEC18069BDA0061D40E /* MakingCentsViewController.h */,
 				9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */,
 				9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */,
@@ -479,7 +487,7 @@
 				9A955069180179F400DFF8E4 /* Default.png in Resources */,
 				9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */,
 				9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */,
-				9A955073180179F400DFF8E4 /* ViewController.xib in Resources */,
+				9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */,
 				9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */,
 				9AB941151801AF91003F79FE /* whiteStar.png in Resources */,
 				9AB941171801B002003F79FE /* yellowStar.png in Resources */,
@@ -557,6 +565,7 @@
 				9A4CA674182526430012E565 /* fish8.png in Resources */,
 				9A4CA675182526430012E565 /* fish9.png in Resources */,
 				9A4CA676182526430012E565 /* fish10.png in Resources */,
+				9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +589,7 @@
 				EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */,
 				EB8C09B6181B6D4F005CB751 /* DBManager.m in Sources */,
 				9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */,
+				9A87BA691828CE32005BFB01 /* HardApplesToOrangesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,12 +604,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9A955071180179F400DFF8E4 /* ViewController.xib */ = {
+		9A955071180179F400DFF8E4 /* MasterViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9A955072180179F400DFF8E4 /* en */,
 			);
-			name = ViewController.xib;
+			name = MasterViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

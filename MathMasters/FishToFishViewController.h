@@ -32,11 +32,13 @@
     NSMutableArray * fishImageArray;
     NSInteger leftTotalAmount;
     NSInteger rightTotalAmount;
+    NSInteger totalCorrect;
     
 }
--(void)loadPictures;
+-(void)load_pictures;
 -(IBAction)left_button_clicked:(id)sender;
 -(IBAction)right_button_clicked:(id)sender;
+-(void)add_total_correct;
 @property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
 @property(nonatomic,strong) IBOutlet UIButton *rightButton;
 @property(nonatomic,strong) IBOutlet UIButton *leftButton;
@@ -46,5 +48,6 @@
 @property(nonatomic,strong) NSMutableArray * fishImageArray;
 @property(nonatomic) NSInteger leftTotalAmount;
 @property(nonatomic) NSInteger rightTotalAmount;
+@property(nonatomic) NSInteger totalCorrect;
           
 @end

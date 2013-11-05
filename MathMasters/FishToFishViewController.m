@@ -1,8 +1,3 @@
-
-
-// !!!THIS FILE IS NOT INTENDED FOR MARKING IN THIS VERSION. IT IS A PLACEHOLDER ONLY!!!
-
-
 /****
  *
  * Filename:    FishToFishViewController.m
@@ -19,11 +14,13 @@
  *
  ****/
 
+// Things to do for normal and hard version .... Tutorial screen
+
 #import "FishToFishViewController.h"
 
 
 @implementation FishToFishViewController
-@synthesize displayUserCorrect, rightButton, leftButton, numberImageArray, orangeImageArray, appleImageArray,fishImageArray,leftTotalAmount,rightTotalAmount;
+@synthesize displayUserCorrect, rightButton, leftButton, numberImageArray, orangeImageArray, appleImageArray,fishImageArray,leftTotalAmount,rightTotalAmount, totalCorrect;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,12 +31,17 @@
     return self;
 }
 
--(IBAction)left_button_clicked:(id)sender
+-(IBAction)left_button_clicked:(id)sender  
 {
     if(leftTotalAmount > rightTotalAmount)
     {
         displayUserCorrect.text = [NSString stringWithFormat:@"You are Correct !!!"];
-        [self loadPictures];
+        [self add_total_correct];
+        if(totalCorrect == 5)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        [self load_pictures];
     }
     else
     {
@@ -52,14 +54,25 @@
     if(rightTotalAmount > leftTotalAmount)
     {
         displayUserCorrect.text = [NSString stringWithFormat:@"You are Correct !!!"];
-        [self loadPictures];
+        [self add_total_correct];
+        if(totalCorrect == 5)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        [self load_pictures];
     }
     else
     {
         displayUserCorrect.text = [NSString stringWithFormat:@"Good Try ! Guess Again"];
     }
 }
--(void)loadPictures
+
+-(void)add_total_correct
+{
+    totalCorrect++;
+}
+
+-(void)load_pictures
 {
     int randomPicture = arc4random() % 10 ;  // NO need to increment by one since array index 0-6
     int randomPicture2 = arc4random() % 10;
@@ -163,7 +176,7 @@
     [numberImageArray addObject:@"9.png"];
     [numberImageArray addObject:@"10.png"];
 
-    [self loadPictures];
+    [self load_pictures];
     
 }
 

@@ -23,6 +23,7 @@
 @synthesize countingStarsViewController,
     hardCountingViewController,
     fishToFishViewController,
+    hardApplesToOrangesViewController,
     makingCentsViewController,
     optionsViewController,
     loginViewController,
@@ -59,11 +60,18 @@
 // Launch FishToFish ViewController:
 -(IBAction)fishtofish_clicked:(id)sender
 {
-    if(!self.fishToFishViewController)
+    if(optionsSingle.globalDifficultyLevel ==1)
     {
+        optionsSingle.globalCurrentGame =3;
         self.fishToFishViewController = [[FishToFishViewController alloc] init];
+        [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
     }
-    [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
+    else
+    {
+        optionsSingle.globalCurrentGame =4;
+        self.hardApplesToOrangesViewController = [[HardApplesToOrangesViewController alloc]init];
+        [self.navigationController pushViewController:self.hardApplesToOrangesViewController animated:YES];
+    }
 }
 
 // Launch MakingCents ViewController:
