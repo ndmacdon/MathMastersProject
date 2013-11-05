@@ -23,22 +23,28 @@
 
 @interface FishToFishViewController : UIViewController
 {
-    IBOutlet UILabel * Display_User_Correct;
-    IBOutlet UIButton * Right_Button;
-    IBOutlet UIButton * Left_Button;
-    NSMutableArray * ImageArray;
-    NSInteger Left_Total_Fish;
-    NSInteger Right_Total_Fish;
+    IBOutlet UILabel * displayUserCorrect;
+    IBOutlet UIButton * rightButton;
+    IBOutlet UIButton * leftButton;
+    NSMutableArray * numberImageArray;
+    NSMutableArray * appleImageArray;
+    NSMutableArray * orangeImageArray;
+    NSMutableArray * fishImageArray;
+    NSInteger leftTotalAmount;
+    NSInteger rightTotalAmount;
     
 }
--(void)LoadPictures;
--(IBAction)left_ButtonClicked:(id)sender;
--(IBAction)right_ButtonClicked:(id)sender;
-@property(nonatomic,strong) IBOutlet UILabel *Display_User_Correct;
-@property(nonatomic,strong) IBOutlet UIButton *Right_Button;
-@property(nonatomic,strong) IBOutlet UIButton *Left_Button;
-@property(nonatomic,strong) NSMutableArray *ImageArray;
-@property(nonatomic) NSInteger Left_Total_Fish;
-@property(nonatomic) NSInteger Right_Total_Fish;
+-(void)loadPictures;
+-(IBAction)left_button_clicked:(id)sender;
+-(IBAction)right_button_clicked:(id)sender;
+@property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
+@property(nonatomic,strong) IBOutlet UIButton *rightButton;
+@property(nonatomic,strong) IBOutlet UIButton *leftButton;
+@property(nonatomic,strong) NSMutableArray *numberImageArray;
+@property(nonatomic,strong) NSMutableArray * orangeImageArray;
+@property(nonatomic,strong) NSMutableArray * appleImageArray;
+@property(nonatomic,strong) NSMutableArray * fishImageArray;
+@property(nonatomic) NSInteger leftTotalAmount;
+@property(nonatomic) NSInteger rightTotalAmount;
           
 @end
