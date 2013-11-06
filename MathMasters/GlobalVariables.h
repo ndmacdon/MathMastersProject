@@ -19,7 +19,7 @@
 @interface GlobalVariables : NSObject
 {
     int globalDifficultyLevel; // normal (1) and Hard (2)
-    int globalCurrentGame;  // 1 = Counting stars and 2 = hard counting stars
+    int globalCurrentGame;  // 1 = Counting stars and 2 = hard counting stars, 3 = apples to oranges , 4 = hard apples to oranges
     NSString *currentUser;
 }
 @property (nonatomic) int globalDifficultyLevel;
