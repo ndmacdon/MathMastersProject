@@ -44,6 +44,7 @@ static sqlite3_stmt *statement = nil;
     if (!sharedInstance) {
         sharedInstance = [[super allocWithZone:NULL]init];
         [sharedInstance createDB];
+        [sharedInstance populateDB];
     }
     return sharedInstance;
 }
@@ -60,13 +61,30 @@ static sqlite3_stmt *statement = nil;
     (username_pk TEXT PRIMARY KEY, \
     password TEXT, secret TEXT);\
     \
+    CREATE TABLE IF NOT EXISTS games\
+    (game_pk TEXT PRIMARY KEY);\
+    \
     CREATE TABLE IF NOT EXISTS tutorials\
     (username_fk TEXT, \
-    tutorial_name_pk TEXT, \
-    FOREIGN KEY(username_fk) REFERENCES USERS(username_pk), \
-    PRIMARY KEY (username_fk, tutorial_name_pk))";
-    // TODO: ADD OTHER TABLES NEEDED HERE....
+    game_fk TEXT, \
+    FOREIGN KEY(username_fk) REFERENCES users(username_pk), \
+    FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
+    PRIMARY KEY (username_fk, game_fk));\
+    \
+    CREATE TABLE IF NOT EXISTS sessionStats\
+    (game_fk TEXT,\
+    username_fk TEXT,\
+    session_date_ck TEXT,\
+    session_length INTEGER,\
+    consecutive_wins INTEGER,\
+    wins INTEGER,\
+    losses INTEGER,\
+    highest_number,\
+    FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
+    FOREIGN KEY(username_fk) REFERENCES users(username_pk),\
+    PRIMARY KEY (game_fk, username_fk, session_date_ck))";
     
+    // TODO: ADD OTHER TABLES NEEDED HERE....
     
     // Get the documents directory:
     dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -128,6 +146,35 @@ static sqlite3_stmt *statement = nil;
     sqlite3_close(database); // Close the database...
     return success;
 }
+
+// Populate the DataBase with critical data:
+-(BOOL) populateDB {
+    BOOL added = FALSE; // Was the user added?
+    NSString *insertSQL =
+                            @"INSERT INTO games \
+                            (game_pk) \
+                            VALUES\
+                            (\"CountingStarsViewController\"),\
+                            (\"CountingStarsHard\"),\
+                            (\"MakingCents\"),\
+                            (\"MakingCentsHard\"),\
+                            (\"SuperShopper\"),\
+                            (\"SuperShopperHard\"),\
+                            (\"Clockwork\"),\
+                            (\"ClockworkHard\"),\
+                            (\"ApplesOranges\"),\
+                            (\"ApplesOrangesHard\")";
+    
+    // IF statement executes without error:
+    if ([self query:insertSQL result:SQLITE_DONE]) {
+        added = TRUE;
+    }
+    else { NSLog(@"Unable to populate Database"); }
+    
+    sqlite3_reset(statement);
+    return added;
+}
+
 
 // Add a user to the database:
 -(BOOL) addUser:(NSString *)username password:(NSString *)password secret:(NSString *)secret {
@@ -208,9 +255,9 @@ static sqlite3_stmt *statement = nil;
     BOOL exists = FALSE; // Is there a record of the user completing this tutorial?
     // Prepare our SQL statement:
     NSString *querySQL = [NSString stringWithFormat:
-                          @"SELECT username_fk tutorial_name_pk\
+                          @"SELECT username_fk game_fk\
                             FROM tutorials \
-                            WHERE username_fk=\"%@\" AND tutorial_name_pk=\"%@\"", username, tutorial];
+                            WHERE username_fk=\"%@\" AND game_fk=\"%@\"", username, tutorial];
     
     // IF query returns any result:
     if ([self query:querySQL result:SQLITE_ROW]) {
@@ -230,7 +277,7 @@ static sqlite3_stmt *statement = nil;
     BOOL completed = FALSE; // Did the update succeed?
     NSString *insertSQL = [NSString stringWithFormat:
                            @"INSERT INTO tutorials \
-                           (username_fk, tutorial_name_pk) \
+                           (username_fk, game_fk) \
                            VALUES (\"%@\", \"%@\")",
                            username, tutorial];
     
@@ -242,6 +289,94 @@ static sqlite3_stmt *statement = nil;
     
     sqlite3_reset(statement);
     return completed;
+}
+
+
+-(BOOL) logStatsFor:(NSString *)gameID
+           withDate:(NSDate *)sessionDate
+           withUser:(NSString *)username
+      sessionLength:(int)sessionLength
+    consecutiveWins:(int)consecutiveWins
+               wins:(int)wins
+             losses:(int)losses
+            highest:(int)highestNumber {
+    
+    BOOL completed = FALSE; // Did the update succeed?
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY/MM/dd hh:mm:ss"];
+    
+    NSString *stringDate = [dateFormatter stringFromDate: sessionDate];
+    
+    
+    NSString *insertSQL = [NSString stringWithFormat:
+                           @"INSERT INTO sessionStats \
+                           (game_fk, username_fk, session_date_ck, \
+                           session_length, consecutive_wins, wins, \
+                           losses,highest_number) \
+                           VALUES \
+                           (\"%@\", \"%@\", \"%@\", \
+                           \"%d\", \"%d\", \"%d\", \
+                           \"%d\", \"%d\")",
+                           gameID, username, stringDate,
+                           sessionLength, consecutiveWins, wins,
+                           losses, highestNumber];
+    
+    if ([self query:insertSQL result:SQLITE_DONE]) {
+        completed = TRUE;
+    }
+    else { NSLog(@"Session could not be recorded"); }
+    
+    sqlite3_reset(statement);
+    return completed;
+}
+
+// Return the array of session results for this [user] and [game] since [start]:
+-(NSArray*) getStatsBefore:(NSString *)start
+                  forGame:(NSString *)gameID
+                aboutUser:(NSString *)username {
+    
+    NSArray *results; // Is there a record of the user completing this tutorial?
+    // Prepare our SQL statement:
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"SELECT session_date_ck session_length \
+                          FROM sessionStats \
+                          WHERE \
+                          username_fk=\"%@\" AND \
+                          game_fk=\"%@\"",
+                          username,
+                          gameID];
+    
+    
+    /*
+    CREATE TABLE IF NOT EXISTS sessionStats\
+    (game_fk TEXT,\
+     username_fk TEXT,\
+     session_date_ck TEXT,\
+     session_length INTEGER,\
+     consecutive_wins INTEGER,\
+     wins INTEGER,\
+     losses INTEGER,\
+     highest_number,\
+     FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
+     FOREIGN KEY(username_fk) REFERENCES users(username_pk),\
+     PRIMARY KEY (game_fk, username_fk, session_date_ck))";*/
+    
+    
+    
+    // IF query returns any result:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        
+        // Load results into an array....
+        
+        
+    }
+    else {
+        NSLog(@"User '%@' has no session results since '%@' for '%@'",
+              username, start, gameID);
+    }
+    
+    sqlite3_reset(statement); // Reset the returned results...
+    return results;
 }
 
 @end

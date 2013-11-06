@@ -39,4 +39,24 @@
 -(BOOL) completeTutorial:(NSString*)username tutorial:(NSString*)tutorial;
 -(BOOL) login:(NSString*)username password:(NSString*)password;
 
+-(BOOL) logStatsFor:(NSString*)gameID
+           withDate:(NSDate*)sessionDate
+           withUser:(NSString*)username
+      sessionLength:(int)sessionLength
+    consecutiveWins:(int)consecutiveWins
+               wins:(int)wins
+             losses:(int)losses
+            highest:(int)highestNumber;
+
+-(NSArray*) getStatsBefore:(NSString*)start
+                  forGame:(NSString*)gameID
+                aboutUser:(NSString*)username;
+
 @end
+
+
+
+
+
+
+

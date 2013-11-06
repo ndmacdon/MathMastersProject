@@ -20,7 +20,7 @@
 
 
 @implementation OptionsViewController
-@synthesize changeDifficultyButton;
+@synthesize changeDifficultyButton, statisticsViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +31,7 @@
     return self;
 }
 // changes globalDifficultyLevel every time button is clicked
+
 -(IBAction)change_difficulty:(id)sender
 {
     // if normal (1) switch to hard (2)
@@ -48,9 +49,16 @@
         optionsSingle = [GlobalVariables singleObj];
         optionsSingle.globalDifficultyLevel = 1;
     }
-    
-    
-    
+}
+
+// Pop statisticsViewController onto the Navigation Stack:
+-(IBAction)statistics_clicked:(id)sender
+{
+    if(!self.statisticsViewController)
+    {
+        self.statisticsViewController = [[StatisticsViewController alloc] init];
+    }
+    [self.navigationController pushViewController:self.statisticsViewController animated:YES];
 }
 
 - (void)viewDidLoad
@@ -65,3 +73,13 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+

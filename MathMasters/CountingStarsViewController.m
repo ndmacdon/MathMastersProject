@@ -16,9 +16,22 @@
 
 #import "CountingStarsViewController.h"
 
-@implementation CountingStarsViewController
-@synthesize starsUserMustCount, randomInteger, totalGuessed, totalCorrect,displayUserCorrect;
-@synthesize btnImage,tutorialCountingStarsViewController;
+@implementation CountingStarsViewController{
+    NSDate *endTime;
+    NSDate *startTime;
+    NSInteger totalIncorrect;
+    NSInteger highestNumber;
+    NSInteger consecutiveWins;
+    NSInteger winStreak;
+    NSInteger randomInteger;
+    NSInteger totalGuessed;
+    NSInteger totalCorrect;
+}
+
+@synthesize starsUserMustCount, randomInteger, totalGuessed, totalCorrect, displayUserCorrect;
+@synthesize btnImage,tutorialCountingStarsViewController, sessionStatisticsViewController;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +46,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
     optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
+
     
     // Check if user has viewed this tutorial:
     viewed = [[DBManager getSharedInstance]hasCompletedTutorial:optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
@@ -47,6 +61,8 @@
         [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
         
     }
+    
+    [self initializeGame]; // Setup the game for play...
 }
 
 // Before showing interface to user: initialize some values
@@ -54,22 +70,36 @@
 {
     [super viewDidLoad];
     
-    randomInteger = arc4random() % 10 + 1 ;   // equals a random integer from 1 - 10
-    starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    NSLog(@"Hi, memory error");
+    NSLog(@"Memory error logged");
 }
 
 // IF user clicks done: check correctness
 -(IBAction)is_user_correct:(id)sender
 {
+
+    
+    // IF the user has completed enough rounds:
     if(totalGuessed == randomInteger) 
     {
-        displayUserCorrect.text = [NSString stringWithFormat:@"Correct !!!"];
+        winStreak++; // Increase the current streak...
+        
+        // IF winStreak is the longest set of consecutiveWins:
+        if (winStreak > consecutiveWins) {
+            consecutiveWins = winStreak;
+        }
+        
+        // IF guessed is the highest encountered number:
+        if (totalGuessed > highestNumber) {
+            highestNumber = totalGuessed;
+        }
+        
+        displayUserCorrect.text = [NSString stringWithFormat:@"Correct!"];
         
         NSInteger randomTemp = arc4random() % 10 + 1 ;   
         randomInteger = randomTemp;
@@ -77,17 +107,62 @@
         
         
         [self add_total_correct]; // add one to add_total_correct
-        if(self.totalCorrect == 5)  // if user has gotten 5 correct, game has ended
+        
+        // IF user completes 5 rounds: Record Stats and end the game
+        if(self.totalCorrect == 5)
         {
-            [self.navigationController popViewControllerAnimated:YES];
+            [self endSession];
+            
+            // The sessionStatistics view will return to this line if the user selected retry...
+            
+            [self initializeGame]; // Reset the game for another session...
         }
         
     }
     else  // user Incorrect
     {
         displayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
+        
+        totalIncorrect++;
+        winStreak = 0; // Reset the current winStreak...
     }
 }
+
+// Setup for a play session:
+-(void)initializeGame {
+    startTime = [NSDate date]; // Load the current time into startTime...
+    randomInteger = arc4random() % 10 + 1 ;   // equals a random integer from 1 - 10
+    starsUserMustCount.text =[NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
+    totalCorrect = 0;
+    totalIncorrect = 0;
+    highestNumber = 0;
+    winStreak = 0;
+    consecutiveWins = 0;
+    
+    
+}
+
+// End the current session and load the Session Statistics Screen:
+-(void)endSession {
+    endTime = [NSDate date]; // Load current time into endTime...
+    NSInteger runningTime = [endTime timeIntervalSinceDate:startTime]; // Calculate the difference in seconds...
+    
+    // Log the session results:
+    [[DBManager getSharedInstance] logStatsFor:NSStringFromClass([self class])
+                                      withDate:startTime
+                                      withUser:optionsSingle.currentUser
+                                 sessionLength:runningTime
+                               consecutiveWins:consecutiveWins
+                                          wins:totalCorrect
+                                        losses:totalIncorrect
+                                       highest:highestNumber];
+    
+    // Initialize the sessionStatisticsViewController and pop it onto the Navigation Stack:
+    self.sessionStatisticsViewController = [[SessionStatisticsViewController alloc] init];
+    self.sessionStatisticsViewController.completionTime = runningTime;
+    [self.navigationController pushViewController:self.sessionStatisticsViewController animated:TRUE];
+}
+
 
 // Launch this game's tutorial:
 -(IBAction)normal_tutorial_clicked:(id)sender

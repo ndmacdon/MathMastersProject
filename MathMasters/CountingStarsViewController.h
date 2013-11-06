@@ -16,6 +16,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
+#import "SessionStatisticsViewController.h"
 #import "DBManager.h"
 #import "GlobalVariables.h"
 
@@ -24,9 +25,6 @@
     GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
-    NSInteger randomInteger;
-    NSInteger totalGuessed;
-    NSInteger totalCorrect;
     UIImage *btnImage;
 }
 
@@ -46,7 +44,7 @@
 @property(nonatomic,strong) UIImage *btnImage;
 
 @property(nonatomic,strong) TutorialCountingStarsViewController * tutorialCountingStarsViewController;
-
+@property(nonatomic, strong) SessionStatisticsViewController * sessionStatisticsViewController;
 
 @end
 

@@ -15,7 +15,6 @@
  ****/
 
 #import "LogInViewController.h"
-#import "GlobalVariables.h"
 
 @interface  LogInViewController ()
 
