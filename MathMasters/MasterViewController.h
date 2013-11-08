@@ -20,6 +20,7 @@
 #import "CountingStarsViewController.h"
 #import "HardCountingStarsViewController.h"
 #import "FishToFishViewController.h"
+#import "HardApplesToOrangesViewController.h"
 #import "MakingCentsViewController.h"
 #import "OptionsViewController.h"
 #import "LogInViewController.h"
@@ -39,6 +40,7 @@
 @property (nonatomic,strong) CountingStarsViewController *countingStarsViewController;
 @property(nonatomic,strong) HardCountingStarsViewController * hardCountingViewController;
 @property (nonatomic,strong) FishToFishViewController *fishToFishViewController;
+@property(nonatomic,strong) HardApplesToOrangesViewController *hardApplesToOrangesViewController;
 @property(nonatomic,strong) MakingCentsViewController * makingCentsViewController;
 
 // Utility ViewControllers:

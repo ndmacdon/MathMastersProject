@@ -36,7 +36,7 @@
 {
     currentIndex = 0;
     optionsSingle = [GlobalVariables singleObj];
-    if(optionsSingle.globalDifficultyLevel == 1) // normal version of counting stars, add tutorial images
+    if(optionsSingle.globalCurrentGame == 1) // normal version of counting stars, add tutorial images
     {
         self.arrayPictureStrings = [NSMutableArray arrayWithCapacity:10];
         [self.arrayPictureStrings addObject:[UIImage imageNamed:@"normal_cs_Tutorial1.png"]];
@@ -50,7 +50,7 @@
         [self.arrayPictureStrings addObject:[UIImage imageNamed:@"normal_cs_Tutorial9.png"]];
     }
     
-    if(optionsSingle.globalDifficultyLevel == 2) //hard version of counting stars, add tutorial images
+    if(optionsSingle.globalCurrentGame == 2) //hard version of counting stars, add tutorial images
     {
         self.arrayPictureStrings = [NSMutableArray arrayWithCapacity:10];
         [self.arrayPictureStrings addObject:[UIImage imageNamed:@"hard_cs_Tutorial1.png"]];
