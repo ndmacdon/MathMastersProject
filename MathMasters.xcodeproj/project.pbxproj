@@ -61,7 +61,6 @@
 		9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */; };
 		9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */; };
 		9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF11B181A0857000C81E6 /* background-spring.png */; };
-		9A87BA691828CE32005BFB01 /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */; };
 		9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
@@ -75,7 +74,6 @@
 		9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* MasterViewController.m */; };
 		9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* MasterViewController.xib */; };
 		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
-		9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */; };
 		9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */; };
 		9AA25D11181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */; };
 		9AB941151801AF91003F79FE /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* whiteStar.png */; };
@@ -104,15 +102,15 @@
 		9AF23AD5181DE69B003DA89C /* hard_cs_Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */; };
 		9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE820918036F370051DFC0 /* FishToFishViewController.m */; };
 		9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */; };
+		EB4C5A96182C9AB00072ABAC /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */; };
 		EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */; };
 		EB67AF9918283B3700AA3FD9 /* SessionStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB67AF9718283B3600AA3FD9 /* SessionStatisticsViewController.m */; };
-		EB67AF9A18283B3700AA3FD9 /* SessionStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB67AF9818283B3700AA3FD9 /* SessionStatisticsViewController.xib */; };
 		EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */; };
 		EB8C09B5181B6D4F005CB751 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8C09B1181B6D4F005CB751 /* CreateAccountViewController.xib */; };
 		EB8C09B6181B6D4F005CB751 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C09B3181B6D4F005CB751 /* DBManager.m */; };
 		EB8C09B8181B6E29005CB751 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */; };
+		EB9DFB91182C9C8D00C483F6 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */; };
 		EBAA44741826F7C10038DA74 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA44721826F7C10038DA74 /* StatisticsViewController.m */; };
-		EBAA44751826F7C10038DA74 /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAA44731826F7C10038DA74 /* StatisticsViewController.xib */; };
 		EBAA44771826FBEE0038DA74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44761826FBEE0038DA74 /* QuartzCore.framework */; };
 		EBAA44C81826FDC10038DA74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44C71826FDC10038DA74 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -197,7 +195,6 @@
 		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
 		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
 		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
-		9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
 		9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialCountingStarsViewController.h; sourceTree = "<group>"; };
 		9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialCountingStarsViewController.m; sourceTree = "<group>"; };
 		9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialCountingStarsViewController.xib; sourceTree = "<group>"; };
@@ -239,6 +236,7 @@
 		EB8C09B2181B6D4F005CB751 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		EB8C09B3181B6D4F005CB751 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
 		EBAA44711826F7C10038DA74 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		EBAA44721826F7C10038DA74 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		EBAA44731826F7C10038DA74 /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
@@ -478,10 +476,10 @@
 				9A955066180179F400DFF8E4 /* AppDelegate.m */,
 				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
 				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
-				9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */,
 				EB8C09AF181B6D4F005CB751 /* CreateAccountViewController.h */,
 				EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */,
 				EB8C09B1181B6D4F005CB751 /* CreateAccountViewController.xib */,
+				EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */,
 				EB8C09B2181B6D4F005CB751 /* DBManager.h */,
 				EB8C09B3181B6D4F005CB751 /* DBManager.m */,
 				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
@@ -500,7 +498,6 @@
 				9A955071180179F400DFF8E4 /* MasterViewController.xib */,
 				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
 				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
-				9A95507B18017C9100DFF8E4 /* CountingStarsViewController.xib */,
 				9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */,
 				9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */,
 				9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */,
@@ -695,7 +692,6 @@
 				9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */,
 				9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */,
 				9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */,
-				9A95507D18017C9100DFF8E4 /* CountingStarsViewController.xib in Resources */,
 				9AB941151801AF91003F79FE /* whiteStar.png in Resources */,
 				9AB941171801B002003F79FE /* yellowStar.png in Resources */,
 				9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */,
@@ -773,6 +769,7 @@
 				9A4CA675182526430012E565 /* fish9.png in Resources */,
 				9A4CA676182526430012E565 /* fish10.png in Resources */,
 				9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */,
+				EB9DFB91182C9C8D00C483F6 /* CountingStarsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4C5A96182C9AB00072ABAC /* HardApplesToOrangesViewController.m in Sources */,
 				9A955063180179F400DFF8E4 /* main.m in Sources */,
 				9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */,
 				9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */,
