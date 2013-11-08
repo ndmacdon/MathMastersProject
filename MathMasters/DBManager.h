@@ -48,8 +48,7 @@
              losses:(int)losses
             highest:(int)highestNumber;
 
--(NSArray*) getStatsBefore:(NSString*)start
-                  forGame:(NSString*)gameID
+-(NSArray*) getStatsForGame:(NSString*)gameID
                 aboutUser:(NSString*)username;
 
 @end

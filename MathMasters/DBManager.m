@@ -139,7 +139,10 @@ static sqlite3_stmt *statement = nil;
             else { NSLog(@"Query returned no rows."); }
         }
         else {
-            NSLog(@"Query caused an error on database."); }
+            // Log the SQLite Error...
+            NSLog(@"%s SQLITE_ERROR '%s' (%1d)", __FUNCTION__, sqlite3_errmsg(database), sqlite3_errcode(database));
+        }
+        
     }
     else { NSLog(@"Database failed to open."); }
     
@@ -155,15 +158,15 @@ static sqlite3_stmt *statement = nil;
                             (game_pk) \
                             VALUES\
                             (\"CountingStarsViewController\"),\
-                            (\"CountingStarsHard\"),\
-                            (\"MakingCents\"),\
-                            (\"MakingCentsHard\"),\
-                            (\"SuperShopper\"),\
-                            (\"SuperShopperHard\"),\
-                            (\"Clockwork\"),\
-                            (\"ClockworkHard\"),\
-                            (\"ApplesOranges\"),\
-                            (\"ApplesOrangesHard\")";
+                            (\"HardCountingStarsViewController\"),\
+                            (\"MakingCentsViewController\"),\
+                            (\"HardMakingCentsViewController\"),\
+                            (\"SuperShopperViewController\"),\
+                            (\"HardSuperShopperViewController\"),\
+                            (\"ClockworkViewController\"),\
+                            (\"HardClockworkViewController\"),\
+                            (\"ApplesOrangesViewController\"),\
+                            (\"HardApplesOrangesViewController\")";
     
     // IF statement executes without error:
     if ([self query:insertSQL result:SQLITE_DONE]) {
@@ -330,49 +333,69 @@ static sqlite3_stmt *statement = nil;
     return completed;
 }
 
+/*
+ CREATE TABLE IF NOT EXISTS sessionStats\
+ (game_fk TEXT,\
+ username_fk TEXT,\
+ session_date_ck TEXT,\
+ session_length INTEGER,\
+ consecutive_wins INTEGER,\
+ wins INTEGER,\
+ losses INTEGER,\
+ highest_number,\
+ FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
+ FOREIGN KEY(username_fk) REFERENCES users(username_pk),\
+ PRIMARY KEY (game_fk, username_fk, session_date_ck))";*/
+
 // Return the array of session results for this [user] and [game] since [start]:
--(NSArray*) getStatsBefore:(NSString *)start
-                  forGame:(NSString *)gameID
+-(NSArray*) getStatsForGame:(NSString *)gameID
                 aboutUser:(NSString *)username {
     
-    NSArray *results; // Is there a record of the user completing this tutorial?
+    NSMutableArray *results = [[NSMutableArray alloc] init]; // Is there a record of the user completing this tutorial?
+    NSString *nextResult; // The next result we will add to our NSMutable array.
+    NSInteger maxResults = 30; // The maximum number of results we want to return...
+    NSInteger numResults = 0; // How many results have we returned?
+    
     // Prepare our SQL statement:
     NSString *querySQL = [NSString stringWithFormat:
-                          @"SELECT session_date_ck session_length \
+                          @"SELECT session_date_ck, session_length \
                           FROM sessionStats \
                           WHERE \
                           username_fk=\"%@\" AND \
-                          game_fk=\"%@\"",
+                          game_fk=\"%@\"\
+                          ORDER BY session_date_ck DESC, session_length",
                           username,
                           gameID];
-    
-    
-    /*
-    CREATE TABLE IF NOT EXISTS sessionStats\
-    (game_fk TEXT,\
-     username_fk TEXT,\
-     session_date_ck TEXT,\
-     session_length INTEGER,\
-     consecutive_wins INTEGER,\
-     wins INTEGER,\
-     losses INTEGER,\
-     highest_number,\
-     FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
-     FOREIGN KEY(username_fk) REFERENCES users(username_pk),\
-     PRIMARY KEY (game_fk, username_fk, session_date_ck))";*/
-    
-    
     
     // IF query returns any result:
     if ([self query:querySQL result:SQLITE_ROW]) {
         
-        // Load results into an array....
+        // querySQL advances past the first result, for cleanliness we reset to the first record returned...
         
+        // Go back to the first result:
+        sqlite3_reset(statement);
+        
+        // Load results into an array....
+        //WHILE there are any rows returned AND we have less than 30 rows:
+        while (sqlite3_step(statement) == SQLITE_ROW && numResults < maxResults) {
+            
+            // Add a date:
+            nextResult =
+            [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
+            [results addObject:nextResult];
+            // Add a sessionLength:
+            nextResult =
+            [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+            [results addObject:nextResult];
+            
+            
+            numResults++;
+        }
         
     }
     else {
-        NSLog(@"User '%@' has no session results since '%@' for '%@'",
-              username, start, gameID);
+        NSLog(@"User '%@' has no session results for '%@'",
+              username, gameID);
     }
     
     sqlite3_reset(statement); // Reset the returned results...
