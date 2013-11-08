@@ -42,12 +42,15 @@ NSArray *tempDays = nil;
     [self getDataFor:@"CountingStarsViewController"];
     gameSelected = @"CountingStarsViewController"; // Appears as the graph title
     [self initPlot];
+    hardModeSwitch.on = FALSE;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     optionsSingle = [GlobalVariables singleObj];
+
 }
 
 - (void)didReceiveMemoryWarning {

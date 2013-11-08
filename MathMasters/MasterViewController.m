@@ -43,18 +43,18 @@
 -(IBAction)cstars_clicked:(id)sender
 {
     // Check difficulty and launch appropriate version:
-    if(optionsSingle.globalDifficultyLevel ==1)
+    if(optionsSingle.globalDifficultyLevel >= 1)
     {
         optionsSingle.globalCurrentGame =1;
         self.countingStarsViewController = [[CountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.countingStarsViewController animated:YES] ;
     }
-    else
+    /*else
     {
         optionsSingle.globalCurrentGame = 2;
         self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
         [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
-    }
+    }*/
 }
 
 // Launch FishToFish ViewController:

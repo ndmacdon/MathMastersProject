@@ -16,13 +16,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TutorialCountingStarsViewController.h"
-#import "SessionStatisticsViewController.h"
-#import "DBManager.h"
-#import "GlobalVariables.h"
+#import "GameViewController.h"
 
-@interface CountingStarsViewController : UIViewController
+@interface CountingStarsViewController : GameViewController
 {
-    GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
+    IBOutlet UIView *starMat;
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
     UIImage *btnImage;
@@ -32,19 +30,12 @@
 -(IBAction)is_user_correct:(id)sender;
 -(IBAction)normal_tutorial_clicked:(id)sender;
 
--(void)add_total_guessed;
--(void)subtract_total_guessed;
--(void)add_total_correct;
 
 @property (nonatomic,strong) IBOutlet UILabel *starsUserMustCount;
 @property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
 @property(nonatomic) NSInteger randomInteger;
-@property(nonatomic) NSInteger totalGuessed;
-@property(nonatomic) NSInteger totalCorrect;
 @property(nonatomic,strong) UIImage *btnImage;
-
 @property(nonatomic,strong) TutorialCountingStarsViewController * tutorialCountingStarsViewController;
-@property(nonatomic, strong) SessionStatisticsViewController * sessionStatisticsViewController;
 
 @end
 
