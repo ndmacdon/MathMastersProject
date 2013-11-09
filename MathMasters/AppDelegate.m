@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];    
-    self.viewController = [[MasterViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[MasterViewController alloc] initWithNibName:@"MasterViewController" bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
     

@@ -25,6 +25,7 @@
     fishToFishViewController,
     hardApplesToOrangesViewController,
     makingCentsViewController,
+    clockWorkViewController,
     optionsViewController,
     loginViewController,
     createAccountViewController;
@@ -124,6 +125,15 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)clockWork_clicked:(id)sender {
+    // Check difficulty and launch appropriate version:
+    if(optionsSingle.globalDifficultyLevel >= 1)
+    {
+        optionsSingle.globalCurrentGame =1;
+        self.clockWorkViewController = [[ClockWorkViewController alloc] init];
+        [self.navigationController pushViewController:self.clockWorkViewController animated:YES] ;
+    }
+}
 @end
 
 
