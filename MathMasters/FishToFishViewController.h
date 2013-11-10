@@ -1,8 +1,3 @@
-
-
-// !!!THIS FILE IS NOT INTENDED FOR MARKING IN THIS VERSION. IT IS A PLACEHOLDER ONLY!!!
-
-
 /****
  *
  * Filename:    FishToFishViewController.h
@@ -49,5 +44,5 @@
 @property(nonatomic) NSInteger leftTotalAmount;
 @property(nonatomic) NSInteger rightTotalAmount;
 @property(nonatomic) NSInteger totalCorrect;
-          
+
 @end
