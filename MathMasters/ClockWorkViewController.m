@@ -11,7 +11,7 @@
 
 
 @implementation ClockWorkViewController
-@synthesize correctTime,timeGuessed,hourGuessed,minuteGuessed, hourCorrectAnswer,minuteCorrectAnswer,rotationBackMinute,rotationBackHour;
+@synthesize correctTime,timeGuessed,hourGuessed,minuteGuessed, hourCorrectAnswer,minuteCorrectAnswer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,79 +60,66 @@
     if(hourHandLocation ==0)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI / 6); // 1
-        rotationBackHour = (M_PI * 11 /6);
         hourCorrectAnswer = [NSString stringWithFormat:@"1"];
     }
     if(hourHandLocation ==1)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI / 3); // 2
-        rotationBackHour = (M_PI * 10/6);
         hourCorrectAnswer = [NSString stringWithFormat:@"2"];
     }
     if(hourHandLocation ==2)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI / 2); // 3
-        rotationBackHour = (M_PI * 3/2);
         hourCorrectAnswer = [NSString stringWithFormat:@"3"];
     }
     if(hourHandLocation ==3)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI *2 /3); // 4
-        rotationBackHour = (M_PI * 4/3);
         hourCorrectAnswer = [NSString stringWithFormat:@"4"];
     }
     if(hourHandLocation ==4)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 5 / 6 ); // 5
-        rotationBackHour = (M_PI * 7/6);
         hourCorrectAnswer = [NSString stringWithFormat:@"5"];
     }
     if(hourHandLocation ==5)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI); // 6
-        rotationBackHour = (M_PI);
         hourCorrectAnswer = [NSString stringWithFormat:@"6"];
     }
     if(hourHandLocation ==6)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 7 / 6); // 7
-        rotationBackHour = (M_PI * 5/6);
         hourCorrectAnswer = [NSString stringWithFormat:@"7"];
     }
     if(hourHandLocation ==7)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 4 /3); // 8
-        rotationBackHour = (M_PI * 2/3);
         hourCorrectAnswer = [NSString stringWithFormat:@"8"];
     }
     if(hourHandLocation ==8)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 3 / 2); // 9
-        rotationBackHour = (M_PI /2);
         hourCorrectAnswer = [NSString stringWithFormat:@"9"];
     }
     if(hourHandLocation ==9)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 10 /6); // 10
-       rotationBackHour = (M_PI /3);
         hourCorrectAnswer = [NSString stringWithFormat:@"10"];
     }
     if(hourHandLocation ==10)
     {
         hourHand.transform =CGAffineTransformMakeRotation(M_PI * 11 /6); // 11
-        rotationBackHour = (M_PI /6);
         hourCorrectAnswer = [NSString stringWithFormat:@"11"];
     }
     if(hourHandLocation ==11)  // 12
     {
-        rotationBackHour = 0;
          hourCorrectAnswer = [NSString stringWithFormat:@"12"];
     }
     
     
    if(miniuteHandLocation == 0)  // 0 miniute 
    {
-       rotationBackMinute = 0;
        minuteCorrectAnswer = [NSString stringWithFormat:@"0"];
     
    }
@@ -140,19 +127,16 @@
    {
        minuteHand.transform = CGAffineTransformMakeRotation(M_PI /2);
        minuteCorrectAnswer = [NSString stringWithFormat:@"1"];
-       rotationBackMinute = (M_PI * 3/2);
    }
    if(miniuteHandLocation == 2)  // 30 miniute
    {
         minuteHand.transform = CGAffineTransformMakeRotation(M_PI);
         minuteCorrectAnswer = [NSString stringWithFormat:@"2"];
-       rotationBackMinute = (M_PI);
    }
    if(miniuteHandLocation == 3)  // 45 miniute
    {
        minuteHand.transform = CGAffineTransformMakeRotation(M_PI * 3 /2);
        minuteCorrectAnswer = [NSString stringWithFormat:@"3"];
-       rotationBackMinute = (M_PI /2);
    }
 
         
@@ -161,8 +145,14 @@
 // Reset hands of the block after user guesses correct
 -(void)reset_hands
 {
-    hourHand.transform = CGAffineTransformMakeRotation(rotationBackHour);
-    minuteHand.transform = CGAffineTransformMakeRotation(rotationBackMinute);
+    if(![hourCorrectAnswer isEqual:@"3"]) // if not equal to 12 (don't need to reset if 12)
+    {
+        hourHand.transform = CGAffineTransformMakeRotation(0);
+    }
+    if(![minuteCorrectAnswer isEqual:@"0"])  // if not equal to 00 ( dont neeed to reset if minutes are 00)
+    {
+        minuteHand.transform = CGAffineTransformMakeRotation(0);
+    }
 }
 
 // tell the picker how many rows are available for a given component
@@ -264,6 +254,7 @@
     
     return sectionWidth;
 }
+
 
 -(void)TestDisplay
 {

@@ -15,8 +15,7 @@
     IBOutlet UIImageView *minuteHand;
     IBOutlet UIImageView *hourHand;
     IBOutlet UILabel *resultLabel;
-    float rotationBackHour;
-    float rotationBackMinute;
+
     NSString *correctTime;
     
     NSString * hourGuessed;
@@ -44,6 +43,5 @@
 @property(nonatomic,strong) NSString * minuteGuessed;
 @property(nonatomic,strong) NSString * hourCorrectAnswer;
 @property(nonatomic,strong) NSString * minuteCorrectAnswer;
-@property(nonatomic) float rotationBackHour;
-@property(nonatomic) float rotationBackMinute;
+
 @end
