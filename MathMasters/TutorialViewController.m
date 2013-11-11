@@ -35,9 +35,12 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    self.navigationItem.hidesBackButton = YES;
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:FALSE animated:animated];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:TRUE animated:animated];
     currentIndex = 0;   // Set to first image.
     [arrayPictureStrings removeAllObjects];
     arrayPictureStrings = [[NSMutableArray alloc] init]; // ReInitialize the picture array...
