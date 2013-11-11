@@ -74,7 +74,7 @@ NSArray *tempDays = nil;
             gameSelected = @"SuperShopperViewController";
             break;
         case 3:
-            gameSelected = @"ClockworkViewController";
+            gameSelected = @"ClockWorkViewController";
             break;
         case 4:
             gameSelected = @"FishToFishViewController";

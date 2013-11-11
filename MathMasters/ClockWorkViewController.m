@@ -10,7 +10,13 @@
 
 
 
-@implementation ClockWorkViewController
+@implementation ClockWorkViewController {
+    NSString *correctTime;
+    NSString *hourGuessed;
+    NSString *minuteGuessed;
+    NSString *hourCorrectAnswer;
+    NSString *minuteCorrectAnswer;
+}
 @synthesize correctTime,timeGuessed,hourGuessed,minuteGuessed, hourCorrectAnswer,minuteCorrectAnswer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,7 +28,7 @@
     return self;
 }
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
     
     // Check if user has viewed this tutorial:
@@ -47,10 +53,8 @@
     }
 
     
-    //[self initializeGame]; // Setup the game for play...
+    [self initializeGame]; // Setup the game for play...
 }
-
-
 
 // function used to randomly move hands of clock and set answers
 -(void)normal_move_hands
@@ -158,12 +162,10 @@
 // tell the picker how many rows are available for a given component
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     NSUInteger numRows;
-    if(component == 0)
-    {
+    if(component == 0) {
         numRows = 12;
     }
-    if(component == 1)
-    {
+    if(component == 1) {
         numRows = 1;
     }
     if(component ==2)
@@ -238,47 +240,33 @@
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     
     int sectionWidth;
-    if(component == 0)
-    {
+    if(component == 0) {
         sectionWidth = 100;
     }
-    else if(component == 1)
-    {
+    else if(component == 1) {
         sectionWidth = 45;
     }
-    else 
-    {
+    else {
         sectionWidth = 100;
     }
-        
     
     return sectionWidth;
 }
 
 
--(void)TestDisplay
-{
+-(void)TestDisplay {
     correcthour.text = [NSString stringWithFormat:@"%@",hourCorrectAnswer];
     correctminute.text = [NSString stringWithFormat:@"%@",minuteCorrectAnswer];
     guesshour.text = [NSString stringWithFormat:@"%@",hourGuessed];
     guessminute.text = [NSString stringWithFormat:@"%@", minuteGuessed];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [self normal_move_hands];
     minuteGuessed = [NSString stringWithFormat:@"0"];   // initialize values
     hourGuessed = [NSString stringWithFormat:@"1"];
     [self TestDisplay];
-    
-    /*
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:3];
-    hourHand.alpha = 0;
-    minuteHand.alpha = 0;
-    [UIView commitAnimations];
-     */
     
     // create UIPickerView 
     UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
@@ -287,74 +275,50 @@
     [self.view addSubview:myPickerView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)checkAnswer:(id)sender
-{
-    [self TestDisplay];
+- (IBAction)checkAnswer:(id)sender {
+    //[self TestDisplay]; // DEBUG ONLY
+    
+    
     if([hourGuessed isEqual:hourCorrectAnswer] && [minuteGuessed isEqual: minuteCorrectAnswer])
     {
         resultLabel.text = [NSString stringWithFormat:@"Correct !!!"];
-        [self reset_hands];  // reset hands back to normal position
-        [self normal_move_hands];  // move hands and set new answer
-        // total correct ++
-    }
-    else
-    {
-        resultLabel.text = [NSString stringWithFormat:@"Please try Again !!!"];
-    }
-    
-    /*
-    // IF the user has completed enough rounds:
-    if(self.userAnswer == 100000000)
-    {
-        resultLabel.text = [NSString stringWithFormat:@"Correct!"];
-        [self incWinStreak]; // Increment the winStreak
-        [self inc_total_correct]; // add one to total correct
-        
-        
-        self.userAnswer = 0;
+        [self inc_total_correct]; // add one to total correct and increase the winStreak.
         
         // IF user completes 5 rounds: Record Stats and end the game
-        if(self.totalCorrect == 5)
+        if(self.totalCorrect == sessionRounds)
         {
             [self endSession];
             
             // The sessionStatistics view will return to this line if the user selected retry...
-            
-            //[self initializeGame]; // Reset the game for another session...
+        }
+        else {
+            [self reset_hands];  // reset hands back to normal position
+            [self normal_move_hands];  // move hands and set new answer
         }
     }
-    else  // user Incorrect
-    {
-        
-        NSDateFormatter * outputFormatter = [[ NSDateFormatter alloc] init];
-        [outputFormatter setDateFormat:@"HH:mm"];
-        NSString *dateString = [outputFormatter stringFromDate:timePicker.date];
-        resultLabel.text = dateString;
-         
-        resultLabel.text = [NSString stringWithFormat:@"%@:%@",hourGuessed,minuteGuessed];
-        
+    else {
+        resultLabel.text = [NSString stringWithFormat:@"Please try Again !!!"];
+        [self inc_total_incorrect];
     }
-    */
 }
-    
-    // Setup for a play session:
-    -(void)initializeGame {
-        self.startTime = [NSDate date]; // Load the current time into startTime...
-        [self resetStats];
-    }
-    
-    // Launch this game's tutorial:
-    -(IBAction)normal_tutorial_clicked:(id)sender
-    {
-        //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
-        //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-    }
+
+// Setup for a play session:
+-(void)initializeGame {
+    self.startTime = [NSDate date]; // Load the current time into startTime...
+    [self resetStats];
+}
+
+// Launch this game's tutorial:
+-(IBAction)normal_tutorial_clicked:(id)sender
+{
+    //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
+    //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
+}
 
 @end
 

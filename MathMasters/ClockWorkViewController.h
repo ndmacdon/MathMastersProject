@@ -9,20 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GameViewController.h"
 
-@interface ClockWorkViewController : GameViewController<UIPickerViewDelegate> {
+@interface ClockWorkViewController : GameViewController <UIPickerViewDelegate> {
     
     IBOutlet UIDatePicker *timePicker;
     IBOutlet UIImageView *minuteHand;
     IBOutlet UIImageView *hourHand;
     IBOutlet UILabel *resultLabel;
 
-    NSString *correctTime;
-    
-    NSString * hourGuessed;
-    NSString * minuteGuessed;
-    
-    NSString * hourCorrectAnswer;
-    NSString * minuteCorrectAnswer;
+
     
     IBOutlet UILabel * correcthour;
     IBOutlet UILabel * correctminute;
