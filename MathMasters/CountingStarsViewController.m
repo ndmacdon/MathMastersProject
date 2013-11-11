@@ -20,6 +20,8 @@
     UIImage *emptyStarImage;
     UIImage *fullStarImage;
     NSMutableArray *starButtons;
+        UIImage *btnImage;
+    int randomInteger;
     int maxStars;
     int maxStarSum;
     int starValue;
@@ -27,8 +29,6 @@
 
 @synthesize starsUserMustCount,
             displayUserCorrect,
-            randomInteger,
-            btnImage,
             tutorialCountingStarsViewController,
             sessionStatisticsViewController;
 

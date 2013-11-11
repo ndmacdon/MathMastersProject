@@ -23,7 +23,7 @@
     IBOutlet UIView *starMat;
     IBOutlet UILabel *starsUserMustCount;
     IBOutlet UILabel *displayUserCorrect;
-    UIImage *btnImage;
+
 }
 
 -(IBAction)star_clicked:(id)sender;
@@ -33,8 +33,6 @@
 
 @property (nonatomic,strong) IBOutlet UILabel *starsUserMustCount;
 @property(nonatomic,strong) IBOutlet UILabel *displayUserCorrect;
-@property(nonatomic) NSInteger randomInteger;
-@property(nonatomic,strong) UIImage *btnImage;
 @property(nonatomic,strong) TutorialCountingStarsViewController * tutorialCountingStarsViewController;
 
 @end

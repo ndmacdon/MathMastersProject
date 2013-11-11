@@ -21,12 +21,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MyButtonMakingCents.h"
+#import "GameViewController.h"
 
-@interface MakingCentsViewController : UIViewController
-{
+@interface MakingCentsViewController : GameViewController {
     IBOutlet UILabel * instructionsUser;
     IBOutlet UIImageView * yellowBox;
     
+    IBOutlet UILabel *resultLabel;
+    IBOutlet MyButtonMakingCents * dollar1;
     IBOutlet MyButtonMakingCents * dime1;
     IBOutlet MyButtonMakingCents * dime2;
     IBOutlet MyButtonMakingCents * quarter1;
@@ -38,13 +40,11 @@
 
 
 -(IBAction)dragged_out:(id)sender withEvent: (UIEvent *) event;
+- (IBAction)check_user_correct:(id)sender;
 
 @property (nonatomic, strong)IBOutlet UILabel *instructionsUser;
-@property (nonatomic) NSInteger amountDisplayed;
 @property(nonatomic, strong) IBOutlet UIImageView *yellowBox;
-@property(nonatomic) NSInteger amountYellowBox;
 @property(nonatomic,strong) NSTimer * timeOfReset;
-@property(nonatomic) NSInteger totalCorrect;
 
 @property(nonatomic,strong) IBOutlet UIButton * dime1;
 @property(nonatomic,strong)IBOutlet UIButton * dime2;
@@ -53,6 +53,7 @@
 @property(nonatomic,strong)IBOutlet UIButton * quarter3;
 @property(nonatomic,strong)IBOutlet UIButton * nickel1;
 @property(nonatomic,strong)IBOutlet UIButton * nickel2;
+@property(nonatomic,strong)IBOutlet UIButton * dollar1;
 
 
 @end

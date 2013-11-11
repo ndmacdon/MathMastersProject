@@ -96,7 +96,6 @@
         // Show the tutorial:
         //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
         //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-        
     }
     
     // If difficulty is EASY:

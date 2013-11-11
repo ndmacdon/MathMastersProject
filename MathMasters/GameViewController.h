@@ -11,7 +11,7 @@
 #import "DBManager.h"
 #import "GlobalVariables.h"
 
-static const int sessionRounds = 50;
+static const int sessionRounds = 2;
 
 @interface GameViewController : UIViewController
 
