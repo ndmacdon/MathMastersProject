@@ -25,6 +25,7 @@
 #import "OptionsViewController.h"
 #import "LogInViewController.h"
 #import "CreateAccountViewController.h"
+#import "ClockWorkViewController.h"
 #import "DBManager.h"
 
 @interface MasterViewController : UIViewController
@@ -35,18 +36,20 @@
 -(IBAction)fishtofish_clicked:(id)sender;
 -(IBAction)makingcents_clicked:(id)sender;
 -(IBAction)options_clicked:(id)sender; // if option button clicked go to options menu
+-(IBAction)clockWork_clicked:(id)sender;
 
 // Game ViewControllers:
 @property (nonatomic,strong) CountingStarsViewController *countingStarsViewController;
-@property(nonatomic,strong) HardCountingStarsViewController * hardCountingViewController;
+@property (nonatomic,strong) HardCountingStarsViewController * hardCountingViewController;
 @property (nonatomic,strong) FishToFishViewController *fishToFishViewController;
-@property(nonatomic,strong) HardApplesToOrangesViewController *hardApplesToOrangesViewController;
-@property(nonatomic,strong) MakingCentsViewController * makingCentsViewController;
+@property (nonatomic,strong) HardApplesToOrangesViewController *hardApplesToOrangesViewController;
+@property (nonatomic,strong) MakingCentsViewController * makingCentsViewController;
+@property (nonatomic, strong) ClockWorkViewController *clockWorkViewController;
 
 // Utility ViewControllers:
-@property(nonatomic,strong) OptionsViewController *optionsViewController;
-@property(nonatomic,strong) LogInViewController *loginViewController;
-@property(nonatomic,strong) CreateAccountViewController *createAccountViewController;
+@property (nonatomic,strong) OptionsViewController *optionsViewController;
+@property (nonatomic,strong) LogInViewController *loginViewController;
+@property (nonatomic,strong) CreateAccountViewController *createAccountViewController;
 
 
 @end

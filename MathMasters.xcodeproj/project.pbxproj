@@ -12,8 +12,6 @@
 		9A05110518063CD0009476AF /* fish5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110418063CD0009476AF /* fish5.png */; };
 		9A05110718063CD5009476AF /* fish6.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110618063CD5009476AF /* fish6.png */; };
 		9A05110918063CE3009476AF /* fish7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A05110818063CE3009476AF /* fish7.png */; };
-		9A24ABEF18069BDB0061D40E /* MakingCentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */; };
-		9A24ABF018069BDB0061D40E /* MakingCentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */; };
 		9A24ABF51806AAAB0061D40E /* Dime.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF21806AAAB0061D40E /* Dime.png */; };
 		9A24ABF61806AAAB0061D40E /* Nickel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF31806AAAB0061D40E /* Nickel.png */; };
 		9A24ABF71806AAAB0061D40E /* Quarter.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A24ABF41806AAAB0061D40E /* Quarter.png */; };
@@ -52,36 +50,21 @@
 		9A4CA674182526430012E565 /* fish8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4CA653182526430012E565 /* fish8.png */; };
 		9A4CA675182526430012E565 /* fish9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4CA654182526430012E565 /* fish9.png */; };
 		9A4CA676182526430012E565 /* fish10.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A4CA655182526430012E565 /* fish10.png */; };
-		9A55087D18194AA200B322DA /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55087B18194AA200B322DA /* OptionsViewController.m */; };
-		9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A55087E18194AB900B322DA /* OptionsViewController.xib */; };
-		9A55088218194AB900B322DA /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A55088018194AB900B322DA /* GlobalVariables.m */; };
 		9A7E025218068AAD00CE98DF /* fish3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E025118068AAD00CE98DF /* fish3.png */; };
 		9A7E025418068AB800CE98DF /* fish1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7E025318068AB800CE98DF /* fish1.png */; };
-		9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */; };
-		9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */; };
 		9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */; };
 		9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7EF11B181A0857000C81E6 /* background-spring.png */; };
-		9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
 		9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95505A180179F400DFF8E4 /* CoreGraphics.framework */; };
-		9A955061180179F400DFF8E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A95505F180179F400DFF8E4 /* InfoPlist.strings */; };
 		9A955063180179F400DFF8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A955062180179F400DFF8E4 /* main.m */; };
-		9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A955066180179F400DFF8E4 /* AppDelegate.m */; };
 		9A955069180179F400DFF8E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A955068180179F400DFF8E4 /* Default.png */; };
 		9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506A180179F400DFF8E4 /* Default@2x.png */; };
 		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
-		9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95506F180179F400DFF8E4 /* MasterViewController.m */; };
-		9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A955071180179F400DFF8E4 /* MasterViewController.xib */; };
-		9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */; };
-		9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */; };
-		9AA25D11181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */; };
 		9AB941151801AF91003F79FE /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941141801AF91003F79FE /* whiteStar.png */; };
 		9AB941171801B002003F79FE /* yellowStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB941161801B002003F79FE /* yellowStar.png */; };
 		9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FC180E99D90028C05C /* quarter1.png */; };
 		9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F4FE180E9A740028C05C /* quarter2.png */; };
-		9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC3F501180E9C5E0028C05C /* LogInViewController.m */; };
-		9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC3F502180E9C5E0028C05C /* LogInViewController.xib */; };
 		9AF23ABB181DE47F003DA89C /* normal_cs_Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB2181DE47E003DA89C /* normal_cs_Tutorial3.png */; };
 		9AF23ABC181DE47F003DA89C /* normal_cs_Tutorial8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB3181DE47E003DA89C /* normal_cs_Tutorial8.png */; };
 		9AF23ABD181DE47F003DA89C /* normal_cs_Tutorial7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23AB4181DE47E003DA89C /* normal_cs_Tutorial7.png */; };
@@ -100,20 +83,42 @@
 		9AF23AD3181DE69B003DA89C /* hard_cs_Tutorial3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACA181DE69B003DA89C /* hard_cs_Tutorial3.png */; };
 		9AF23AD4181DE69B003DA89C /* hard_cs_Tutorial2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACB181DE69B003DA89C /* hard_cs_Tutorial2.png */; };
 		9AF23AD5181DE69B003DA89C /* hard_cs_Tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */; };
-		9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFE820918036F370051DFC0 /* FishToFishViewController.m */; };
-		9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */; };
-		EB4C5A96182C9AB00072ABAC /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */; };
+		EB59F899182D9DA500BA6A7F /* ClockFace01.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59F897182D9DA500BA6A7F /* ClockFace01.png */; };
+		EB59F89A182D9DA500BA6A7F /* ClockHand01.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59F898182D9DA500BA6A7F /* ClockHand01.png */; };
+		EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */; };
+		EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */; };
 		EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */; };
-		EB67AF9918283B3700AA3FD9 /* SessionStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB67AF9718283B3600AA3FD9 /* SessionStatisticsViewController.m */; };
-		EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */; };
-		EB8C09B5181B6D4F005CB751 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB8C09B1181B6D4F005CB751 /* CreateAccountViewController.xib */; };
-		EB8C09B6181B6D4F005CB751 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8C09B3181B6D4F005CB751 /* DBManager.m */; };
 		EB8C09B8181B6E29005CB751 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */; };
-		EB9DFB91182C9C8D00C483F6 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */; };
-		EB9DFB94182CA6C500C483F6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9DFB93182CA6C500C483F6 /* GameViewController.m */; };
-		EBAA44741826F7C10038DA74 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBAA44721826F7C10038DA74 /* StatisticsViewController.m */; };
 		EBAA44771826FBEE0038DA74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44761826FBEE0038DA74 /* QuartzCore.framework */; };
 		EBAA44C81826FDC10038DA74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44C71826FDC10038DA74 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EBF002E2182D97F400F9F3E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002BA182D97F400F9F3E8 /* AppDelegate.m */; };
+		EBF002E3182D97F400F9F3E8 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */; };
+		EBF002E4182D97F400F9F3E8 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */; };
+		EBF002E5182D97F400F9F3E8 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */; };
+		EBF002E6182D97F400F9F3E8 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C1182D97F400F9F3E8 /* DBManager.m */; };
+		EBF002E7182D97F400F9F3E8 /* FishToFishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */; };
+		EBF002E8182D97F400F9F3E8 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */; };
+		EBF002E9182D97F400F9F3E8 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C6182D97F400F9F3E8 /* GameViewController.m */; };
+		EBF002EA182D97F400F9F3E8 /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */; };
+		EBF002EB182D97F400F9F3E8 /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */; };
+		EBF002EC182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */; };
+		EBF002ED182D97F400F9F3E8 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */; };
+		EBF002EE182D97F400F9F3E8 /* HardCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */; };
+		EBF002EF182D97F400F9F3E8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D0182D97F400F9F3E8 /* LogInViewController.m */; };
+		EBF002F0182D97F400F9F3E8 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */; };
+		EBF002F1182D97F400F9F3E8 /* MakingCentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */; };
+		EBF002F2182D97F400F9F3E8 /* MakingCentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */; };
+		EBF002F3182D97F400F9F3E8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D6182D97F400F9F3E8 /* MasterViewController.m */; };
+		EBF002F4182D97F400F9F3E8 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D8182D97F400F9F3E8 /* OptionsViewController.m */; };
+		EBF002F5182D97F400F9F3E8 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002D9182D97F400F9F3E8 /* OptionsViewController.xib */; };
+		EBF002F6182D97F400F9F3E8 /* SessionStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002DB182D97F400F9F3E8 /* SessionStatisticsViewController.m */; };
+		EBF002F7182D97F400F9F3E8 /* SessionStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002DC182D97F400F9F3E8 /* SessionStatisticsViewController.xib */; };
+		EBF002F8182D97F400F9F3E8 /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */; };
+		EBF002F9182D97F400F9F3E8 /* TutorialCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002E0182D97F400F9F3E8 /* TutorialCountingStarsViewController.m */; };
+		EBF002FA182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002E1182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib */; };
+		EBF002FC182D981100F9F3E8 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002FB182D981100F9F3E8 /* MasterViewController.xib */; };
+		EBF002FF182D998500F9F3E8 /* CountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */; };
+		EBF00301182D99B800F9F3E8 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,9 +127,6 @@
 		9A05110418063CD0009476AF /* fish5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish5.png; path = "Pictures for math masters/FishToFish/fish5.png"; sourceTree = "<group>"; };
 		9A05110618063CD5009476AF /* fish6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish6.png; path = "Pictures for math masters/FishToFish/fish6.png"; sourceTree = "<group>"; };
 		9A05110818063CE3009476AF /* fish7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish7.png; path = "Pictures for math masters/FishToFish/fish7.png"; sourceTree = "<group>"; };
-		9A24ABEC18069BDA0061D40E /* MakingCentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakingCentsViewController.h; sourceTree = "<group>"; };
-		9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakingCentsViewController.m; sourceTree = "<group>"; };
-		9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakingCentsViewController.xib; sourceTree = "<group>"; };
 		9A24ABF21806AAAB0061D40E /* Dime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dime.png; path = "Pictures for math masters/MakingCents/Dime.png"; sourceTree = "<group>"; };
 		9A24ABF31806AAAB0061D40E /* Nickel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Nickel.png; path = "Pictures for math masters/MakingCents/Nickel.png"; sourceTree = "<group>"; };
 		9A24ABF41806AAAB0061D40E /* Quarter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Quarter.png; path = "Pictures for math masters/MakingCents/Quarter.png"; sourceTree = "<group>"; };
@@ -163,21 +165,10 @@
 		9A4CA653182526430012E565 /* fish8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish8.png; path = "Pictures for math masters/FishToFish/fish8.png"; sourceTree = "<group>"; };
 		9A4CA654182526430012E565 /* fish9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish9.png; path = "Pictures for math masters/FishToFish/fish9.png"; sourceTree = "<group>"; };
 		9A4CA655182526430012E565 /* fish10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish10.png; path = "Pictures for math masters/FishToFish/fish10.png"; sourceTree = "<group>"; };
-		9A55087B18194AA200B322DA /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
-		9A55087C18194AA200B322DA /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
-		9A55087E18194AB900B322DA /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
-		9A55087F18194AB900B322DA /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
-		9A55088018194AB900B322DA /* GlobalVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
 		9A7E025118068AAD00CE98DF /* fish3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish3.png; path = "Pictures for math masters/FishToFish/fish3.png"; sourceTree = "<group>"; };
 		9A7E025318068AB800CE98DF /* fish1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish1.png; path = "Pictures for math masters/FishToFish/fish1.png"; sourceTree = "<group>"; };
-		9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardCountingStarsViewController.xib; sourceTree = "<group>"; };
-		9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCountingStarsViewController.h; sourceTree = "<group>"; };
-		9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
 		9A7EF1161819E2E0000C81E6 /* threeStarsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = threeStarsWhite.png; path = "Pictures for math masters/CountingStars/threeStarsWhite.png"; sourceTree = "<group>"; };
 		9A7EF11B181A0857000C81E6 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-spring.png"; path = "Pictures for math masters/backgrounds/background-spring.png"; sourceTree = "<group>"; };
-		9A87BA661828CE32005BFB01 /* HardApplesToOrangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardApplesToOrangesViewController.h; sourceTree = "<group>"; };
-		9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardApplesToOrangesViewController.m; sourceTree = "<group>"; };
-		9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardApplesToOrangesViewController.xib; sourceTree = "<group>"; };
 		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,26 +177,13 @@
 		9A955060180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A955062180179F400DFF8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A955064180179F400DFF8E4 /* MathMasters-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathMasters-Prefix.pch"; sourceTree = "<group>"; };
-		9A955065180179F400DFF8E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9A955066180179F400DFF8E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A955068180179F400DFF8E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9A95506A180179F400DFF8E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A95506C180179F400DFF8E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9A95506E180179F400DFF8E4 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		9A95506F180179F400DFF8E4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		9A955072180179F400DFF8E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
-		9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
-		9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
-		9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialCountingStarsViewController.h; sourceTree = "<group>"; };
-		9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialCountingStarsViewController.m; sourceTree = "<group>"; };
-		9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialCountingStarsViewController.xib; sourceTree = "<group>"; };
 		9AB941141801AF91003F79FE /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteStar.png; path = "Pictures for math masters/CountingStars/whiteStar.png"; sourceTree = "<group>"; };
 		9AB941161801B002003F79FE /* yellowStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellowStar.png; path = "Pictures for math masters/CountingStars/yellowStar.png"; sourceTree = "<group>"; };
 		9AC3F4FC180E99D90028C05C /* quarter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter1.png; path = "Pictures for math masters/MakingCents/quarter1.png"; sourceTree = "<group>"; };
 		9AC3F4FE180E9A740028C05C /* quarter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quarter2.png; path = "Pictures for math masters/MakingCents/quarter2.png"; sourceTree = "<group>"; };
-		9AC3F500180E9C5E0028C05C /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
-		9AC3F501180E9C5E0028C05C /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		9AC3F502180E9C5E0028C05C /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		9AF23AB2181DE47E003DA89C /* normal_cs_Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial3.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial3.png"; sourceTree = "<group>"; };
 		9AF23AB3181DE47E003DA89C /* normal_cs_Tutorial8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial8.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial8.png"; sourceTree = "<group>"; };
 		9AF23AB4181DE47E003DA89C /* normal_cs_Tutorial7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normal_cs_Tutorial7.png; path = "Pictures for math masters/CountingStars/normal_cs_Tutorial7.png"; sourceTree = "<group>"; };
@@ -224,25 +202,13 @@
 		9AF23ACA181DE69B003DA89C /* hard_cs_Tutorial3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial3.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial3.png"; sourceTree = "<group>"; };
 		9AF23ACB181DE69B003DA89C /* hard_cs_Tutorial2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial2.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial2.png"; sourceTree = "<group>"; };
 		9AF23ACC181DE69B003DA89C /* hard_cs_Tutorial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hard_cs_Tutorial1.png; path = "Pictures for math masters/CountingStars/hard_cs_Tutorial1.png"; sourceTree = "<group>"; };
-		9AFE820818036F370051DFC0 /* FishToFishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishToFishViewController.h; sourceTree = "<group>"; };
-		9AFE820918036F370051DFC0 /* FishToFishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishToFishViewController.m; sourceTree = "<group>"; };
-		9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FishToFishViewController.xib; sourceTree = "<group>"; };
+		EB59F897182D9DA500BA6A7F /* ClockFace01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ClockFace01.png; path = "Pictures for math masters/ClockFace01.png"; sourceTree = "<group>"; };
+		EB59F898182D9DA500BA6A7F /* ClockHand01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ClockHand01.png; path = "Pictures for math masters/ClockHand01.png"; sourceTree = "<group>"; };
+		EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWorkViewController.h; sourceTree = "<group>"; };
+		EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWorkViewController.m; sourceTree = "<group>"; };
+		EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockWorkViewController.xib; sourceTree = "<group>"; };
 		EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "MathMasters/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
-		EB67AF9618283B3600AA3FD9 /* SessionStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionStatisticsViewController.h; sourceTree = "<group>"; };
-		EB67AF9718283B3600AA3FD9 /* SessionStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionStatisticsViewController.m; sourceTree = "<group>"; };
-		EB67AF9818283B3700AA3FD9 /* SessionStatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionStatisticsViewController.xib; sourceTree = "<group>"; };
-		EB8C09AF181B6D4F005CB751 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
-		EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
-		EB8C09B1181B6D4F005CB751 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
-		EB8C09B2181B6D4F005CB751 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
-		EB8C09B3181B6D4F005CB751 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
-		EB9DFB92182CA6C400C483F6 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		EB9DFB93182CA6C500C483F6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		EBAA44711826F7C10038DA74 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
-		EBAA44721826F7C10038DA74 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
-		EBAA44731826F7C10038DA74 /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
 		EBAA44761826FBEE0038DA74 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EBAA44791826FCA60038DA74 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		EBAA447A1826FCA60038DA74 /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
@@ -323,6 +289,51 @@
 		EBAA44C51826FCA60038DA74 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		EBAA44C61826FCA60038DA74 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		EBAA44C71826FDC10038DA74 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		EBF002B9182D97F400F9F3E8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EBF002BA182D97F400F9F3E8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EBF002BB182D97F400F9F3E8 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
+		EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingStarsViewController.xib; sourceTree = "<group>"; };
+		EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		EBF002C0182D97F400F9F3E8 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		EBF002C1182D97F400F9F3E8 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		EBF002C2182D97F400F9F3E8 /* FishToFishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishToFishViewController.h; sourceTree = "<group>"; };
+		EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishToFishViewController.m; sourceTree = "<group>"; };
+		EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FishToFishViewController.xib; sourceTree = "<group>"; };
+		EBF002C5182D97F400F9F3E8 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		EBF002C6182D97F400F9F3E8 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		EBF002C7182D97F400F9F3E8 /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
+		EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
+		EBF002C9182D97F400F9F3E8 /* HardApplesToOrangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardApplesToOrangesViewController.h; sourceTree = "<group>"; };
+		EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardApplesToOrangesViewController.m; sourceTree = "<group>"; };
+		EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardApplesToOrangesViewController.xib; sourceTree = "<group>"; };
+		EBF002CC182D97F400F9F3E8 /* HardCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCountingStarsViewController.h; sourceTree = "<group>"; };
+		EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
+		EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardCountingStarsViewController.xib; sourceTree = "<group>"; };
+		EBF002CF182D97F400F9F3E8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		EBF002D0182D97F400F9F3E8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		EBF002D2182D97F400F9F3E8 /* MakingCentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakingCentsViewController.h; sourceTree = "<group>"; };
+		EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakingCentsViewController.m; sourceTree = "<group>"; };
+		EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakingCentsViewController.xib; sourceTree = "<group>"; };
+		EBF002D5182D97F400F9F3E8 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		EBF002D6182D97F400F9F3E8 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		EBF002D7182D97F400F9F3E8 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		EBF002D8182D97F400F9F3E8 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		EBF002D9182D97F400F9F3E8 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
+		EBF002DA182D97F400F9F3E8 /* SessionStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionStatisticsViewController.h; sourceTree = "<group>"; };
+		EBF002DB182D97F400F9F3E8 /* SessionStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionStatisticsViewController.m; sourceTree = "<group>"; };
+		EBF002DC182D97F400F9F3E8 /* SessionStatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionStatisticsViewController.xib; sourceTree = "<group>"; };
+		EBF002DD182D97F400F9F3E8 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
+		EBF002DF182D97F400F9F3E8 /* TutorialCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialCountingStarsViewController.h; sourceTree = "<group>"; };
+		EBF002E0182D97F400F9F3E8 /* TutorialCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialCountingStarsViewController.m; sourceTree = "<group>"; };
+		EBF002E1182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialCountingStarsViewController.xib; sourceTree = "<group>"; };
+		EBF002FB182D981100F9F3E8 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+		EBF002FD182D987000F9F3E8 /* CPTAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAxis.h; sourceTree = "<group>"; };
+		EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingStarsViewController.m; sourceTree = "<group>"; };
+		EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,11 +454,8 @@
 		9A95504A180179F300DFF8E4 = {
 			isa = PBXGroup;
 			children = (
-				EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */,
-				EBAA44C71826FDC10038DA74 /* Accelerate.framework */,
-				EBAA44761826FBEE0038DA74 /* QuartzCore.framework */,
-				EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */,
 				9A95505C180179F400DFF8E4 /* MathMasters */,
+				9A95505D180179F400DFF8E4 /* Supporting Files */,
 				9A955055180179F300DFF8E4 /* Frameworks */,
 				9A955054180179F300DFF8E4 /* Products */,
 			);
@@ -464,6 +472,11 @@
 		9A955055180179F300DFF8E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBAA44781826FC690038DA74 /* CorePlot */,
+				EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */,
+				EBAA44C71826FDC10038DA74 /* Accelerate.framework */,
+				EBAA44761826FBEE0038DA74 /* QuartzCore.framework */,
+				EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */,
 				9A955056180179F300DFF8E4 /* UIKit.framework */,
 				9A955058180179F300DFF8E4 /* Foundation.framework */,
 				9A95505A180179F400DFF8E4 /* CoreGraphics.framework */,
@@ -474,66 +487,9 @@
 		9A95505C180179F400DFF8E4 /* MathMasters */ = {
 			isa = PBXGroup;
 			children = (
-				EBAA44781826FC690038DA74 /* CorePlot */,
-				9A955065180179F400DFF8E4 /* AppDelegate.h */,
-				9A955066180179F400DFF8E4 /* AppDelegate.m */,
-				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
-				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
-				EB9DFB90182C9C8D00C483F6 /* CountingStarsViewController.xib */,
-				EB9DFB92182CA6C400C483F6 /* GameViewController.h */,
-				EB9DFB93182CA6C500C483F6 /* GameViewController.m */,
-				EB8C09AF181B6D4F005CB751 /* CreateAccountViewController.h */,
-				EB8C09B0181B6D4F005CB751 /* CreateAccountViewController.m */,
-				EB8C09B1181B6D4F005CB751 /* CreateAccountViewController.xib */,
-				EB8C09B2181B6D4F005CB751 /* DBManager.h */,
-				EB8C09B3181B6D4F005CB751 /* DBManager.m */,
-				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
-				9AFE820918036F370051DFC0 /* FishToFishViewController.m */,
-				9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */,
-				9A55087F18194AB900B322DA /* GlobalVariables.h */,
-				9A55088018194AB900B322DA /* GlobalVariables.m */,
-				9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */,
-				9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */,
-				9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */,
-				9AC3F500180E9C5E0028C05C /* LogInViewController.h */,
-				9AC3F501180E9C5E0028C05C /* LogInViewController.m */,
-				9AC3F502180E9C5E0028C05C /* LogInViewController.xib */,
-				9A95506E180179F400DFF8E4 /* MasterViewController.h */,
-				9A95506F180179F400DFF8E4 /* MasterViewController.m */,
-				9A955071180179F400DFF8E4 /* MasterViewController.xib */,
-				9A95507918017C9100DFF8E4 /* CountingStarsViewController.h */,
-				9A95507A18017C9100DFF8E4 /* CountingStarsViewController.m */,
-				9A7EF1121819D69B000C81E6 /* HardCountingStarsViewController.h */,
-				9A7EF1131819D69B000C81E6 /* HardCountingStarsViewController.m */,
-				9A7EF1111819D69B000C81E6 /* HardCountingStarsViewController.xib */,
-				9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */,
-				9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */,
-				9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */,
-				9AFE820818036F370051DFC0 /* FishToFishViewController.h */,
-				9AFE820918036F370051DFC0 /* FishToFishViewController.m */,
-				9AFE820A18036F370051DFC0 /* FishToFishViewController.xib */,
-				9A87BA661828CE32005BFB01 /* HardApplesToOrangesViewController.h */,
-				9A87BA671828CE32005BFB01 /* HardApplesToOrangesViewController.m */,
-				9A87BA681828CE32005BFB01 /* HardApplesToOrangesViewController.xib */,
-				9A24ABEC18069BDA0061D40E /* MakingCentsViewController.h */,
-				9A24ABED18069BDA0061D40E /* MakingCentsViewController.m */,
-				9A24ABEE18069BDB0061D40E /* MakingCentsViewController.xib */,
-				9A95506E180179F400DFF8E4 /* MasterViewController.h */,
-				9A95506F180179F400DFF8E4 /* MasterViewController.m */,
-				9A955071180179F400DFF8E4 /* MasterViewController.xib */,
-				9A55087C18194AA200B322DA /* OptionsViewController.h */,
-				9A55087B18194AA200B322DA /* OptionsViewController.m */,
-				9A55087E18194AB900B322DA /* OptionsViewController.xib */,
-				EBAA44711826F7C10038DA74 /* StatisticsViewController.h */,
-				EBAA44721826F7C10038DA74 /* StatisticsViewController.m */,
-				EBAA44731826F7C10038DA74 /* StatisticsViewController.xib */,
-				9A95505D180179F400DFF8E4 /* Supporting Files */,
-				9AA25D0D181DBD3F00C7FF03 /* TutorialCountingStarsViewController.h */,
-				9AA25D0E181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m */,
-				9AA25D0F181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib */,
-				EB67AF9618283B3600AA3FD9 /* SessionStatisticsViewController.h */,
-				EB67AF9718283B3600AA3FD9 /* SessionStatisticsViewController.m */,
-				EB67AF9818283B3700AA3FD9 /* SessionStatisticsViewController.xib */,
+				EB59F896182D9CE700BA6A7F /* Games */,
+				EB59F8A0182D9F2700BA6A7F /* Menus */,
+				EB59F8A1182D9F5F00BA6A7F /* Utility */,
 			);
 			path = MathMasters;
 			sourceTree = "<group>";
@@ -541,6 +497,8 @@
 		9A95505D180179F400DFF8E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB59F897182D9DA500BA6A7F /* ClockFace01.png */,
+				EB59F898182D9DA500BA6A7F /* ClockHand01.png */,
 				9A7EF11A181A01C6000C81E6 /* backgrounds */,
 				9A24ABF11806AA950061D40E /* MakingCentsImages */,
 				9A0510F718063B2F009476AF /* FishToFishImages */,
@@ -554,11 +512,81 @@
 				9A95506C180179F400DFF8E4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = MathMasters;
+			sourceTree = "<group>";
+		};
+		EB59F896182D9CE700BA6A7F /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002C5182D97F400F9F3E8 /* GameViewController.h */,
+				EBF002C6182D97F400F9F3E8 /* GameViewController.m */,
+				EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */,
+				EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */,
+				EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */,
+				EBF002BB182D97F400F9F3E8 /* CountingStarsViewController.h */,
+				EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */,
+				EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */,
+				EBF002C2182D97F400F9F3E8 /* FishToFishViewController.h */,
+				EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */,
+				EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */,
+				EBF002C9182D97F400F9F3E8 /* HardApplesToOrangesViewController.h */,
+				EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */,
+				EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */,
+				EBF002CC182D97F400F9F3E8 /* HardCountingStarsViewController.h */,
+				EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */,
+				EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */,
+				EBF002D2182D97F400F9F3E8 /* MakingCentsViewController.h */,
+				EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */,
+				EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */,
+				EBF002DF182D97F400F9F3E8 /* TutorialCountingStarsViewController.h */,
+				EBF002E0182D97F400F9F3E8 /* TutorialCountingStarsViewController.m */,
+				EBF002E1182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib */,
+			);
+			name = Games;
+			sourceTree = "<group>";
+		};
+		EB59F8A0182D9F2700BA6A7F /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */,
+				EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */,
+				EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */,
+				EBF002CF182D97F400F9F3E8 /* LogInViewController.h */,
+				EBF002D0182D97F400F9F3E8 /* LogInViewController.m */,
+				EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */,
+				EBF002D5182D97F400F9F3E8 /* MasterViewController.h */,
+				EBF002D6182D97F400F9F3E8 /* MasterViewController.m */,
+				EBF002FB182D981100F9F3E8 /* MasterViewController.xib */,
+				EBF002D7182D97F400F9F3E8 /* OptionsViewController.h */,
+				EBF002D8182D97F400F9F3E8 /* OptionsViewController.m */,
+				EBF002D9182D97F400F9F3E8 /* OptionsViewController.xib */,
+				EBF002DA182D97F400F9F3E8 /* SessionStatisticsViewController.h */,
+				EBF002DB182D97F400F9F3E8 /* SessionStatisticsViewController.m */,
+				EBF002DC182D97F400F9F3E8 /* SessionStatisticsViewController.xib */,
+				EBF002DD182D97F400F9F3E8 /* StatisticsViewController.h */,
+				EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */,
+				EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		EB59F8A1182D9F5F00BA6A7F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002B9182D97F400F9F3E8 /* AppDelegate.h */,
+				EBF002C7182D97F400F9F3E8 /* GlobalVariables.h */,
+				EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */,
+				EBF002C0182D97F400F9F3E8 /* DBManager.h */,
+				EBF002C1182D97F400F9F3E8 /* DBManager.m */,
+				EBF002BA182D97F400F9F3E8 /* AppDelegate.m */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		EBAA44781826FC690038DA74 /* CorePlot */ = {
 			isa = PBXGroup;
 			children = (
+				EBF002FD182D987000F9F3E8 /* CPTAxis.h */,
 				EBAA44791826FCA60038DA74 /* CorePlot-CocoaTouch.h */,
 				EBAA447A1826FCA60038DA74 /* CPTAnimation.h */,
 				EBAA447B1826FCA60038DA74 /* CPTAnimationOperation.h */,
@@ -639,6 +667,7 @@
 				EBAA44C61826FCA60038DA74 /* NSNumberExtensions.h */,
 			);
 			name = CorePlot;
+			path = MathMasters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -692,14 +721,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A955061180179F400DFF8E4 /* InfoPlist.strings in Resources */,
 				9A955069180179F400DFF8E4 /* Default.png in Resources */,
 				9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */,
 				9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */,
-				9A955073180179F400DFF8E4 /* MasterViewController.xib in Resources */,
 				9AB941151801AF91003F79FE /* whiteStar.png in Resources */,
 				9AB941171801B002003F79FE /* yellowStar.png in Resources */,
-				9AFE820C18036F370051DFC0 /* FishToFishViewController.xib in Resources */,
 				9A0510FF18063BC8009476AF /* fish2.png in Resources */,
 				9A05110318063CC0009476AF /* fish4.png in Resources */,
 				9A05110518063CD0009476AF /* fish5.png in Resources */,
@@ -707,21 +733,15 @@
 				9A05110918063CE3009476AF /* fish7.png in Resources */,
 				9A7E025218068AAD00CE98DF /* fish3.png in Resources */,
 				9A7E025418068AB800CE98DF /* fish1.png in Resources */,
-				9A24ABF018069BDB0061D40E /* MakingCentsViewController.xib in Resources */,
 				9A24ABF51806AAAB0061D40E /* Dime.png in Resources */,
 				9A24ABF61806AAAB0061D40E /* Nickel.png in Resources */,
 				9A24ABF71806AAAB0061D40E /* Quarter.png in Resources */,
 				9A24ABF91806B0CB0061D40E /* yellow.png in Resources */,
 				9AC3F4FD180E99D90028C05C /* quarter1.png in Resources */,
 				9AC3F4FF180E9A740028C05C /* quarter2.png in Resources */,
-				9AC3F504180E9C5E0028C05C /* LogInViewController.xib in Resources */,
 				9A4881C9181924FD00E9347B /* threeStarsColor.png in Resources */,
-				9A55088118194AB900B322DA /* OptionsViewController.xib in Resources */,
-				9A7EF1141819D69B000C81E6 /* HardCountingStarsViewController.xib in Resources */,
 				9A7EF1171819E2E0000C81E6 /* threeStarsWhite.png in Resources */,
 				9A7EF11C181A0857000C81E6 /* background-spring.png in Resources */,
-				EB8C09B5181B6D4F005CB751 /* CreateAccountViewController.xib in Resources */,
-				9AA25D11181DBD3F00C7FF03 /* TutorialCountingStarsViewController.xib in Resources */,
 				9AF23ABB181DE47F003DA89C /* normal_cs_Tutorial3.png in Resources */,
 				9AF23ABC181DE47F003DA89C /* normal_cs_Tutorial8.png in Resources */,
 				9AF23ABD181DE47F003DA89C /* normal_cs_Tutorial7.png in Resources */,
@@ -773,8 +793,21 @@
 				9A4CA674182526430012E565 /* fish8.png in Resources */,
 				9A4CA675182526430012E565 /* fish9.png in Resources */,
 				9A4CA676182526430012E565 /* fish10.png in Resources */,
-				9A87BA6A1828CE32005BFB01 /* HardApplesToOrangesViewController.xib in Resources */,
-				EB9DFB91182C9C8D00C483F6 /* CountingStarsViewController.xib in Resources */,
+				EBF002E3182D97F400F9F3E8 /* CountingStarsViewController.xib in Resources */,
+				EBF002E5182D97F400F9F3E8 /* CreateAccountViewController.xib in Resources */,
+				EBF002E8182D97F400F9F3E8 /* FishToFishViewController.xib in Resources */,
+				EBF002EC182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib in Resources */,
+				EBF002EE182D97F400F9F3E8 /* HardCountingStarsViewController.xib in Resources */,
+				EBF002F0182D97F400F9F3E8 /* LogInViewController.xib in Resources */,
+				EBF002F2182D97F400F9F3E8 /* MakingCentsViewController.xib in Resources */,
+				EBF002F5182D97F400F9F3E8 /* OptionsViewController.xib in Resources */,
+				EBF002F7182D97F400F9F3E8 /* SessionStatisticsViewController.xib in Resources */,
+				EBF002F8182D97F400F9F3E8 /* StatisticsViewController.xib in Resources */,
+				EBF002FA182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib in Resources */,
+				EBF002FC182D981100F9F3E8 /* MasterViewController.xib in Resources */,
+				EB59F899182D9DA500BA6A7F /* ClockFace01.png in Resources */,
+				EB59F89A182D9DA500BA6A7F /* ClockHand01.png in Resources */,
+				EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,23 +818,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB4C5A96182C9AB00072ABAC /* HardApplesToOrangesViewController.m in Sources */,
 				9A955063180179F400DFF8E4 /* main.m in Sources */,
-				9A955067180179F400DFF8E4 /* AppDelegate.m in Sources */,
-				9A955070180179F400DFF8E4 /* MasterViewController.m in Sources */,
-				9A95507C18017C9100DFF8E4 /* CountingStarsViewController.m in Sources */,
-				9AFE820B18036F370051DFC0 /* FishToFishViewController.m in Sources */,
-				9A24ABEF18069BDB0061D40E /* MakingCentsViewController.m in Sources */,
-				9AC3F503180E9C5E0028C05C /* LogInViewController.m in Sources */,
-				9A55087D18194AA200B322DA /* OptionsViewController.m in Sources */,
-				9A55088218194AB900B322DA /* GlobalVariables.m in Sources */,
-				9A7EF1151819D69B000C81E6 /* HardCountingStarsViewController.m in Sources */,
-				EB8C09B4181B6D4F005CB751 /* CreateAccountViewController.m in Sources */,
-				EB8C09B6181B6D4F005CB751 /* DBManager.m in Sources */,
-				9AA25D10181DBD3F00C7FF03 /* TutorialCountingStarsViewController.m in Sources */,
-				EBAA44741826F7C10038DA74 /* StatisticsViewController.m in Sources */,
-				EB67AF9918283B3700AA3FD9 /* SessionStatisticsViewController.m in Sources */,
-				EB9DFB94182CA6C500C483F6 /* GameViewController.m in Sources */,
+				EBF002E2182D97F400F9F3E8 /* AppDelegate.m in Sources */,
+				EBF002E4182D97F400F9F3E8 /* CreateAccountViewController.m in Sources */,
+				EBF002E6182D97F400F9F3E8 /* DBManager.m in Sources */,
+				EBF002E7182D97F400F9F3E8 /* FishToFishViewController.m in Sources */,
+				EBF002E9182D97F400F9F3E8 /* GameViewController.m in Sources */,
+				EBF002EA182D97F400F9F3E8 /* GlobalVariables.m in Sources */,
+				EBF002EB182D97F400F9F3E8 /* HardApplesToOrangesViewController.m in Sources */,
+				EBF002ED182D97F400F9F3E8 /* HardCountingStarsViewController.m in Sources */,
+				EBF002EF182D97F400F9F3E8 /* LogInViewController.m in Sources */,
+				EBF002F1182D97F400F9F3E8 /* MakingCentsViewController.m in Sources */,
+				EBF002F3182D97F400F9F3E8 /* MasterViewController.m in Sources */,
+				EBF002F4182D97F400F9F3E8 /* OptionsViewController.m in Sources */,
+				EBF002F6182D97F400F9F3E8 /* SessionStatisticsViewController.m in Sources */,
+				EBF002F9182D97F400F9F3E8 /* TutorialCountingStarsViewController.m in Sources */,
+				EBF002FF182D998500F9F3E8 /* CountingStarsViewController.m in Sources */,
+				EBF00301182D99B800F9F3E8 /* StatisticsViewController.m in Sources */,
+				EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,14 +848,6 @@
 				9A955060180179F400DFF8E4 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9A955071180179F400DFF8E4 /* MasterViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A955072180179F400DFF8E4 /* en */,
-			);
-			name = MasterViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
