@@ -1,10 +1,19 @@
-//
-//  ClockWorkViewController.h
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-08.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    ClockWorkViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 07, 2013
+ *
+ * Description: ViewController: Asks players to correctly interpret the current time
+ *                              displayed on an analog clock face.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "GameViewController.h"

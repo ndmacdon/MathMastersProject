@@ -1,10 +1,18 @@
-//
-//  MyButtonMakingCents.h
-//  MathMasters
-//
-//  Created by Ryan Wong on 2013-11-05.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    MyButtonMakingCents.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 05, 2013
+ *
+ * Description: ViewController: Provides a custom button for the makingCents game.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 

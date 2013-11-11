@@ -8,7 +8,7 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: Oct 29, 2013
  *
  * Description: ViewController: Normal Version of Counting Stars Game.
  *
@@ -29,7 +29,6 @@
 
 @synthesize starsUserMustCount,
             displayUserCorrect,
-            tutorialCountingStarsViewController,
             sessionStatisticsViewController;
 
 
@@ -41,22 +40,9 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
+    NSString *myName;
     
-    // Check if user has viewed this tutorial:
-    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-    
-    // IF tutorial NOT viewed yet:
-    if (!viewed) {
-        // Mark this tutorial as completed for the current user:
-        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-        
-        // Show the tutorial:
-        self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-        [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-        
-    }
-    
-    // If difficulty is EASY:
+    // If difficulty is Normal:
     if(self.optionsSingle.globalDifficultyLevel ==1) {
         maxStars = 10;
         maxStarSum = 10;
@@ -65,6 +51,7 @@
         fullStarImage = [UIImage imageNamed:@"yellowStar.png"];
         self.prepend = @"";
     }
+    // ELSE Difficulty is hard:
     else {
         maxStars = 6;
         maxStarSum = 18;
@@ -72,6 +59,20 @@
         emptyStarImage = [UIImage imageNamed:@"threeStarsWhite.png"];
         fullStarImage = [UIImage imageNamed:@"threeStarsColor.png"];
         self.prepend = @"Hard";
+    }
+    
+    myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
+    
+    // Check if user has viewed this tutorial:
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:myName];
+    
+    // IF tutorial NOT viewed yet:
+    if (!viewed) {
+        // Mark this tutorial as completed for the current user:
+        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:myName];
+        
+        // Show the tutorial:
+        [self tutorial_clicked:self];
     }
     
     [[starMat subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -84,10 +85,8 @@
 }
 
 // Before showing interface to user: initialize some values
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    //starButtons = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -159,13 +158,11 @@
     starsUserMustCount.text =
     [NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
 }
-
+/*
 // Launch this game's tutorial:
--(IBAction)normal_tutorial_clicked:(id)sender
-{
-    self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
-    [self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-}
+-(IBAction)tutorial_clicked:(id)sender {
+    [super tutorial_clicked];
+}*/
 
 // Find an empty region to place a star into:
 -(CGPoint)getEmptyRegion {

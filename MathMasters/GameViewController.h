@@ -1,17 +1,27 @@
-//
-//  GameViewController.h
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-07.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    GameViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 03, 2013
+ *
+ * Description: ViewController: Provides common functionality (statistics tracking, tutorial launching)
+ *              to each game.
+ *
+ ****/
 
 #import <UIKit/UIKit.h>
 #import "SessionStatisticsViewController.h"
 #import "DBManager.h"
+#import "TutorialViewController.h"
 #import "GlobalVariables.h"
 
-static const int sessionRounds = 2;
+static const int sessionRounds = 5;
 
 @interface GameViewController : UIViewController
 
@@ -27,7 +37,9 @@ static const int sessionRounds = 2;
 @property (nonatomic) NSString* prepend;
 @property(nonatomic, strong) SessionStatisticsViewController * sessionStatisticsViewController;
 @property (nonatomic, strong) GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
+@property(nonatomic,strong) TutorialViewController * tutorialViewController;
 
+-(IBAction)tutorial_clicked:(id)sender;
 -(void)incWinStreak;
 -(void)resetStats;
 -(void)logStats;

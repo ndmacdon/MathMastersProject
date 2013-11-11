@@ -8,9 +8,10 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: October 30, 2013
  *
- * Description: ViewController: Counting and magnitude relation game.
+ * Description: ViewController: Counting and magnitude relation game which asks players
+ *                              to estimate the price of an item.
  *
  ****/
 

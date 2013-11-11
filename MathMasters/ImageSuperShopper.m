@@ -1,10 +1,18 @@
-//
-//  ImageSuperShopper.m
-//  MathMasters
-//
-//  Created by Ryan Wong on 2013-11-07.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    ImageSuperShopper.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 05, 2013
+ *
+ * Description: ViewController: Provides a clickable image for superShopper.
+ *
+ ****/
 
 #import "ImageSuperShopper.h"
 

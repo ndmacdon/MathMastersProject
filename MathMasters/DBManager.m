@@ -14,6 +14,7 @@
  *              Provides easy access to the database via abstracted queries.
  *
  ****/
+
 /* Methods we can use to grab data from returned query statements:
  
  SQLITE_API const void *sqlite3_column_blob(sqlite3_stmt*, int iCol);

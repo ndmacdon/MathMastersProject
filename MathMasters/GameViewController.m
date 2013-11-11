@@ -1,10 +1,19 @@
-//
-//  GameViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-07.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    GameViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 03, 2013
+ *
+ * Description: ViewController: Provides common functionality (statistics tracking, tutorial launching)
+ *              to each game.
+ *
+ ****/
 
 #import "GameViewController.h"
 
@@ -26,7 +35,8 @@
     prepend,
     startTime,
     endTime,
-    runningTime;
+    runningTime,
+    tutorialViewController;
 
 
 
@@ -37,6 +47,14 @@
         // Custom initialization
     }
     return self;
+}
+
+// Launch this game's tutorial according to its class name:
+-(IBAction)tutorial_clicked:(id)sender {
+    NSString *myName = [NSString stringWithFormat:@"%@%@", prepend, NSStringFromClass([self class])];
+    self.tutorialViewController = [[TutorialViewController alloc]init];
+    self.tutorialViewController.currentTutorial = myName;
+    [self.navigationController pushViewController:self.tutorialViewController animated:YES];
 }
 
 - (void)viewDidLoad

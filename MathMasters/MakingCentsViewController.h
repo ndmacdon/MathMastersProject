@@ -1,8 +1,3 @@
-
-
-// !!!THIS FILE IS NOT INTENDED FOR MARKING IN THIS VERSION. IT IS A PLACEHOLDER ONLY!!!
-
-
 /****
  *
  * Filename:    MakingCentsViewController.h
@@ -13,9 +8,10 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: Nov 02, 2013
  *
- * Description: ViewController: Counting and magnitude relation game.
+ * Description: ViewController: Counting and magnitude relation which asks players to
+ *                              make exact change according to a total.
  *
  ****/
 

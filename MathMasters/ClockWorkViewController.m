@@ -1,11 +1,19 @@
-//
-//  ClockWorkViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-08.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
-
+/****
+ *
+ * Filename:    ClockWorkViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 07, 2013
+ *
+ * Description: ViewController: Asks players to correctly interpret the current time
+ *                              displayed on an analog clock face.
+ *
+ ****/
 #import "ClockWorkViewController.h"
 
 
@@ -30,28 +38,30 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
+    NSString *myName;
+    
+    // If difficulty is Normal: add a prefix to our classname.
+    if(self.optionsSingle.globalDifficultyLevel == 1) {
+        self.prepend = @"";
+    }
+    // ELSE: difficulty is Hard.
+    else {
+        self.prepend = @"Hard";
+    }
+    
+    myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
     
     // Check if user has viewed this tutorial:
-    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:myName];
     
     // IF tutorial NOT viewed yet:
     if (!viewed) {
         // Mark this tutorial as completed for the current user:
-        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
+        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:myName];
         
         // Show the tutorial:
-        //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-        //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-        
+        [self tutorial_clicked:self];
     }
-    // If difficulty is EASY:
-    if(self.optionsSingle.globalDifficultyLevel ==1) {
-        self.prepend = @"";
-    }
-    else {
-        self.prepend = @"Hard";
-    }
-
     
     [self initializeGame]; // Setup the game for play...
 }
@@ -277,12 +287,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)checkAnswer:(id)sender {
     //[self TestDisplay]; // DEBUG ONLY
-    
     
     if([hourGuessed isEqual:hourCorrectAnswer] && [minuteGuessed isEqual: minuteCorrectAnswer])
     {

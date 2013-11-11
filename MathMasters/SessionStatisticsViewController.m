@@ -1,10 +1,18 @@
-//
-//  SessionStatisticsViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-04.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    SessionStatisticsViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: Nov 07, 2013
+ *
+ * Description: ViewController: Displays the results of a player session.
+ *
+ ****/
 
 #import "SessionStatisticsViewController.h"
 

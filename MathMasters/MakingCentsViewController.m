@@ -8,9 +8,10 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: Nov 02, 2013
  *
- * Description: ViewController: Counting and magnitude relation game.
+ * Description: ViewController: Counting and magnitude relation which asks players to
+ *                              make exact change according to a total.
  *
  ****/
 
@@ -44,20 +45,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
-    
-    // Check if user has viewed this tutorial:
-    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-    
-    // IF tutorial NOT viewed yet:
-    if (!viewed) {
-        // Mark this tutorial as completed for the current user:
-        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-        
-        // Show the tutorial:
-        //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-        //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-        
-    }
+    NSString *myName;
     
     // If difficulty is EASY:
     if(self.optionsSingle.globalDifficultyLevel ==1) {
@@ -69,6 +57,20 @@
         self.prepend = @"Hard";
         [dollar1 setHidden:FALSE];
         maxAmount = 199;
+    }
+    
+    myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
+    
+    // Check if user has viewed this tutorial:
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:myName];
+    
+    // IF tutorial NOT viewed yet:
+    if (!viewed) {
+        // Mark this tutorial as completed for the current user:
+        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:myName];
+        
+        // Show the tutorial:
+        [self tutorial_clicked:self];
     }
     
     [self initializeGame]; // Setup the game for play...

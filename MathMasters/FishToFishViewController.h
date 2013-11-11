@@ -10,7 +10,7 @@
  *
  * VersionDate: November 02, 2013
  *
- * Description: ViewController: Magnitude estimation game.
+ * Description: ViewController: Magnitude estimation game which asks users to pick the largest group.
  *
  ****/
 

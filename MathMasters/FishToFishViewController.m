@@ -8,9 +8,9 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: November 02, 2013
  *
- * Description: ViewController: Magnitude estimation game.
+ * Description: ViewController: Magnitude estimation game which asks users to pick the largest group.
  *
  ****/
 
@@ -34,20 +34,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
-    
-    // Check if user has viewed this tutorial:
-    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-    
-    // IF tutorial NOT viewed yet:
-    if (!viewed) {
-        // Mark this tutorial as completed for the current user:
-        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:NSStringFromClass([self class])];
-        
-        // Show the tutorial:
-        //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc] init];
-        //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
-        
-    }
+    NSString *myName;
     
     // If difficulty is Normal:
     if(self.optionsSingle.globalDifficultyLevel == 1) {
@@ -59,6 +46,21 @@
         self.prepend = @"Hard";
         maxGroupSize = 15;
     }
+    
+    myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
+    
+    // Check if user has viewed this tutorial:
+    viewed = [[DBManager getSharedInstance]hasCompletedTutorial:self.optionsSingle.currentUser tutorial:myName];
+    
+    // IF tutorial NOT viewed yet:
+    if (!viewed) {
+        // Mark this tutorial as completed for the current user:
+        [[DBManager getSharedInstance]completeTutorial:self.optionsSingle.currentUser tutorial:myName];
+        
+        // Show the tutorial:
+        [self tutorial_clicked:self];
+    }
+
     
     [self initializeGame]; // Setup the game for play..
     [self load_pictures]; // Load the first set of groups...
