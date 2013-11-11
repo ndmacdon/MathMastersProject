@@ -11,6 +11,8 @@
 #import "DBManager.h"
 #import "GlobalVariables.h"
 
+static const int sessionRounds = 50;
+
 @interface GameViewController : UIViewController
 
 @property (nonatomic,strong) NSDate *endTime;
@@ -29,6 +31,7 @@
 -(void)incWinStreak;
 -(void)resetStats;
 -(void)logStats;
--(void)add_total_correct;
+-(void)inc_total_correct;
+-(void)inc_total_incorrect;
 -(void)endSession;
 @end

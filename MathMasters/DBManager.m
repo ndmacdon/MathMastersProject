@@ -122,6 +122,7 @@ static sqlite3_stmt *statement = nil;
 -(BOOL) query:(NSString *)queryString result:(int)result{
     const char *dbpath = [databasePath UTF8String]; // Converted SQL query string.
     BOOL success = FALSE; // Did the query return rows?
+    int stepResult = 0;
     
     sqlite3_reset(statement); // Clear any existing results...
     
@@ -133,10 +134,12 @@ static sqlite3_stmt *statement = nil;
         
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
             
+            stepResult = sqlite3_step(statement); // Get the result code.
+            
             // IF query returns some row:
-            if (sqlite3_step(statement) == result)
+            if (stepResult == result)
             { success = TRUE; }
-            else { NSLog(@"Query returned no rows."); }
+            else { NSLog(@"Query returned code: %d", stepResult); }
         }
         else {
             // Log the SQLite Error...
@@ -165,8 +168,8 @@ static sqlite3_stmt *statement = nil;
                             (\"HardSuperShopperViewController\"),\
                             (\"ClockworkViewController\"),\
                             (\"HardClockworkViewController\"),\
-                            (\"ApplesOrangesViewController\"),\
-                            (\"HardApplesOrangesViewController\")";
+                            (\"FishToFishViewController\"),\
+                            (\"HardFishToFishViewController\")";
     
     // IF statement executes without error:
     if ([self query:insertSQL result:SQLITE_DONE]) {
@@ -332,20 +335,6 @@ static sqlite3_stmt *statement = nil;
     sqlite3_reset(statement);
     return completed;
 }
-
-/*
- CREATE TABLE IF NOT EXISTS sessionStats\
- (game_fk TEXT,\
- username_fk TEXT,\
- session_date_ck TEXT,\
- session_length INTEGER,\
- consecutive_wins INTEGER,\
- wins INTEGER,\
- losses INTEGER,\
- highest_number,\
- FOREIGN KEY(game_fk) REFERENCES games(game_pk),\
- FOREIGN KEY(username_fk) REFERENCES users(username_pk),\
- PRIMARY KEY (game_fk, username_fk, session_date_ck))";*/
 
 // Return the array of session results for this [user] and [game] since [start]:
 -(NSArray*) getStatsForGame:(NSString *)gameID

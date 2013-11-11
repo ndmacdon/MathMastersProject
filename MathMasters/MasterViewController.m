@@ -21,11 +21,10 @@
 
 @implementation MasterViewController
 @synthesize countingStarsViewController,
-    hardCountingViewController,
     fishToFishViewController,
-    hardApplesToOrangesViewController,
     makingCentsViewController,
     clockWorkViewController,
+    superShopperViewController,
     optionsViewController,
     loginViewController,
     createAccountViewController;
@@ -41,38 +40,17 @@
 }
 
 // Launch CountingStars ViewController:
--(IBAction)cstars_clicked:(id)sender
-{
-    // Check difficulty and launch appropriate version:
-    if(optionsSingle.globalDifficultyLevel >= 1)
-    {
-        optionsSingle.globalCurrentGame =1;
-        self.countingStarsViewController = [[CountingStarsViewController alloc] init];
-        [self.navigationController pushViewController:self.countingStarsViewController animated:YES] ;
-    }
-    /*else
-    {
-        optionsSingle.globalCurrentGame = 2;
-        self.hardCountingViewController = [[HardCountingStarsViewController alloc] init];
-        [self.navigationController pushViewController:self.hardCountingViewController animated:YES];
-    }*/
+-(IBAction)cstars_clicked:(id)sender {
+    optionsSingle.globalCurrentGame =1;
+    self.countingStarsViewController = [[CountingStarsViewController alloc] init];
+    [self.navigationController pushViewController:self.countingStarsViewController animated:YES];
 }
 
 // Launch FishToFish ViewController:
--(IBAction)fishtofish_clicked:(id)sender
-{
-    if(optionsSingle.globalDifficultyLevel ==1)
-    {
-        optionsSingle.globalCurrentGame =3;
-        self.fishToFishViewController = [[FishToFishViewController alloc] init];
-        [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
-    }
-    else
-    {
-        optionsSingle.globalCurrentGame =4;
-        self.hardApplesToOrangesViewController = [[HardApplesToOrangesViewController alloc]init];
-        [self.navigationController pushViewController:self.hardApplesToOrangesViewController animated:YES];
-    }
+-(IBAction)fishtofish_clicked:(id)sender {
+    optionsSingle.globalCurrentGame =3;
+    self.fishToFishViewController = [[FishToFishViewController alloc] init];
+    [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
 }
 
 // Launch MakingCents ViewController:
@@ -133,6 +111,12 @@
         self.clockWorkViewController = [[ClockWorkViewController alloc] init];
         [self.navigationController pushViewController:self.clockWorkViewController animated:YES] ;
     }
+}
+
+- (IBAction)superShopper_clicked:(id)sender {
+    optionsSingle.globalCurrentGame =5;
+    self.superShopperViewController = [[SuperShopperViewController alloc] init];
+    [self.navigationController pushViewController:self.superShopperViewController animated:YES];
 }
 @end
 

@@ -18,14 +18,13 @@
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
 #import "CountingStarsViewController.h"
-#import "HardCountingStarsViewController.h"
 #import "FishToFishViewController.h"
-#import "HardApplesToOrangesViewController.h"
 #import "MakingCentsViewController.h"
 #import "OptionsViewController.h"
 #import "LogInViewController.h"
 #import "CreateAccountViewController.h"
 #import "ClockWorkViewController.h"
+#import "SuperShopperViewController.h"
 #import "DBManager.h"
 
 @interface MasterViewController : UIViewController
@@ -37,14 +36,14 @@
 -(IBAction)makingcents_clicked:(id)sender;
 -(IBAction)options_clicked:(id)sender; // if option button clicked go to options menu
 -(IBAction)clockWork_clicked:(id)sender;
+- (IBAction)superShopper_clicked:(id)sender;
 
 // Game ViewControllers:
 @property (nonatomic,strong) CountingStarsViewController *countingStarsViewController;
-@property (nonatomic,strong) HardCountingStarsViewController * hardCountingViewController;
 @property (nonatomic,strong) FishToFishViewController *fishToFishViewController;
-@property (nonatomic,strong) HardApplesToOrangesViewController *hardApplesToOrangesViewController;
 @property (nonatomic,strong) MakingCentsViewController * makingCentsViewController;
 @property (nonatomic, strong) ClockWorkViewController *clockWorkViewController;
+@property (nonatomic, strong) SuperShopperViewController *superShopperViewController;
 
 // Utility ViewControllers:
 @property (nonatomic,strong) OptionsViewController *optionsViewController;
