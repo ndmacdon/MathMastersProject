@@ -87,8 +87,13 @@
 		EB59F89A182D9DA500BA6A7F /* ClockHand01.png in Resources */ = {isa = PBXBuildFile; fileRef = EB59F898182D9DA500BA6A7F /* ClockHand01.png */; };
 		EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */; };
 		EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */; };
+		EB59F8A9183032A700BA6A7F /* ImageSuperShopper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8A6183032A700BA6A7F /* ImageSuperShopper.m */; };
+		EB59F8AC183032B400BA6A7F /* MyButtonMakingCents.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8AB183032B400BA6A7F /* MyButtonMakingCents.m */; };
+		EB59F8B0183032C200BA6A7F /* SuperShopperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */; };
+		EB59F8B1183032C200BA6A7F /* SuperShopperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */; };
 		EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */; };
 		EB8C09B8181B6E29005CB751 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */; };
+		EBA5EF051830EA780095DBE2 /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA5EF041830EA780095DBE2 /* dollar.png */; };
 		EBAA44771826FBEE0038DA74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44761826FBEE0038DA74 /* QuartzCore.framework */; };
 		EBAA44C81826FDC10038DA74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44C71826FDC10038DA74 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EBF002E2182D97F400F9F3E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002BA182D97F400F9F3E8 /* AppDelegate.m */; };
@@ -100,10 +105,6 @@
 		EBF002E8182D97F400F9F3E8 /* FishToFishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */; };
 		EBF002E9182D97F400F9F3E8 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C6182D97F400F9F3E8 /* GameViewController.m */; };
 		EBF002EA182D97F400F9F3E8 /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */; };
-		EBF002EB182D97F400F9F3E8 /* HardApplesToOrangesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */; };
-		EBF002EC182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */; };
-		EBF002ED182D97F400F9F3E8 /* HardCountingStarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */; };
-		EBF002EE182D97F400F9F3E8 /* HardCountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */; };
 		EBF002EF182D97F400F9F3E8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D0182D97F400F9F3E8 /* LogInViewController.m */; };
 		EBF002F0182D97F400F9F3E8 /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */; };
 		EBF002F1182D97F400F9F3E8 /* MakingCentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */; };
@@ -207,8 +208,16 @@
 		EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWorkViewController.h; sourceTree = "<group>"; };
 		EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWorkViewController.m; sourceTree = "<group>"; };
 		EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockWorkViewController.xib; sourceTree = "<group>"; };
+		EB59F8A5183032A700BA6A7F /* ImageSuperShopper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSuperShopper.h; sourceTree = "<group>"; };
+		EB59F8A6183032A700BA6A7F /* ImageSuperShopper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSuperShopper.m; sourceTree = "<group>"; };
+		EB59F8AA183032B400BA6A7F /* MyButtonMakingCents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyButtonMakingCents.h; sourceTree = "<group>"; };
+		EB59F8AB183032B400BA6A7F /* MyButtonMakingCents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyButtonMakingCents.m; sourceTree = "<group>"; };
+		EB59F8AD183032C200BA6A7F /* SuperShopperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperShopperViewController.h; sourceTree = "<group>"; };
+		EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperShopperViewController.m; sourceTree = "<group>"; };
+		EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperShopperViewController.xib; sourceTree = "<group>"; };
 		EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "MathMasters/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EBA5EF041830EA780095DBE2 /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dollar.png; path = "Pictures for math masters/MakingCents/dollar.png"; sourceTree = "<group>"; };
 		EBAA44761826FBEE0038DA74 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EBAA44791826FCA60038DA74 /* CorePlot-CocoaTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CorePlot-CocoaTouch.h"; sourceTree = "<group>"; };
 		EBAA447A1826FCA60038DA74 /* CPTAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTAnimation.h; sourceTree = "<group>"; };
@@ -305,12 +314,6 @@
 		EBF002C6182D97F400F9F3E8 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		EBF002C7182D97F400F9F3E8 /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
 		EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
-		EBF002C9182D97F400F9F3E8 /* HardApplesToOrangesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardApplesToOrangesViewController.h; sourceTree = "<group>"; };
-		EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardApplesToOrangesViewController.m; sourceTree = "<group>"; };
-		EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardApplesToOrangesViewController.xib; sourceTree = "<group>"; };
-		EBF002CC182D97F400F9F3E8 /* HardCountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCountingStarsViewController.h; sourceTree = "<group>"; };
-		EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCountingStarsViewController.m; sourceTree = "<group>"; };
-		EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HardCountingStarsViewController.xib; sourceTree = "<group>"; };
 		EBF002CF182D97F400F9F3E8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		EBF002D0182D97F400F9F3E8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
@@ -433,6 +436,7 @@
 		9A24ABF11806AA950061D40E /* MakingCentsImages */ = {
 			isa = PBXGroup;
 			children = (
+				EBA5EF041830EA780095DBE2 /* dollar.png */,
 				9AC3F4FE180E9A740028C05C /* quarter2.png */,
 				9AC3F4FC180E99D90028C05C /* quarter1.png */,
 				9A24ABF21806AAAB0061D40E /* Dime.png */,
@@ -527,17 +531,14 @@
 				EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */,
 				EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */,
 				EBF002C2182D97F400F9F3E8 /* FishToFishViewController.h */,
-				EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */,
 				EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */,
-				EBF002C9182D97F400F9F3E8 /* HardApplesToOrangesViewController.h */,
-				EBF002CA182D97F400F9F3E8 /* HardApplesToOrangesViewController.m */,
-				EBF002CB182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib */,
-				EBF002CC182D97F400F9F3E8 /* HardCountingStarsViewController.h */,
-				EBF002CD182D97F400F9F3E8 /* HardCountingStarsViewController.m */,
-				EBF002CE182D97F400F9F3E8 /* HardCountingStarsViewController.xib */,
+				EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */,
 				EBF002D2182D97F400F9F3E8 /* MakingCentsViewController.h */,
 				EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */,
 				EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */,
+				EB59F8AD183032C200BA6A7F /* SuperShopperViewController.h */,
+				EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */,
+				EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */,
 				EBF002DF182D97F400F9F3E8 /* TutorialCountingStarsViewController.h */,
 				EBF002E0182D97F400F9F3E8 /* TutorialCountingStarsViewController.m */,
 				EBF002E1182D97F400F9F3E8 /* TutorialCountingStarsViewController.xib */,
@@ -573,6 +574,10 @@
 		EB59F8A1182D9F5F00BA6A7F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EB59F8AA183032B400BA6A7F /* MyButtonMakingCents.h */,
+				EB59F8AB183032B400BA6A7F /* MyButtonMakingCents.m */,
+				EB59F8A5183032A700BA6A7F /* ImageSuperShopper.h */,
+				EB59F8A6183032A700BA6A7F /* ImageSuperShopper.m */,
 				EBF002B9182D97F400F9F3E8 /* AppDelegate.h */,
 				EBF002C7182D97F400F9F3E8 /* GlobalVariables.h */,
 				EBF002C8182D97F400F9F3E8 /* GlobalVariables.m */,
@@ -796,8 +801,6 @@
 				EBF002E3182D97F400F9F3E8 /* CountingStarsViewController.xib in Resources */,
 				EBF002E5182D97F400F9F3E8 /* CreateAccountViewController.xib in Resources */,
 				EBF002E8182D97F400F9F3E8 /* FishToFishViewController.xib in Resources */,
-				EBF002EC182D97F400F9F3E8 /* HardApplesToOrangesViewController.xib in Resources */,
-				EBF002EE182D97F400F9F3E8 /* HardCountingStarsViewController.xib in Resources */,
 				EBF002F0182D97F400F9F3E8 /* LogInViewController.xib in Resources */,
 				EBF002F2182D97F400F9F3E8 /* MakingCentsViewController.xib in Resources */,
 				EBF002F5182D97F400F9F3E8 /* OptionsViewController.xib in Resources */,
@@ -808,6 +811,8 @@
 				EB59F899182D9DA500BA6A7F /* ClockFace01.png in Resources */,
 				EB59F89A182D9DA500BA6A7F /* ClockHand01.png in Resources */,
 				EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */,
+				EB59F8B1183032C200BA6A7F /* SuperShopperViewController.xib in Resources */,
+				EBA5EF051830EA780095DBE2 /* dollar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,8 +830,6 @@
 				EBF002E7182D97F400F9F3E8 /* FishToFishViewController.m in Sources */,
 				EBF002E9182D97F400F9F3E8 /* GameViewController.m in Sources */,
 				EBF002EA182D97F400F9F3E8 /* GlobalVariables.m in Sources */,
-				EBF002EB182D97F400F9F3E8 /* HardApplesToOrangesViewController.m in Sources */,
-				EBF002ED182D97F400F9F3E8 /* HardCountingStarsViewController.m in Sources */,
 				EBF002EF182D97F400F9F3E8 /* LogInViewController.m in Sources */,
 				EBF002F1182D97F400F9F3E8 /* MakingCentsViewController.m in Sources */,
 				EBF002F3182D97F400F9F3E8 /* MasterViewController.m in Sources */,
@@ -836,6 +839,9 @@
 				EBF002FF182D998500F9F3E8 /* CountingStarsViewController.m in Sources */,
 				EBF00301182D99B800F9F3E8 /* StatisticsViewController.m in Sources */,
 				EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */,
+				EB59F8A9183032A700BA6A7F /* ImageSuperShopper.m in Sources */,
+				EB59F8AC183032B400BA6A7F /* MyButtonMakingCents.m in Sources */,
+				EB59F8B0183032C200BA6A7F /* SuperShopperViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

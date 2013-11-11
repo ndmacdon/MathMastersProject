@@ -20,26 +20,40 @@
  ****/
 
 #import <UIKit/UIKit.h>
+#import "MyButtonMakingCents.h"
+#import "GameViewController.h"
 
-@interface MakingCentsViewController : UIViewController
-{
-    IBOutlet UILabel * instructions_User;
-    NSInteger amountDisplayed;
+@interface MakingCentsViewController : GameViewController {
+    IBOutlet UILabel * instructionsUser;
+    IBOutlet UIImageView * yellowBox;
     
-    IBOutlet UIButton *five_Cents;
-    IBOutlet UIButton *ten_Cents;
-    IBOutlet UIButton *twentyfive_Cents;
-    
+    IBOutlet UILabel *resultLabel;
+    IBOutlet MyButtonMakingCents * dollar1;
+    IBOutlet MyButtonMakingCents * dime1;
+    IBOutlet MyButtonMakingCents * dime2;
+    IBOutlet MyButtonMakingCents * quarter1;
+    IBOutlet MyButtonMakingCents * quarter2;
+    IBOutlet MyButtonMakingCents * quarter3;
+    IBOutlet MyButtonMakingCents * nickel1;
+    IBOutlet MyButtonMakingCents * nickel2;
 }
 
--(void)SetInstructionsUser;
--(IBAction)draggedOut:(id)sender withEvent: (UIEvent *) event;
 
-@property (nonatomic, strong)IBOutlet UILabel *instructions_User;
-@property (nonatomic) NSInteger amountDisplayed;
-@property (nonatomic, strong) IBOutlet UIButton *five_Cents;
-@property (nonatomic, strong) IBOutlet UIButton *ten_Cents;
-@property (nonatomic, strong) IBOutlet UIButton *twentyfive_Cents;
+-(IBAction)dragged_out:(id)sender withEvent: (UIEvent *) event;
+- (IBAction)check_user_correct:(id)sender;
+
+@property (nonatomic, strong)IBOutlet UILabel *instructionsUser;
+@property(nonatomic, strong) IBOutlet UIImageView *yellowBox;
+@property(nonatomic,strong) NSTimer * timeOfReset;
+
+@property(nonatomic,strong) IBOutlet UIButton * dime1;
+@property(nonatomic,strong)IBOutlet UIButton * dime2;
+@property(nonatomic,strong)IBOutlet UIButton * quarter1;
+@property(nonatomic,strong)IBOutlet UIButton * quarter2;
+@property(nonatomic,strong)IBOutlet UIButton * quarter3;
+@property(nonatomic,strong)IBOutlet UIButton * nickel1;
+@property(nonatomic,strong)IBOutlet UIButton * nickel2;
+@property(nonatomic,strong)IBOutlet UIButton * dollar1;
 
 
 @end

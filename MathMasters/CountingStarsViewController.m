@@ -20,6 +20,8 @@
     UIImage *emptyStarImage;
     UIImage *fullStarImage;
     NSMutableArray *starButtons;
+        UIImage *btnImage;
+    int randomInteger;
     int maxStars;
     int maxStarSum;
     int starValue;
@@ -27,8 +29,6 @@
 
 @synthesize starsUserMustCount,
             displayUserCorrect,
-            randomInteger,
-            btnImage,
             tutorialCountingStarsViewController,
             sessionStatisticsViewController;
 
@@ -39,7 +39,7 @@
     return self;
 }
 
--(void)viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
     
     // Check if user has viewed this tutorial:
@@ -103,36 +103,34 @@
     if(self.userAnswer == randomInteger)
     {
         displayUserCorrect.text = [NSString stringWithFormat:@"Correct!"];
-        [self incWinStreak]; // Increment the winStreak
-        [self nextRandomStars];
-        [self add_total_correct]; // add one to total correct
+
+        [self inc_total_correct]; // add one to total correct and increase the winStreak.
         
-        // Clear the stars:
-        for (UIButton *cur in [starMat subviews]) {
-            [cur setImage:emptyStarImage forState:UIControlStateNormal];
-        }
-        
-        self.userAnswer = 0;
+
         
         // IF user completes 5 rounds: Record Stats and end the game
-        if(self.totalCorrect == 5)
+        if(self.totalCorrect == sessionRounds)
         {
             [self endSession];
             
             // The sessionStatistics view will return to this line if the user selected retry...
-            
-            [self initializeGame]; // Reset the game for another session...
+        }
+        else {
+            self.userAnswer = 0;
+            [self nextRandomStars]; // Generate the next sum and clear the stars...
         }
     }
     else  // user Incorrect
     {
         displayUserCorrect.text = [NSString stringWithFormat:@" Try Again !"];
+        [self inc_total_incorrect];
     }
 }
 
 // Setup for a play session:
 -(void)initializeGame {
     self.startTime = [NSDate date]; // Load the current time into startTime...
+    self.userAnswer = 0;
     [self nextRandomStars];
     [self resetStats];
 }
@@ -151,6 +149,11 @@
         else {
             validTotal = TRUE;
         }
+    }
+    
+    // Clear the stars:
+    for (UIButton *cur in [starMat subviews]) {
+        [cur setImage:emptyStarImage forState:UIControlStateNormal];
     }
     
     starsUserMustCount.text =

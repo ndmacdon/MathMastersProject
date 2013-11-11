@@ -314,7 +314,7 @@
     {
         resultLabel.text = [NSString stringWithFormat:@"Correct!"];
         [self incWinStreak]; // Increment the winStreak
-        [self add_total_correct]; // add one to total correct
+        [self inc_total_correct]; // add one to total correct
         
         
         self.userAnswer = 0;

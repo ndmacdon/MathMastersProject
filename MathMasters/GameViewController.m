@@ -19,6 +19,7 @@
 @synthesize totalCorrect,
     totalIncorrect,
     highestNumber,
+    userAnswer,
     consecutiveWins,
     winStreak,
     optionsSingle,
@@ -78,7 +79,7 @@
 
 // Break the current winStreak:
 -(void)breakWinStreak {
-    self.totalIncorrect++;
+
     self.winStreak = 0; // Reset the current winStreak...
 }
 
@@ -109,6 +110,14 @@
 }
 
 // Increment totalCorrect:
--(void)add_total_correct { totalCorrect++; }
+-(void)inc_total_correct {
+    totalCorrect++;
+    [self incWinStreak];
+}
+
+-(void)inc_total_incorrect {
+    totalIncorrect++;
+    [self breakWinStreak];
+}
 
 @end
