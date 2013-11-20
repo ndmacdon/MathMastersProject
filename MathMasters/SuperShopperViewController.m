@@ -20,15 +20,15 @@
 
 @implementation SuperShopperViewController {
     NSMutableArray *itemPictures;
-    NSMutableArray *priceIndex;
+    NSMutableArray *lowPriceIndex;
+    NSMutableArray *highPriceIndex;
+    NSMutableArray *priceChoices;
     int currentIndex;
     int correctPrice;
-    int incorrectPrice;
-    int leftHandPrice;
-    int rightHandPrice;
 }
 @synthesize currentItemDisplayed,
             rightButton,
+            centreButton,
             leftButton,
             resultLabel;
 
@@ -44,43 +44,61 @@
     
     // Initialize an index of prices and an array of corresponding objects:
     itemPictures = [[NSMutableArray alloc]init];
-    priceIndex = [[NSMutableArray alloc] init];
+    highPriceIndex = [[NSMutableArray alloc] init];
+    lowPriceIndex = [[NSMutableArray alloc] init];
+    priceChoices = [[NSMutableArray alloc] init];
+    
+    [priceChoices addObject:[NSNumber numberWithInt:0]];
+    [priceChoices addObject:[NSNumber numberWithInt:0]];
+    [priceChoices addObject:[NSNumber numberWithInt:0]];
     
     [itemPictures addObject:[UIImage imageNamed:@"chair.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:25]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:20]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:50]];
     
     [itemPictures addObject:[UIImage imageNamed:@"lollipop.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:1]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:1]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:5]];
     
     [itemPictures addObject:[UIImage imageNamed:@"computer.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:750]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:500]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:2000]];
     
     [itemPictures addObject:[UIImage imageNamed:@"soccerball.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:20]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:10]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:50]];
     
     [itemPictures addObject:[UIImage imageNamed:@"basketball.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:20]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:10]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:50]];
     
     [itemPictures addObject:[UIImage imageNamed:@"pencil.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:1]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:1]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:3]];
     
     [itemPictures addObject:[UIImage imageNamed:@"car.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:4000]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:1000]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:50000]];
     
     [itemPictures addObject:[UIImage imageNamed:@"burger.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:3]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:2]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:8]];
     
     [itemPictures addObject:[UIImage imageNamed:@"fries.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:3]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:2]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:5]];
     
     [itemPictures addObject:[UIImage imageNamed:@"orange.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:1]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:1]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:3]];
     
     [itemPictures addObject:[UIImage imageNamed:@"shirt.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:20]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:15]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:40]];
     
     [itemPictures addObject:[UIImage imageNamed:@"apple.png"]];
-    [priceIndex addObject:[NSNumber numberWithInt:1]];
+    [lowPriceIndex addObject:[NSNumber numberWithInt:1]];
+    [highPriceIndex addObject:[NSNumber numberWithInt:4]];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -90,9 +108,13 @@
     // If difficulty is Normal: add a prefix to our classname.
     if(self.optionsSingle.globalDifficultyLevel == 1) {
         self.prepend = @"";
+        [centreButton setHidden:TRUE];
+        [centreButton setEnabled:FALSE];
     }
     else {
         self.prepend = @"Hard";
+        //[centreButton setEnabled:FALSE];
+        
     }
     
     myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
@@ -116,8 +138,15 @@
 -(IBAction)price_button:(id)sender
 {
     // Assign the chosen price to userAnswer:
-    if (sender == leftButton) { self.userAnswer = leftHandPrice; }
-    else {self.userAnswer = rightHandPrice; }
+    if (sender == leftButton) {
+        self.userAnswer = [[priceChoices objectAtIndex:0] intValue];
+    }
+    else if (sender == centreButton) {
+        self.userAnswer = [[priceChoices objectAtIndex:1] intValue];
+    }
+    else if (sender == rightButton) {
+        self.userAnswer = [[priceChoices objectAtIndex:2] intValue];
+    }
     
     // IF userAnswer matches the correct price:
     if (self.userAnswer == correctPrice) {
@@ -165,52 +194,60 @@
     
     // Update the button labels with new prices:
     [leftButton setTitle:
-        [NSString stringWithFormat:@"$%d", leftHandPrice]forState:UIControlStateNormal];
+     [NSString stringWithFormat:@"$%d", [[priceChoices objectAtIndex:0] intValue]] forState:UIControlStateNormal];
+    
+    [centreButton setTitle:
+     [NSString stringWithFormat:@"$%d", [[priceChoices objectAtIndex:1] intValue]] forState:UIControlStateNormal];
+    
     [rightButton setTitle:
-        [NSString stringWithFormat:@"$%d", rightHandPrice]forState:UIControlStateNormal];
+        [NSString stringWithFormat:@"$%d", [[priceChoices objectAtIndex:2] intValue]] forState:UIControlStateNormal];
 }
 
 // Update the prices to reflect the displayed item:
 -(void)set_prices {
-    BOOL leftIsCorrect = arc4random() % 2;      // Is the leftHandPrice correct?
-    BOOL decreasePrice = arc4random() % 2;      // Will our price be increased or decreased?
-    BOOL incorrectPriceIsHigher = arc4random() % 2; // Is the wrong price higher or lower?
-    int modifier = [[priceIndex objectAtIndex:currentIndex] integerValue];
+    int correctPriceLocation = arc4random() % 3;    // 0=>LeftHand 1=>Centre 2=>RightHand
+    int fakePriceOneLocation = arc4random() % 3;   // 0=> lowest possible label
+    NSNumber *fakePriceOne = 0;                     // An incorrect price.
+    NSNumber *fakePriceTwo = 0;                     // Another incorrect price.
+    int currentLow = [[lowPriceIndex objectAtIndex:currentIndex] integerValue];
+    int currentHigh = [[highPriceIndex objectAtIndex:currentIndex] integerValue];
+    correctPrice = currentLow + arc4random() % (currentHigh - currentLow); // Set newPrice between high and low
     
-    // Set modifier to random value between 0 and 1/4 current price.
-    // Very small prices will not be modified (because of integer rounding)
-    // This is reasonable because inexpensive items should not have widly varying
-    // prices. i.e. a pencil should never cost $5.
-    modifier = (arc4random() % ((modifier / 4) + 1) + 1);
-    
-    
-    // IF price is to be increased: negate the modifier.
-    if (decreasePrice) { modifier *= -1; }
-    
-    correctPrice = [[priceIndex objectAtIndex:currentIndex] integerValue] + modifier;
-    incorrectPrice = modifier;
-    
-    
-
-    // IF corect price is small: ensure incorrect price is high.
-    if (correctPrice < 15) {
-        // Ensure possible correct prices:
-        if (correctPrice < 1) { correctPrice = 1; }
+    // IF centreButton is disabled: don't put the correct price there...
+    if (!centreButton.enabled && correctPriceLocation == 1) {
         
-        incorrectPrice = (30 + arc4random() % 100);
+        // WHILE correctPriceLocation is centre, randomize correct price location...
+        while (correctPriceLocation == 1) {
+            correctPriceLocation = arc4random() % 3;
+        }
     }
-    else if (incorrectPriceIsHigher) {
-        incorrectPrice = correctPrice * incorrectPrice;
+    
+    // Ensure our first fake price does not overwrite the correct one:
+    while (fakePriceOneLocation == correctPriceLocation) {
+        fakePriceOneLocation = arc4random() % 3;
     }
-
-    // IF leftHandPrice is the correct price:
-    if (leftIsCorrect) {
-        leftHandPrice = correctPrice;
-        rightHandPrice = incorrectPrice;
+    
+    // IF corect price is small: ensure incorrect price is high.
+    if (currentLow < 20) {
+        fakePriceOne = [NSNumber numberWithInt:(currentHigh * 2 + arc4random() % 100)];
+        fakePriceTwo = [NSNumber numberWithInt:(currentHigh * 2 + arc4random() % 100)];
     }
     else {
-        leftHandPrice = incorrectPrice;
-        rightHandPrice = correctPrice;
+        fakePriceOne = [NSNumber numberWithInt:(currentHigh * 2 + arc4random() % currentHigh)];
+        fakePriceTwo = [NSNumber numberWithInt:(arc4random() % (currentLow / 2) ) ];
+    }
+    
+    // Set the priceChoices according to the randomized locations of correct and incorrect prices:
+    for (int i = 0; i < priceChoices.count; i++) {
+        if (i == correctPriceLocation) {
+            [priceChoices setObject:[NSNumber numberWithInt:correctPrice] atIndexedSubscript:i];
+        }
+        else if (i == fakePriceOneLocation) {
+            [priceChoices setObject:fakePriceOne atIndexedSubscript:i];
+        }
+        else {
+            [priceChoices setObject:fakePriceTwo atIndexedSubscript:i];
+        }
     }
 }
 

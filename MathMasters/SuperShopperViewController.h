@@ -31,5 +31,6 @@
 @property (nonatomic, strong) IBOutlet UIButton *leftButton;
 @property (nonatomic,strong) IBOutlet UIButton *rightButton;
 @property (nonatomic,strong) IBOutlet UILabel *resultLabel;
+@property (strong, nonatomic) IBOutlet UIButton *centreButton;
 
 @end
