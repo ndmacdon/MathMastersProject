@@ -158,11 +158,6 @@
     starsUserMustCount.text =
     [NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
 }
-/*
-// Launch this game's tutorial:
--(IBAction)tutorial_clicked:(id)sender {
-    [super tutorial_clicked];
-}*/
 
 // Find an empty region to place a star into:
 -(CGPoint)getEmptyRegion {

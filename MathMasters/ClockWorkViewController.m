@@ -19,22 +19,22 @@
 
 
 @implementation ClockWorkViewController {
-    NSString *correctTime;
-    NSString *hourGuessed;
-    NSString *minuteGuessed;
-    NSString *hourCorrectAnswer;
-    NSString *minuteCorrectAnswer;
+    int hourGuessed;
+    int minuteGuessed;
+    int correctHour;
+    int correctMinute;
+    int hourGuessedz;
+    int minuteGuessedz;
+    int minTimeUnit;
 }
-@synthesize correctTime,timeGuessed,hourGuessed,minuteGuessed, hourCorrectAnswer,minuteCorrectAnswer;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
     return self;
 }
+
 
 -(void)viewWillAppear:(BOOL)animated {
     BOOL viewed = FALSE; // Has the current user ever viewed this tutorial?
@@ -43,10 +43,12 @@
     // If difficulty is Normal: add a prefix to our classname.
     if(self.optionsSingle.globalDifficultyLevel == 1) {
         self.prepend = @"";
+        minTimeUnit = 15;
     }
     // ELSE: difficulty is Hard.
     else {
         self.prepend = @"Hard";
+        minTimeUnit = 5;
     }
     
     myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
@@ -63,238 +65,163 @@
         [self tutorial_clicked:self];
     }
     
+    [self nextTime]; // Randomize the displayed time...
+    
     [self initializeGame]; // Setup the game for play...
 }
 
-// function used to randomly move hands of clock and set answers
--(void)normal_move_hands
+// Randomize correct hour/minute and set clock hands accordingly:
+-(void)nextTime
 {
-    int hourHandLocation = arc4random() % 12;   // 12 unique locations for hour hand
-    int miniuteHandLocation = arc4random() % 4;   // 4 unique locations for minute hand
-    if(hourHandLocation ==0)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI / 6); // 1
-        hourCorrectAnswer = [NSString stringWithFormat:@"1"];
-    }
-    if(hourHandLocation ==1)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI / 3); // 2
-        hourCorrectAnswer = [NSString stringWithFormat:@"2"];
-    }
-    if(hourHandLocation ==2)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI / 2); // 3
-        hourCorrectAnswer = [NSString stringWithFormat:@"3"];
-    }
-    if(hourHandLocation ==3)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI *2 /3); // 4
-        hourCorrectAnswer = [NSString stringWithFormat:@"4"];
-    }
-    if(hourHandLocation ==4)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 5 / 6 ); // 5
-        hourCorrectAnswer = [NSString stringWithFormat:@"5"];
-    }
-    if(hourHandLocation ==5)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI); // 6
-        hourCorrectAnswer = [NSString stringWithFormat:@"6"];
-    }
-    if(hourHandLocation ==6)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 7 / 6); // 7
-        hourCorrectAnswer = [NSString stringWithFormat:@"7"];
-    }
-    if(hourHandLocation ==7)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 4 /3); // 8
-        hourCorrectAnswer = [NSString stringWithFormat:@"8"];
-    }
-    if(hourHandLocation ==8)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 3 / 2); // 9
-        hourCorrectAnswer = [NSString stringWithFormat:@"9"];
-    }
-    if(hourHandLocation ==9)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 10 /6); // 10
-        hourCorrectAnswer = [NSString stringWithFormat:@"10"];
-    }
-    if(hourHandLocation ==10)
-    {
-        hourHand.transform =CGAffineTransformMakeRotation(M_PI * 11 /6); // 11
-        hourCorrectAnswer = [NSString stringWithFormat:@"11"];
-    }
-    if(hourHandLocation ==11)  // 12
-    {
-         hourCorrectAnswer = [NSString stringWithFormat:@"12"];
-    }
+    correctHour = arc4random() % 12 + 1;                    // Set the correct hour
+    correctMinute = arc4random() % 60 + 1;                  // Set the correct minute
     
+    // Force minute hand to a multiple of minTimeUnit (0,15,30,45 if minTimeUnit is 15):
+    correctMinute = correctMinute - (correctMinute % minTimeUnit);
     
-   if(miniuteHandLocation == 0)  // 0 miniute 
-   {
-       minuteCorrectAnswer = [NSString stringWithFormat:@"0"];
+    float hourAngle = ((float)correctHour / 12.0f) * 2 * M_PI;      // Hours in radians.
+    float minuteAngle = ((float)correctMinute / 60.0f) * 2 * M_PI;  // Minutes in radians.
     
-   }
-   if(miniuteHandLocation == 1)  // 15 miniute
-   {
-       minuteHand.transform = CGAffineTransformMakeRotation(M_PI /2);
-       minuteCorrectAnswer = [NSString stringWithFormat:@"1"];
-   }
-   if(miniuteHandLocation == 2)  // 30 miniute
-   {
-        minuteHand.transform = CGAffineTransformMakeRotation(M_PI);
-        minuteCorrectAnswer = [NSString stringWithFormat:@"2"];
-   }
-   if(miniuteHandLocation == 3)  // 45 miniute
-   {
-       minuteHand.transform = CGAffineTransformMakeRotation(M_PI * 3 /2);
-       minuteCorrectAnswer = [NSString stringWithFormat:@"3"];
-   }
-
-        
+    hourHand.transform = CGAffineTransformMakeRotation(0);
+    minuteHand.transform = CGAffineTransformMakeRotation(0);
+    
+    hourHand.transform = CGAffineTransformMakeRotation(hourAngle);
+    minuteHand.transform = CGAffineTransformMakeRotation(minuteAngle);
 }
 
-// Reset hands of the block after user guesses correct
--(void)reset_hands
-{
-    if(![hourCorrectAnswer isEqual:@"3"]) // if not equal to 12 (don't need to reset if 12)
-    {
-        hourHand.transform = CGAffineTransformMakeRotation(0);
-    }
-    if(![minuteCorrectAnswer isEqual:@"0"])  // if not equal to 00 ( dont neeed to reset if minutes are 00)
-    {
-        minuteHand.transform = CGAffineTransformMakeRotation(0);
-    }
-}
-
-// tell the picker how many rows are available for a given component
+// Set number of rows for each column in the TimePicker:
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    NSUInteger numRows;
-    if(component == 0) {
+    
+    NSUInteger numRows = 0;
+    
+    if (component == 0) {
         numRows = 12;
     }
-    if(component == 1) {
+
+    else if (component == 1) {
         numRows = 1;
     }
-    if(component ==2)
-    {
-        numRows = 4;
+    
+    else if (component == 2) {
+        numRows = 60 / minTimeUnit;
     }
+    
+    
     return numRows;
 }
 
-// Methods for time picker
 
+// Read the guessed time from the TimePicker:
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     
-    if(component == 0) // hour column
-    {
-        hourGuessed = [NSString stringWithFormat:@"%d",row + 1];
-    }
-    if(component == 2)  // minute column
-    {
-        minuteGuessed = [NSString stringWithFormat:@"%d", row];
-    }
+    // Set the hour or minute guessed:
+    if (component == 0) { hourGuessed = row + 1; }
+    else if (component == 2) { minuteGuessed = row * minTimeUnit; }
     
+    self.userAnswer = hourGuessed * 100 + minuteGuessed;
 }
 
 
-// tell the picker how many components it will have
-- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+// Set the number of components for each column of the TimePicker:
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView
+             attributedTitleForRow:(NSInteger)row
+                      forComponent:(NSInteger)component {
     
     NSString * text;
     NSMutableAttributedString *as;
-    if(component == 0)   // fist column
-    {
+    
+    // Hour Column:
+    if (component == 0) {
         text = [NSString stringWithFormat:@"%d", row+1];
-        as = [[NSMutableAttributedString alloc]initWithString:text];
-        NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
-        mutParaStyle.alignment = NSTextAlignmentCenter;
-        [as addAttribute:NSParagraphStyleAttributeName value:mutParaStyle range:NSMakeRange(0,[text length])];
-    }
-    if(component == 2)  // third column
-    {
-        if(row == 0)
-        {
-            text = [NSString stringWithFormat:@"00"];
-        }
-        else
-        {
-            text = [NSString stringWithFormat:@"%d", row *15];
-        }
-        as = [[NSMutableAttributedString alloc]initWithString:text];
-        NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
-        mutParaStyle.alignment = NSTextAlignmentCenter;
-        [as addAttribute:NSParagraphStyleAttributeName value:mutParaStyle range:NSMakeRange(0,[text length])];
         
-    }
-    if(component == 1)  // first column
-    {
-        text = [NSString stringWithFormat:@":"];
         as = [[NSMutableAttributedString alloc]initWithString:text];
-        NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
+        
+        NSMutableParagraphStyle *mutParaStyle = [[NSMutableParagraphStyle alloc] init];
+        
         mutParaStyle.alignment = NSTextAlignmentCenter;
-        [as addAttribute:NSParagraphStyleAttributeName value:mutParaStyle range:NSMakeRange(0,[text length])];
+        
+        [as addAttribute:NSParagraphStyleAttributeName
+                   value:mutParaStyle
+                   range:NSMakeRange(0,[text length])];
     }
+    
+    // ':' Column...
+    else if (component == 1) {
+        text = [NSString stringWithFormat:@":"];
+        
+        as = [[NSMutableAttributedString alloc]initWithString:text];
+        
+        NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
+        
+        mutParaStyle.alignment = NSTextAlignmentCenter;
+        
+        [as addAttribute:NSParagraphStyleAttributeName
+                   value:mutParaStyle
+                   range:NSMakeRange(0,[text length])];
+    }
+    
+    // Minute Column:
+    else if (component == 2) {
+        
+        if(row == 0){ text = [NSString stringWithFormat:@"00"]; }
+        else { text = [NSString stringWithFormat:@"%d", row * minTimeUnit]; }
+        
+        as = [[NSMutableAttributedString alloc]initWithString:text];
+        
+        NSMutableParagraphStyle *mutParaStyle=[[NSMutableParagraphStyle alloc] init];
+        
+        mutParaStyle.alignment = NSTextAlignmentCenter;
+        
+        [as addAttribute:NSParagraphStyleAttributeName
+                   value:mutParaStyle
+                   range:NSMakeRange(0,[text length])];
+    }
+
     return as;
 }
 
-
+// Set number of TimePicker columns:
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 3;
 }
 
-// tell the picker the width of each row for a given component
+// Set width of columns in TimePicker:
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     
     int sectionWidth;
-    if(component == 0) {
-        sectionWidth = 100;
-    }
-    else if(component == 1) {
-        sectionWidth = 45;
-    }
-    else {
-        sectionWidth = 100;
+    
+    switch (component) {
+        case 0: {
+            sectionWidth = 100;
+            break;
+        }
+        
+        case 1: {
+            sectionWidth = 45;
+            break;
+        }
+        
+        case 2: {
+            sectionWidth = 100;
+            break;
+        }
     }
     
     return sectionWidth;
 }
 
 
--(void)TestDisplay {
-    correcthour.text = [NSString stringWithFormat:@"%@",hourCorrectAnswer];
-    correctminute.text = [NSString stringWithFormat:@"%@",minuteCorrectAnswer];
-    guesshour.text = [NSString stringWithFormat:@"%@",hourGuessed];
-    guessminute.text = [NSString stringWithFormat:@"%@", minuteGuessed];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self normal_move_hands];
-    minuteGuessed = [NSString stringWithFormat:@"0"];   // initialize values
-    hourGuessed = [NSString stringWithFormat:@"1"];
-    [self TestDisplay];
-    
-    // create UIPickerView 
-    UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
-    myPickerView.delegate = self;
-    myPickerView.showsSelectionIndicator = YES;
-    [self.view addSubview:myPickerView];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+// Check the user's answer against the correct answer:
 - (IBAction)checkAnswer:(id)sender {
-    //[self TestDisplay]; // DEBUG ONLY
     
-    if([hourGuessed isEqual:hourCorrectAnswer] && [minuteGuessed isEqual: minuteCorrectAnswer])
-    {
+    if(hourGuessed == correctHour && minuteGuessed == correctMinute) {
+        
         resultLabel.text = [NSString stringWithFormat:@"Correct !!!"];
+        
         [self inc_total_correct]; // add one to total correct and increase the winStreak.
         
         // IF user completes 5 rounds: Record Stats and end the game
@@ -305,8 +232,7 @@
             // The sessionStatistics view will return to this line if the user selected retry...
         }
         else {
-            [self reset_hands];  // reset hands back to normal position
-            [self normal_move_hands];  // move hands and set new answer
+            [self nextTime];  // move hands and set new answer
         }
     }
     else {
@@ -318,14 +244,13 @@
 // Setup for a play session:
 -(void)initializeGame {
     self.startTime = [NSDate date]; // Load the current time into startTime...
+    
+    // create UIPickerView
+    UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
+    myPickerView.delegate = self;
+    myPickerView.showsSelectionIndicator = YES;
+    [self.view addSubview:myPickerView];
     [self resetStats];
-}
-
-// Launch this game's tutorial:
--(IBAction)normal_tutorial_clicked:(id)sender
-{
-    //self.tutorialCountingStarsViewController = [[TutorialCountingStarsViewController alloc]init];
-    //[self.navigationController pushViewController:self.tutorialCountingStarsViewController animated:YES];
 }
 
 @end

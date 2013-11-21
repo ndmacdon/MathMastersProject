@@ -113,8 +113,6 @@
     }
     else {
         self.prepend = @"Hard";
-        //[centreButton setEnabled:FALSE];
-        
     }
     
     myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
