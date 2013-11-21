@@ -16,21 +16,28 @@
 
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
+#import "PasswordResetViewController.h"
+#import "CreateAccountViewController.h"
 #import "DBManager.h"
+
+#define MAX_LOGIN_ATTEMPTS 3
 
 @class MasterViewController;
 
-@interface LogInViewController : UIViewController<UITextFieldDelegate>
-{
+@interface LogInViewController : UIViewController<UITextFieldDelegate> {
     GlobalVariables *optionsSingle;
     IBOutlet UITextField *usernameTextField;
     IBOutlet UITextField *passwordTextField;
 }
 
--(IBAction)login:(id)sender;
+- (IBAction)createAccount:(id)sender;
+- (IBAction)login:(id)sender;
+- (IBAction)resetPassword:(id)sender;
+
 @property (nonatomic, strong) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
-
+@property (nonatomic, strong) PasswordResetViewController *passwordResetViewController;
+@property (nonatomic, strong) CreateAccountViewController *createAccountViewController;
 
 
 

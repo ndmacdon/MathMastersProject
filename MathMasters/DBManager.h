@@ -30,11 +30,11 @@
 
 -(BOOL) addUser:(NSString*)username password:(NSString*)password secret:(NSString*)secret;
 //-(BOOL) deleteUser:(NSString*)username password:(NSString*)password;
-//-(BOOL) resetPassword:(NSString*)username password:(NSString*)password newPassword:(NSString*)newPassword;
+-(BOOL) resetPassword:(NSString*)username newPassword:(NSString*)newPassword;
 
 -(BOOL) userExists:(NSString*)username;
--(int) countRowsOF:(NSString*)table;
-//-(BOOL) correctSecret:(NSString*)username secret:(NSString*)secret;
+-(int)  countRowsOF:(NSString*)table;
+-(BOOL) correctSecret:(NSString*)username secret:(NSString*)secret;
 -(BOOL) hasCompletedTutorial:(NSString*)username tutorial:(NSString*)tutorial;
 -(BOOL) completeTutorial:(NSString*)username tutorial:(NSString*)tutorial;
 -(BOOL) login:(NSString*)username password:(NSString*)password;

@@ -1,28 +1,23 @@
-/****
- *
- * Filename:    CreateAccountViewController.m
- *
- * Authors:     Ryan Wong, Nicholas Macdonald
- *
- * Project:     MathMasters
- *
- * Team:        Team 12: First Step Conceptions
- *
- * VersionDate: October 27, 2013
- *
- * Description: ViewController: Provides a User interface for the account creation process.
- *
- ****/
+//
+//  PasswordResetViewController.m
+//  MathMasters
+//
+//  Created by Kristina Mishina on 13-11-20.
+//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
+//
 
+#import "PasswordResetViewController.h"
 
-#import "CreateAccountViewController.h"
-
-@interface CreateAccountViewController ()
+@interface PasswordResetViewController ()
 
 @end
 
-@implementation CreateAccountViewController
-@synthesize usernameText, passwordText, passwordConfirmationText, secretText;
+@implementation PasswordResetViewController
+@synthesize usernameText,
+            passwordText,
+            passwordConfirmationText,
+            secretText,
+            username;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +31,11 @@
     self.navigationItem.hidesBackButton = YES; // Disable back button.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:TRUE];
+    
+    usernameText.text = username;
+}
 
 
 // Clear the text input fields of the view:
@@ -44,53 +44,55 @@
 }
 
 // Attempts to add a user to the USERS Database:
--(IBAction)createAccount:(id)sender {
+-(IBAction)resetPassword:(id)sender {
     BOOL success = FALSE;
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Account Creation Failed"
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Password Reset Failed"
                                                    message:nil
                                                   delegate:nil
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil];
     
     // IF all required fields have input:
-    if (usernameText.text.length > 0 &&
-        passwordText.text.length > 0 &&
+    if (passwordText.text.length > 0 &&
         passwordConfirmationText.text.length > 0 &&
         secretText.text.length > 0) {
-    
-        if ([self isLongEnough:usernameText length:MIN_FIELD_LENGTH]                &
-            [self isLongEnough:passwordText length:MIN_FIELD_LENGTH]                &
-            [self isLongEnough:passwordConfirmationText length:MIN_FIELD_LENGTH]    &
-            [self isLongEnough:secretText length:MIN_FIELD_LENGTH]                  ) {
-
+        
+        if ([self isLongEnough:passwordText length:MIN_FIELD_LENGTH]                &
+            [self isLongEnough:passwordConfirmationText length:MIN_FIELD_LENGTH]    ) {
+            
             // IF USER with this USERNAME does NOT exist:
-            if (![[DBManager getSharedInstance]userExists:usernameText.text]) {
+            if ([[DBManager getSharedInstance]userExists:usernameText.text]) {
                 
                 // IF password matches passwordConfirmation:
                 if ([passwordText.text isEqualToString:passwordConfirmationText.text]) {
                     
-                    success = [[DBManager getSharedInstance]addUser:usernameText.text password:passwordText.text secret:secretText.text];
+                    if ( [[DBManager getSharedInstance]correctSecret:usernameText.text secret:secretText.text] ) {
+                        success = [[DBManager getSharedInstance]resetPassword:usernameText.text
+                                                                  newPassword:passwordText.text];
+                    }
+                    else {
+                        [alert setMessage:@"The Secret Answer entered is incorrect"];
+                    }
+                
                 }
-                else { [alert setMessage:@"Password does not match Password Confirmation"]; }
+                else { [alert setMessage:@"Password does not match your Password Confirmation"]; }
             }
             else {
-                [alert setMessage:[NSString
-                                   stringWithFormat:@"Choose a different username. '%@' already has an account",
-                                   usernameText.text]];
+                [alert setMessage:[NSString stringWithFormat:@"User '%@' was not found in the database", usernameText.text]];
             }
         }
         else { [alert setMessage:@"The red entries are too short"]; }
     }
-    else { [alert setMessage:@"Please fill out all boxes"]; }
+    else { [alert  setMessage:@"Please fill out all boxes"]; }
     
-    // IF account creation failed:
+    // IF password reset failed:
     if (!success) {
 
         [alert show];
     }
     else {
         // Pop back to the Main-Menu:
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:TRUE];
     }
 }
 
@@ -111,31 +113,13 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 // When user selects return: resign keyboard and login.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [super textFieldShouldReturn:textField];
-    [self createAccount:textField];
+    [self resetPassword:textField];
     return YES;
 }
 
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

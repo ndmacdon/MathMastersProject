@@ -21,6 +21,9 @@
 		EB59F8B0183032C200BA6A7F /* SuperShopperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */; };
 		EB59F8B1183032C200BA6A7F /* SuperShopperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */; };
 		EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */; };
+		EB753C00183DB25400E81284 /* PasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB753BFE183DB25400E81284 /* PasswordResetViewController.m */; };
+		EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */; };
+		EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB753C03183E9A5600E81284 /* InputFormViewController.m */; };
 		EB8C09B8181B6E29005CB751 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */; };
 		EB9493AD18316C9D00E4FF22 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933118316C9D00E4FF22 /* background-spring.png */; };
 		EB9493AE18316C9D00E4FF22 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB94933218316C9D00E4FF22 /* images.jpeg */; };
@@ -195,6 +198,11 @@
 		EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperShopperViewController.m; sourceTree = "<group>"; };
 		EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperShopperViewController.xib; sourceTree = "<group>"; };
 		EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "MathMasters/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		EB753BFD183DB25400E81284 /* PasswordResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordResetViewController.h; sourceTree = "<group>"; };
+		EB753BFE183DB25400E81284 /* PasswordResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordResetViewController.m; sourceTree = "<group>"; };
+		EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordResetViewController.xib; sourceTree = "<group>"; };
+		EB753C02183E9A5600E81284 /* InputFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputFormViewController.h; sourceTree = "<group>"; };
+		EB753C03183E9A5600E81284 /* InputFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputFormViewController.m; sourceTree = "<group>"; };
 		EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EB94933118316C9D00E4FF22 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-spring.png"; sourceTree = "<group>"; };
 		EB94933218316C9D00E4FF22 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
@@ -546,12 +554,17 @@
 				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
 				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
 				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
+				EB753C02183E9A5600E81284 /* InputFormViewController.h */,
+				EB753C03183E9A5600E81284 /* InputFormViewController.m */,
 				EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */,
 				EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */,
 				EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */,
 				EBF002CF182D97F400F9F3E8 /* LogInViewController.h */,
 				EBF002D0182D97F400F9F3E8 /* LogInViewController.m */,
 				EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */,
+				EB753BFD183DB25400E81284 /* PasswordResetViewController.h */,
+				EB753BFE183DB25400E81284 /* PasswordResetViewController.m */,
+				EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */,
 				EBF002D5182D97F400F9F3E8 /* MasterViewController.h */,
 				EBF002D6182D97F400F9F3E8 /* MasterViewController.m */,
 				EBF002FB182D981100F9F3E8 /* MasterViewController.xib */,
@@ -1085,6 +1098,7 @@
 				EB94943218318CC800E4FF22 /* normal_cw_tut02.png in Resources */,
 				EB94943318318CC800E4FF22 /* normal_cw_tut03.png in Resources */,
 				EB94943418318CC800E4FF22 /* normal_cw_tut04.png in Resources */,
+				EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,6 +1128,8 @@
 				EB59F8AC183032B400BA6A7F /* MyButtonMakingCents.m in Sources */,
 				EB59F8B0183032C200BA6A7F /* SuperShopperViewController.m in Sources */,
 				EB94942218316DEE00E4FF22 /* TutorialViewController.m in Sources */,
+				EB753C00183DB25400E81284 /* PasswordResetViewController.m in Sources */,
+				EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
