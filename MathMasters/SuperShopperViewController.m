@@ -132,6 +132,9 @@
     [self initializeGame]; // Setup the game for play...
 }
 
+// load taDA sound effect
+
+
 // Check if the price of the clicked button is correct:
 -(IBAction)price_button:(id)sender
 {
@@ -149,6 +152,7 @@
     // IF userAnswer matches the correct price:
     if (self.userAnswer == correctPrice) {
         
+        [self play_done_sound];
         resultLabel.text = [NSString stringWithFormat:@"You are Correct!"];
         [self inc_total_correct]; // add one to total correct and increase winStreak...
         

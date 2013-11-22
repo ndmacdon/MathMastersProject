@@ -25,7 +25,8 @@
 }
 - (IBAction)statistics_clicked:(id)sender;
 -(IBAction)change_difficulty:(id)sender;
--(IBAction)set_volume:(id)sender;
+-(IBAction)set_music_volume:(id)sender;
+-(IBAction)set_soundeffect_volume:(id)sender;
 @property(nonatomic,strong) IBOutlet UIButton *changeDifficultyButton;
 @property (nonatomic,strong) StatisticsViewController  *statisticsViewController;
 @property (nonatomic,strong) GlobalVariables *optionsSingle;

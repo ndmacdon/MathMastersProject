@@ -36,7 +36,8 @@
     startTime,
     endTime,
     runningTime,
-    tutorialViewController;
+    tutorialViewController,
+    arrayMusic;
 
 
 
@@ -65,22 +66,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
-    [self play_sound];
-    
-
+    self.optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
 
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self set_music_array];
+    [self play_sound];
+}
+
+// initializes array with music
+-(void)set_music_array
+{
+    arrayMusic = [[NSMutableArray alloc]init];
+    [arrayMusic addObject:[[NSBundle mainBundle]pathForResource:@"classicalmusic" ofType:@"m4a"]];
+    [arrayMusic addObject:[[NSBundle mainBundle]pathForResource:@"classicalmusic1" ofType:@"m4a"]];
+    [arrayMusic addObject:[[NSBundle mainBundle]pathForResource:@"classicalmusic2" ofType:@"mp3"]];
+    
+}
+
+// used to play background music
 -(void)play_sound
 {
     // background music added!
-    NSString *music = [[NSBundle mainBundle]pathForResource:@"classicalmusic" ofType:@".m4a"];
-    optionsSingle.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
-    optionsSingle.audioPlayer.numberOfLoops = -1;
-    [optionsSingle.audioPlayer setVolume:optionsSingle.volumeControl];
+    int randomNumber = arc4random() % 3;
+    
+    optionsSingle.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[arrayMusic objectAtIndex:randomNumber]] error:NULL];
+    optionsSingle.audioPlayer.numberOfLoops = -1;  // played infinite amount of times
+    [optionsSingle.audioPlayer setVolume:optionsSingle.musicVolumeControl];
     [optionsSingle.audioPlayer play];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,6 +135,8 @@
     self.winStreak = 0; // Reset the current winStreak...
 }
 
+
+
 // Reset the stored statistics for a new session:
 -(void)resetStats {
     totalCorrect = 0;
@@ -156,6 +172,15 @@
 -(void)inc_total_incorrect {
     totalIncorrect++;
     [self breakWinStreak];
+}
+// play ta da sound
+-(void)play_done_sound
+{
+    NSString * done_effect = [[NSBundle mainBundle]pathForResource:@"taDa" ofType:@"mp3"];
+    self.optionsSingle.soundEffectsPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:done_effect] error:NULL];
+    self.optionsSingle.soundEffectsPlayer.numberOfLoops = 0;
+    [self.optionsSingle.soundEffectsPlayer setVolume:self.optionsSingle.soundeffectVolumeControl];
+    [self.optionsSingle.soundEffectsPlayer play];
 }
 
 @end

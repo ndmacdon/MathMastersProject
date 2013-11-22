@@ -68,11 +68,16 @@
     
 
 }
--(IBAction)set_volume:(id)sender
+-(IBAction)set_music_volume:(id)sender
 {
     UISlider * mySlider = sender;
-    optionsSingle.volumeControl = mySlider.value;
+    optionsSingle.musicVolumeControl = mySlider.value;
     
+}
+-(IBAction)set_soundeffect_volume:(id)sender
+{
+    UISlider * mySlider = sender;
+    optionsSingle.soundeffectVolumeControl = mySlider.value;
 }
 
 - (void)didReceiveMemoryWarning

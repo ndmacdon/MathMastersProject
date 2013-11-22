@@ -51,7 +51,7 @@
         fullStarImage = [UIImage imageNamed:@"yellowStar.png"];
         self.prepend = @"";
     }
-    // ELSE Difficulty is hard:
+     //ELSE Difficulty is hard:
     else {
         maxStars = 6;
         maxStarSum = 18;
@@ -59,7 +59,9 @@
         emptyStarImage = [UIImage imageNamed:@"threeStarsWhite.png"];
         fullStarImage = [UIImage imageNamed:@"threeStarsColor.png"];
         self.prepend = @"Hard";
+     
     }
+     
     
     myName = [NSString stringWithFormat:@"%@%@", self.prepend, NSStringFromClass([self class])];
     
@@ -87,6 +89,8 @@
 // Before showing interface to user: initialize some values
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,6 +105,8 @@
     // IF the user has completed enough rounds:
     if(self.userAnswer == randomInteger)
     {
+        
+        [self play_done_sound];
         displayUserCorrect.text = [NSString stringWithFormat:@"Correct!"];
 
         [self inc_total_correct]; // add one to total correct and increase the winStreak.
@@ -199,10 +205,25 @@
 }
 
 
+
+-(void)play_star_sound
+{
+    
+    NSString * star_effect = [[NSBundle mainBundle]pathForResource:@"star_click" ofType:@"mp3"];
+    self.optionsSingle.soundEffectsPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:star_effect] error:NULL];
+    self.optionsSingle.soundEffectsPlayer.numberOfLoops = 0;
+    [self.optionsSingle.soundEffectsPlayer setVolume:self.optionsSingle.soundeffectVolumeControl];
+    [self.optionsSingle.soundEffectsPlayer play];
+    
+}
+
 // IF user clicks stars buttons on interface, will change image depending on current image
 -(IBAction)star_clicked:(id)sender  
 {
-    // IF star button clicked is currently a yellow star
+     
+    [self play_star_sound];  // set and play star sound effect audio player
+    
+        // IF star button clicked is currently a yellow star
     if([[sender imageForState:UIControlStateNormal] isEqual:fullStarImage])
     {
         self.userAnswer -= starValue;

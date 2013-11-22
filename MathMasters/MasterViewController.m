@@ -40,15 +40,17 @@
 }
 
 // Launch CountingStars ViewController:
--(IBAction)cstars_clicked:(id)sender {
-    optionsSingle.globalCurrentGame =1;
+-(IBAction)cstars_clicked:(id)sender
+{
+
     self.countingStarsViewController = [[CountingStarsViewController alloc] init];
     [self.navigationController pushViewController:self.countingStarsViewController animated:YES];
 }
 
 // Launch FishToFish ViewController:
--(IBAction)fishtofish_clicked:(id)sender {
-    optionsSingle.globalCurrentGame =3;
+-(IBAction)fishtofish_clicked:(id)sender
+{
+
     self.fishToFishViewController = [[FishToFishViewController alloc] init];
     [self.navigationController pushViewController:self.fishToFishViewController animated:YES];
 }
@@ -56,11 +58,22 @@
 // Launch MakingCents ViewController:
 -(IBAction)makingcents_clicked:(id)sender
 {
-    if(!self.makingCentsViewController)
-    {
-        self.makingCentsViewController = [[MakingCentsViewController alloc] init];
-    }
+    
+    self.makingCentsViewController = [[MakingCentsViewController alloc] init];
     [self.navigationController pushViewController:self.makingCentsViewController animated:YES];
+}
+
+
+- (IBAction)clockWork_clicked:(id)sender
+{
+    self.clockWorkViewController = [[ClockWorkViewController alloc] init];
+    [self.navigationController pushViewController:self.clockWorkViewController animated:YES] ;
+}
+
+- (IBAction)superShopper_clicked:(id)sender
+{
+    self.superShopperViewController = [[SuperShopperViewController alloc] init];
+    [self.navigationController pushViewController:self.superShopperViewController animated:YES];
 }
 
 - (void)viewDidLoad
@@ -68,7 +81,9 @@
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
     optionsSingle.globalDifficultyLevel = 1;   // initialize difficultyLevel to 1 ( normal )
-    optionsSingle.volumeControl = 0.5;
+    optionsSingle.musicVolumeControl = 0.5;  // initialize music sound to medium
+    optionsSingle.soundeffectVolumeControl = 0.5; // initialize sound effect to medium
+    
 	
 }
 
@@ -102,22 +117,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (IBAction)clockWork_clicked:(id)sender {
-    // Check difficulty and launch appropriate version:
-    if(optionsSingle.globalDifficultyLevel >= 1)
-    {
-        optionsSingle.globalCurrentGame =1;
-        self.clockWorkViewController = [[ClockWorkViewController alloc] init];
-        [self.navigationController pushViewController:self.clockWorkViewController animated:YES] ;
-    }
-}
-
-- (IBAction)superShopper_clicked:(id)sender {
-    optionsSingle.globalCurrentGame =5;
-    self.superShopperViewController = [[SuperShopperViewController alloc] init];
-    [self.navigationController pushViewController:self.superShopperViewController animated:YES];
 }
 
 // Logout the current user:

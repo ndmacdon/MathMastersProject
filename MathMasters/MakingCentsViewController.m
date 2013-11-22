@@ -127,12 +127,14 @@
         selected.inYellowBox = false;
     }
 }
+// load taDA sound effect
 
 // Check if the user has placed the correct change in the yellow box:
 - (IBAction)check_user_correct:(id)sender {
     
         // IF the user has completed enough rounds:
         if(self.userAnswer == amountDisplayed) {
+            [self play_done_sound];
             resultLabel.text = [NSString stringWithFormat:@"Correct!"];
             
             [self inc_total_correct]; // add one to total correct and increase the winStreak.

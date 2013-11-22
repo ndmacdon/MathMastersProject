@@ -219,6 +219,7 @@
 - (IBAction)checkAnswer:(id)sender {
     
     if(hourGuessed == correctHour && minuteGuessed == correctMinute) {
+        [self play_done_sound];
         
         resultLabel.text = [NSString stringWithFormat:@"Correct !!!"];
         

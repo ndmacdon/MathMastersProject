@@ -67,7 +67,8 @@
 }
 
 
--(IBAction)group_button_clicked:(id)sender {
+-(IBAction)group_button_clicked:(id)sender
+{
     
     // Set userAnswer to the selectedGroup's size:
     if (sender == leftGroup) { self.userAnswer = leftSize; }
@@ -77,6 +78,7 @@
     // IF userAnswer is the largest value of the three groups:
     if (self.userAnswer >= rightSize && self.userAnswer >= leftSize && self.userAnswer >= bottomSize) {
         
+        [self play_done_sound];
         displayUserCorrect.text = [NSString stringWithFormat:@"You are Correct!"];
         [self inc_total_correct]; // add one to total correct and increase winStreak...
         

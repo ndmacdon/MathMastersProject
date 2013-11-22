@@ -21,6 +21,7 @@
 #import "TutorialViewController.h"
 #import "GlobalVariables.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 
 static const int sessionRounds = 5;
@@ -29,7 +30,7 @@ static const int sessionRounds = 5;
 {
     
 }
-
+@property (nonatomic,strong) NSMutableArray * arrayMusic;
 @property (nonatomic,strong) NSDate *endTime;
 @property (nonatomic,strong) NSDate *startTime;
 @property (nonatomic) NSInteger runningTime;
@@ -44,6 +45,7 @@ static const int sessionRounds = 5;
 @property (nonatomic, strong) GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
 @property(nonatomic,strong) TutorialViewController * tutorialViewController;
 
+
 -(IBAction)tutorial_clicked:(id)sender;
 -(void)incWinStreak;
 -(void)resetStats;
@@ -51,4 +53,5 @@ static const int sessionRounds = 5;
 -(void)inc_total_correct;
 -(void)inc_total_incorrect;
 -(void)endSession;
+-(void)play_done_sound;
 @end

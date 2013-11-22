@@ -10,6 +10,12 @@
 		9A0B9A16183E0DE700C0013A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */; };
 		9A0B9A18183E2BC100C0013A /* classicalmusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */; };
 		9A0B9A1B183E2C3200C0013A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */; };
+		9A4898CB183F0032009572DE /* star_click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898CA183F0031009572DE /* star_click.mp3 */; };
+		9A4898CE183F42DA009572DE /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898CC183F42DA009572DE /* taDa.mp3 */; };
+		9A4898D1183F4851009572DE /* triumph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898D0183F4851009572DE /* triumph.mp3 */; };
+		9A4898D3183F5DDB009572DE /* classicalmusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898D2183F5DDB009572DE /* classicalmusic2.mp3 */; };
+		9A4898D5183F5EC1009572DE /* classicalmusic1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898D4183F5EC1009572DE /* classicalmusic1.m4a */; };
+		9A4898D9183F697B009572DE /* scroll.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898D8183F697B009572DE /* scroll.m4a */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
 		9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95505A180179F400DFF8E4 /* CoreGraphics.framework */; };
@@ -182,6 +188,12 @@
 		9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = classicalmusic.m4a; path = sounds/classicalmusic.m4a; sourceTree = "<group>"; };
 		9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A4898CA183F0031009572DE /* star_click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = star_click.mp3; path = sounds/star_click.mp3; sourceTree = "<group>"; };
+		9A4898CC183F42DA009572DE /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = taDa.mp3; path = sounds/taDa.mp3; sourceTree = "<group>"; };
+		9A4898D0183F4851009572DE /* triumph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = triumph.mp3; path = sounds/triumph.mp3; sourceTree = "<group>"; };
+		9A4898D2183F5DDB009572DE /* classicalmusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = classicalmusic2.mp3; path = sounds/classicalmusic2.mp3; sourceTree = "<group>"; };
+		9A4898D4183F5EC1009572DE /* classicalmusic1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = classicalmusic1.m4a; path = sounds/classicalmusic1.m4a; sourceTree = "<group>"; };
+		9A4898D8183F697B009572DE /* scroll.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = scroll.m4a; path = sounds/scroll.m4a; sourceTree = "<group>"; };
 		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -476,6 +488,12 @@
 		9A0B9A19183E2BD600C0013A /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				9A4898CC183F42DA009572DE /* taDa.mp3 */,
+				9A4898D8183F697B009572DE /* scroll.m4a */,
+				9A4898D2183F5DDB009572DE /* classicalmusic2.mp3 */,
+				9A4898D4183F5EC1009572DE /* classicalmusic1.m4a */,
+				9A4898D0183F4851009572DE /* triumph.mp3 */,
+				9A4898CA183F0031009572DE /* star_click.mp3 */,
 				9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */,
 			);
 			name = sounds;
@@ -484,8 +502,6 @@
 		9A95504A180179F300DFF8E4 = {
 			isa = PBXGroup;
 			children = (
-				9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */,
-				9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */,
 				9A95505C180179F400DFF8E4 /* MathMasters */,
 				9A95505D180179F400DFF8E4 /* Supporting Files */,
 				9A955055180179F300DFF8E4 /* Frameworks */,
@@ -504,6 +520,8 @@
 		9A955055180179F300DFF8E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */,
+				9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */,
 				EBAA44781826FC690038DA74 /* CorePlot */,
 				EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */,
 				EBAA44C71826FDC10038DA74 /* Accelerate.framework */,
@@ -1119,6 +1137,12 @@
 				EB94943418318CC800E4FF22 /* normal_cw_tut04.png in Resources */,
 				EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */,
 				9A0B9A18183E2BC100C0013A /* classicalmusic.m4a in Resources */,
+				9A4898CB183F0032009572DE /* star_click.mp3 in Resources */,
+				9A4898CE183F42DA009572DE /* taDa.mp3 in Resources */,
+				9A4898D1183F4851009572DE /* triumph.mp3 in Resources */,
+				9A4898D3183F5DDB009572DE /* classicalmusic2.mp3 in Resources */,
+				9A4898D5183F5EC1009572DE /* classicalmusic1.m4a in Resources */,
+				9A4898D9183F697B009572DE /* scroll.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
