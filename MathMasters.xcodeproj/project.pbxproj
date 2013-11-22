@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0B9A16183E0DE700C0013A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */; };
+		9A0B9A18183E2BC100C0013A /* classicalmusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */; };
+		9A0B9A1B183E2C3200C0013A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */; };
 		9A955057180179F300DFF8E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955056180179F300DFF8E4 /* UIKit.framework */; };
 		9A955059180179F400DFF8E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A955058180179F300DFF8E4 /* Foundation.framework */; };
 		9A95505B180179F400DFF8E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95505A180179F400DFF8E4 /* CoreGraphics.framework */; };
@@ -176,6 +179,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = classicalmusic.m4a; path = sounds/classicalmusic.m4a; sourceTree = "<group>"; };
+		9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9A955053180179F300DFF8E4 /* MathMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A955056180179F300DFF8E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A955058180179F300DFF8E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -452,6 +458,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0B9A1B183E2C3200C0013A /* AVFoundation.framework in Frameworks */,
+				9A0B9A16183E0DE700C0013A /* AudioToolbox.framework in Frameworks */,
 				EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				EBAA44C81826FDC10038DA74 /* Accelerate.framework in Frameworks */,
 				EBAA44771826FBEE0038DA74 /* QuartzCore.framework in Frameworks */,
@@ -465,9 +473,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A0B9A19183E2BD600C0013A /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		9A95504A180179F300DFF8E4 = {
 			isa = PBXGroup;
 			children = (
+				9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */,
+				9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */,
 				9A95505C180179F400DFF8E4 /* MathMasters */,
 				9A95505D180179F400DFF8E4 /* Supporting Files */,
 				9A955055180179F300DFF8E4 /* Frameworks */,
@@ -511,6 +529,7 @@
 		9A95505D180179F400DFF8E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A0B9A19183E2BD600C0013A /* sounds */,
 				EB94932F18316C9D00E4FF22 /* Pictures for math masters */,
 				9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */,
 				9A95505F180179F400DFF8E4 /* InfoPlist.strings */,
@@ -1099,6 +1118,7 @@
 				EB94943318318CC800E4FF22 /* normal_cw_tut03.png in Resources */,
 				EB94943418318CC800E4FF22 /* normal_cw_tut04.png in Resources */,
 				EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */,
+				9A0B9A18183E2BC100C0013A /* classicalmusic.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

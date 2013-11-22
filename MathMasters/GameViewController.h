@@ -20,10 +20,15 @@
 #import "DBManager.h"
 #import "TutorialViewController.h"
 #import "GlobalVariables.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 static const int sessionRounds = 5;
 
 @interface GameViewController : UIViewController
+{
+    
+}
 
 @property (nonatomic,strong) NSDate *endTime;
 @property (nonatomic,strong) NSDate *startTime;
