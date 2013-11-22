@@ -1,11 +1,18 @@
-//
-//  PasswordResetViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-20.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
-
+/****
+ *
+ * Filename:    PasswordResetViewController.h
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: November 21, 2013
+ *
+ * Description: ViewController: Allows users to reset their password. Updates Database with new password.
+ *
+ ****/
 #import "PasswordResetViewController.h"
 
 @interface PasswordResetViewController ()
@@ -19,24 +26,11 @@
             secretText,
             username;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.navigationItem.hidesBackButton = YES; // Disable back button.
-}
-
+// Set the diaplayed username to one passed by instantiator:
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:TRUE];
-    
     usernameText.text = username;
 }
-
 
 // Clear the text input fields of the view:
 - (IBAction)clearFields:(id)sender {
@@ -118,6 +112,14 @@
     [super textFieldShouldReturn:textField];
     [self resetPassword:textField];
     return YES;
+}
+
+
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 
 - (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }

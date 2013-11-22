@@ -551,9 +551,6 @@
 		EB59F8A0182D9F2700BA6A7F /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
-				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
-				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
 				EB753C02183E9A5600E81284 /* InputFormViewController.h */,
 				EB753C03183E9A5600E81284 /* InputFormViewController.m */,
 				EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */,
@@ -577,6 +574,9 @@
 				EBF002DD182D97F400F9F3E8 /* StatisticsViewController.h */,
 				EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */,
 				EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */,
+				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
+				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
+				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
 			);
 			name = Menus;
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: November 21, 2013
  *
  * Description: ViewController: Primary Log In interface of application.
  *
@@ -21,17 +21,24 @@
 @end
 
 @implementation LogInViewController {
-    int loginAttempts;
+    int loginAttempts;  // Number of times the user has attempted to login...
 }
+
 @synthesize passwordTextField,
             usernameTextField,
             passwordResetViewController,
             createAccountViewController;
 
+// Setup login screen:
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES; // Disable back button.
+}
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
+// Reset login attempts...
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:TRUE];
+    loginAttempts = 0; // Reset login attempts.
 }
 
 // Pop the CreateAccount screen:
@@ -40,18 +47,19 @@
     [self.navigationController pushViewController:self.createAccountViewController animated:YES];
 }
 
+// Attempt to login with the username and password entered:
 -(IBAction)login:(id)sender {
-    BOOL success = FALSE;
+    BOOL loginSuccess = FALSE;
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Login Failed"
                                                    message:nil
                                                   delegate:nil
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil];
     // Attempt to login:
-    success = [[DBManager getSharedInstance]login:usernameTextField.text password:passwordTextField.text];
+    loginSuccess = [[DBManager getSharedInstance]login:usernameTextField.text password:passwordTextField.text];
 
     // IF login failed:
-    if (!success) {
+    if (!loginSuccess) {
         
         // IF User is registered in the DB:
         if ([[DBManager getSharedInstance]userExists:usernameTextField.text]) {
@@ -59,20 +67,16 @@
             [alert setMessage:@"Password Incorrect"];
             loginAttempts++;
         }
-        else {
-            [alert setMessage:@"User Does Not Exist"];
-        }
+        else { [alert setMessage:@"User Does Not Exist"]; }
         
         // IF user has failed to login too many times:
         if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
+            
             [alert setMessage:@"Resetting Password"];
-            [alert show];
+            [alert show]; // Show the notification before switching screens...
             [self resetPassword:self];
         }
-        else {
-            [alert show];
-        }
-        
+        else { [alert show]; }
     }
     else {
         // Update Global Session Variable:
@@ -91,55 +95,31 @@
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil];
     
-    // IF user with given username exists: Reset their password:
+    // IF user with given username exists: Reset their password.
     if ([[DBManager getSharedInstance]userExists:usernameTextField.text]) {
         
         self.passwordResetViewController = [[PasswordResetViewController alloc]init];
         self.passwordResetViewController.username = usernameTextField.text;
         [self.navigationController pushViewController:self.passwordResetViewController animated:YES];
     }
-    else {
-        [alert show];
-    }
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    optionsSingle = [GlobalVariables singleObj];
-    self.passwordTextField.delegate = self;  //allows keyboard to be dismissed for user&pass textfields
-    self.usernameTextField.delegate = self;
-    [self.passwordTextField resignFirstResponder];
-    [self.usernameTextField resignFirstResponder];
-    
-    self.navigationItem.hidesBackButton = YES; // Disable back button.
-    
-    loginAttempts = 0; // Reset login attempts.
-}
-
--(void)viewWillDisappear:(BOOL)animated {
-    usernameTextField.text = @"";
-    passwordTextField.text = @"";
-    [self.view endEditing:TRUE];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return YES;
+    else { [alert show]; }
 }
 
 // When user selects return: resign keyboard and login.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    [super textFieldShouldReturn:textField];
     [self login:self];
     return YES;
 }
 
-// When user touches outside keyboard: resign keyboard.
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view endEditing:YES];
+
+
+
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 
 @end

@@ -1,10 +1,18 @@
-//
-//  InputFormViewController.m
-//  MathMasters
-//
-//  Created by Kristina Mishina on 13-11-21.
-//  Copyright (c) 2013 CMPT275_team12. All rights reserved.
-//
+/****
+ *
+ * Filename:    InputFormViewController.m
+ *
+ * Authors:     Ryan Wong, Nicholas Macdonald
+ *
+ * Project:     MathMasters
+ *
+ * Team:        Team 12: First Step Conceptions
+ *
+ * VersionDate: November 21, 2013
+ *
+ * Description: ViewController: Provides common functionality (textbox resignation, field checking)
+ *              to each input screen.
+ ****/
 
 #import "InputFormViewController.h"
 
@@ -14,18 +22,12 @@
 
 @implementation InputFormViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 // Assign the delegate for our text fields and setup their resignation...
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    optionsSingle = [GlobalVariables singleObj];
     
     // Allow keyboard to be dismissed when touch event occurs:
     for (UIView *view in self.view.subviews) {
@@ -36,8 +38,21 @@
             [textField resignFirstResponder];   // Resign textboxes' responder status...
         }
     }
+}
+
+// Close the keyboard when the view is hidden:
+-(void)viewWillDisappear:(BOOL)animated {
     
-    //self.navigationItem.hidesBackButton = YES; // Disable back button.
+    // Clear all text fields:
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            
+            UITextField *textField = (UITextField *)view;
+            textField.text = @"";
+        }
+    }
+    
+    [self.view endEditing:TRUE]; // Close the keyboard...
 }
 
 // Clear the text input fields of the view:
@@ -86,8 +101,6 @@
     return islongEnough;
 }
 
-- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
-
 // Dismiss text entry when user clicks:
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event { [self.view endEditing:YES]; }
 
@@ -99,6 +112,12 @@
 
 
 
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
+}
 
 @end
 

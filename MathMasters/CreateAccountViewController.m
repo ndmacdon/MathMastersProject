@@ -8,7 +8,7 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: November 21, 2013
  *
  * Description: ViewController: Provides a User interface for the account creation process.
  *
@@ -23,20 +23,6 @@
 
 @implementation CreateAccountViewController
 @synthesize usernameText, passwordText, passwordConfirmationText, secretText;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.navigationItem.hidesBackButton = YES; // Disable back button.
-}
-
-
 
 // Clear the text input fields of the view:
 - (IBAction)clearFields:(id)sender {
@@ -94,7 +80,7 @@
     }
 }
 
-// Validate our text fields when editing finishes:
+// Check password and passwordConfirmation for equality:
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     [super textFieldDidEndEditing:textField];
     
@@ -111,16 +97,21 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 // When user selects return: resign keyboard and login.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [super textFieldShouldReturn:textField];
     [self createAccount:textField];
     return YES;
+}
+
+
+
+
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 
 @end

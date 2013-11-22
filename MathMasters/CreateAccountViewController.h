@@ -8,13 +8,11 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: November 21, 2013
  *
  * Description: ViewController: Provides a User interface for the account creation process.
  *
  ****/
-
-
 
 #import <UIKit/UIKit.h>
 #import "DBManager.h"
