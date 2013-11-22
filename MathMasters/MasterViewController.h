@@ -8,7 +8,7 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: Nov 08, 2013
+ * VersionDate: Nov 21, 2013
  *
  * Description: ViewController: Main menu and navigation controller of application. 
  *              Contains links to multiple games and the Options menu.
@@ -37,6 +37,7 @@
 -(IBAction)options_clicked:(id)sender; // if option button clicked go to options menu
 -(IBAction)clockWork_clicked:(id)sender;
 - (IBAction)superShopper_clicked:(id)sender;
+- (IBAction)logoutClicked:(id)sender;
 
 // Game ViewControllers:
 @property (nonatomic,strong) CountingStarsViewController *countingStarsViewController;

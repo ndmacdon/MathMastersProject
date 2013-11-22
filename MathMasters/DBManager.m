@@ -202,6 +202,27 @@ static sqlite3_stmt *statement = nil;
     return added;
 }
 
+// Reset a user's password:
+-(BOOL) resetPassword:(NSString *)username
+          newPassword:(NSString *)newPassword {
+    
+    BOOL reset = FALSE; // Was the user added?
+    NSString *insertSQL = [NSString stringWithFormat:
+                           @"UPDATE users             \
+                           SET password = \"%@\"      \
+                           WHERE username_pk = \"%@\" ",
+                           newPassword, username];
+    
+    // IF statement executes without error:
+    if ([self query:insertSQL result:SQLITE_DONE]) {
+        reset = TRUE;
+    }
+    else { NSLog(@"Unable to reset user"); }
+    
+    sqlite3_reset(statement);
+    return reset;
+}
+
 // Does a user with [username] exist in the DB:
 -(BOOL) userExists:(NSString*)username {
     BOOL exists = FALSE; // Does [username] exist in the database?
@@ -255,6 +276,25 @@ static sqlite3_stmt *statement = nil;
     
     sqlite3_reset(statement); // Reset the returned results...
     return loginSuccess;
+}
+
+// Attempt to verify [username] with [secret]:
+-(BOOL) correctSecret:(NSString *)username secret:(NSString *)secret {
+    
+    BOOL secretSuccess = FALSE; // Is this the correct secret?
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"SELECT username_pk secret\
+                          FROM users\
+                          WHERE username_pk=\"%@\" AND secret=\"%@\"", username, secret];
+    
+    // IF query returns some row:
+    if ([self query:querySQL result:SQLITE_ROW]) {
+        secretSuccess = TRUE;
+    }
+    else { NSLog(@"User not found"); }
+    
+    sqlite3_reset(statement); // Reset the returned results...
+    return secretSuccess;
 }
 
 // Has [username] completed [tutorial]?

@@ -8,7 +8,7 @@
  *
  * Team:        Team 12: First Step Conceptions
  *
- * VersionDate: October 27, 2013
+ * VersionDate: November 21, 2013
  *
  * Description: ViewController: Primary Log In interface of application.
  *
@@ -20,74 +20,106 @@
 
 @end
 
-@implementation LogInViewController
-@synthesize passwordTextField, usernameTextField;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
+@implementation LogInViewController {
+    int loginAttempts;  // Number of times the user has attempted to login...
 }
 
-// Attempt to login according to passed credentials:
+@synthesize passwordTextField,
+            usernameTextField,
+            passwordResetViewController,
+            createAccountViewController;
+
+// Setup login screen:
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES; // Disable back button.
+}
+
+// Reset login attempts...
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:TRUE];
+    loginAttempts = 0; // Reset login attempts.
+}
+
+// Pop the CreateAccount screen:
+- (IBAction)createAccount:(id)sender {
+    self.createAccountViewController = [[CreateAccountViewController alloc]init];
+    [self.navigationController pushViewController:self.createAccountViewController animated:YES];
+}
+
+// Attempt to login with the username and password entered:
 -(IBAction)login:(id)sender {
-    BOOL success = FALSE;
-    NSString *alertString = @"Login Failed";
-    
+    BOOL loginSuccess = FALSE;
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Login Failed"
+                                                   message:nil
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
     // Attempt to login:
-    success = [[DBManager getSharedInstance]login:usernameTextField.text password:passwordTextField.text];
+    loginSuccess = [[DBManager getSharedInstance]login:usernameTextField.text password:passwordTextField.text];
 
     // IF login failed:
-    if (!success) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:alertString message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+    if (!loginSuccess) {
+        
+        // IF User is registered in the DB:
+        if ([[DBManager getSharedInstance]userExists:usernameTextField.text]) {
+            
+            [alert setMessage:@"Password Incorrect"];
+            loginAttempts++;
+        }
+        else { [alert setMessage:@"User Does Not Exist"]; }
+        
+        // IF user has failed to login too many times:
+        if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
+            
+            [alert setMessage:@"Resetting Password"];
+            [alert show]; // Show the notification before switching screens...
+            [self resetPassword:self];
+        }
+        else { [alert show]; }
     }
     else {
         // Update Global Session Variable:
-        optionsSingle = [GlobalVariables singleObj];
         optionsSingle.currentUser = usernameTextField.text;
         
         // Pop back to the Main-Menu:
         [self.navigationController popToRootViewControllerAnimated:YES];
-        
     }
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.passwordTextField.delegate = self;  //allows keyboard to be dismissed for user&pass textfields
-    self.usernameTextField.delegate = self;
-    [self.passwordTextField resignFirstResponder];
-    [self.usernameTextField resignFirstResponder];
+// Launch password reset screen:
+-(IBAction)resetPassword:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Password Reset Failed"
+                                                   message:@"User Does Not Exist"
+                                                  delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
     
-    self.navigationItem.hidesBackButton = YES; // Disable back button.
+    // IF user with given username exists: Reset their password.
+    if ([[DBManager getSharedInstance]userExists:usernameTextField.text]) {
+        
+        self.passwordResetViewController = [[PasswordResetViewController alloc]init];
+        self.passwordResetViewController.username = usernameTextField.text;
+        [self.navigationController pushViewController:self.passwordResetViewController animated:YES];
+    }
+    else { [alert show]; }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    
-}
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
+// When user selects return: resign keyboard and login.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [super textFieldShouldReturn:textField];
+    [self login:self];
     return YES;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField  // if user clicks return, dismiss keyboard
-{
-    [textField resignFirstResponder];
-    return YES;
-}
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event //if user clicks bg, textfield dismiss
-{
-    [self.view endEditing:YES];
+
+
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 
 @end

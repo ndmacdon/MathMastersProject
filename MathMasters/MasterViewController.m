@@ -118,6 +118,18 @@
     self.superShopperViewController = [[SuperShopperViewController alloc] init];
     [self.navigationController pushViewController:self.superShopperViewController animated:YES];
 }
+
+// Logout the current user:
+- (IBAction)logoutClicked:(id)sender {
+    // Update Global Session Variable:
+    optionsSingle.currentUser = @"";
+    // IF we can push the LoginViewController:
+    if(!self.loginViewController) {
+        self.loginViewController = [[LogInViewController alloc] init];
+    }
+    [self.navigationController pushViewController:self.loginViewController animated:YES];
+    
+}
 @end
 
 
