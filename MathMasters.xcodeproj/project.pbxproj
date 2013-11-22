@@ -14,6 +14,8 @@
 		9A955069180179F400DFF8E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A955068180179F400DFF8E4 /* Default.png */; };
 		9A95506B180179F400DFF8E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506A180179F400DFF8E4 /* Default@2x.png */; };
 		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
+		EB0E1214183EE04F002A3CAE /* ResetConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */; };
+		EB0E1215183EE04F002A3CAE /* ResetConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */; };
 		EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */; };
 		EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */; };
 		EB59F8A9183032A700BA6A7F /* ImageSuperShopper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8A6183032A700BA6A7F /* ImageSuperShopper.m */; };
@@ -187,6 +189,9 @@
 		9A955068180179F400DFF8E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9A95506A180179F400DFF8E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A95506C180179F400DFF8E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EB0E1211183EE04F002A3CAE /* ResetConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetConfirmationViewController.h; sourceTree = "<group>"; };
+		EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetConfirmationViewController.m; sourceTree = "<group>"; };
+		EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetConfirmationViewController.xib; sourceTree = "<group>"; };
 		EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWorkViewController.h; sourceTree = "<group>"; };
 		EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWorkViewController.m; sourceTree = "<group>"; };
 		EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockWorkViewController.xib; sourceTree = "<group>"; };
@@ -577,6 +582,9 @@
 				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
 				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
 				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
+				EB0E1211183EE04F002A3CAE /* ResetConfirmationViewController.h */,
+				EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */,
+				EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
@@ -1099,6 +1107,7 @@
 				EB94943318318CC800E4FF22 /* normal_cw_tut03.png in Resources */,
 				EB94943418318CC800E4FF22 /* normal_cw_tut04.png in Resources */,
 				EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */,
+				EB0E1215183EE04F002A3CAE /* ResetConfirmationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1139,7 @@
 				EB94942218316DEE00E4FF22 /* TutorialViewController.m in Sources */,
 				EB753C00183DB25400E81284 /* PasswordResetViewController.m in Sources */,
 				EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */,
+				EB0E1214183EE04F002A3CAE /* ResetConfirmationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

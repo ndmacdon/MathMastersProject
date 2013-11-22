@@ -22,14 +22,7 @@
 @implementation OptionsViewController
 @synthesize changeDifficultyButton, statisticsViewController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
-}
+
 // changes globalDifficultyLevel every time button is clicked
 
 -(IBAction)change_difficulty:(id)sender
@@ -52,24 +45,28 @@
 }
 
 // Pop statisticsViewController onto the Navigation Stack:
--(IBAction)statistics_clicked:(id)sender
-{
-    if(!self.statisticsViewController)
-    {
-        self.statisticsViewController = [[StatisticsViewController alloc] init];
-    }
+- (IBAction)resetStatisticsClicked:(id)sender {
+    if(!self.resetConfirmationViewController)
+    { self.resetConfirmationViewController = [[ResetConfirmationViewController alloc] init]; }
+    //[self.view addSubview:self.resetConfirmationViewController];
+    //[self addChildViewController:self.statisticsViewController];
+    
     [self.navigationController pushViewController:self.statisticsViewController animated:YES];
 }
 
-- (void)viewDidLoad
+-(IBAction)statistics_clicked:(id)sender
 {
-    [super viewDidLoad];
-
+    if(!self.statisticsViewController)
+    { self.statisticsViewController = [[StatisticsViewController alloc] init]; }
+    
+    [self.navigationController pushViewController:self.statisticsViewController animated:YES];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 
 @end
