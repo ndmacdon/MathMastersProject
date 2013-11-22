@@ -20,7 +20,7 @@
 
 
 @implementation OptionsViewController
-@synthesize changeDifficultyButton, statisticsViewController;
+@synthesize changeDifficultyButton, statisticsViewController,optionsSingle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,7 +64,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.optionsSingle = [GlobalVariables singleObj];
+    
 
+}
+-(IBAction)set_volume:(id)sender
+{
+    UISlider * mySlider = sender;
+    optionsSingle.volumeControl = mySlider.value;
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -16,6 +16,7 @@
 
 #import "AppDelegate.h"
 #import "MasterViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @implementation AppDelegate
 @synthesize window;

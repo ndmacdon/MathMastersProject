@@ -68,6 +68,7 @@
     [super viewDidLoad];
     optionsSingle = [GlobalVariables singleObj];
     optionsSingle.globalDifficultyLevel = 1;   // initialize difficultyLevel to 1 ( normal )
+    optionsSingle.volumeControl = 0.5;
 	
 }
 

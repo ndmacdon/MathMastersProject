@@ -20,7 +20,7 @@
 {
     GlobalVariables * NewSingle;
 }
-@synthesize globalDifficultyLevel,globalCurrentGame,currentUser;
+@synthesize globalDifficultyLevel,globalCurrentGame,currentUser, audioPlayer,volumeControl;
 
 +(GlobalVariables*)singleObj  // only one GlobalVariables object can be created
 {

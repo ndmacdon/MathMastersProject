@@ -57,10 +57,30 @@
     [self.navigationController pushViewController:self.tutorialViewController animated:YES];
 }
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [optionsSingle.audioPlayer stop];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	self.optionsSingle = [GlobalVariables singleObj]; // Grab the global options handle...
+    [self play_sound];
+    
+
+
+}
+-(void)play_sound
+{
+    // background music added!
+    NSString *music = [[NSBundle mainBundle]pathForResource:@"classicalmusic" ofType:@".m4a"];
+    optionsSingle.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
+    optionsSingle.audioPlayer.numberOfLoops = -1;
+    [optionsSingle.audioPlayer setVolume:optionsSingle.volumeControl];
+    [optionsSingle.audioPlayer play];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
