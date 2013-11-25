@@ -173,7 +173,7 @@
     totalIncorrect++;
     [self breakWinStreak];
 }
-// play ta da sound
+// play ta da sound, ( SOUND EFFECT )
 -(void)play_done_sound
 {
     NSString * done_effect = [[NSBundle mainBundle]pathForResource:@"taDa" ofType:@"mp3"];

@@ -19,11 +19,11 @@
 #import "GameViewController.h"
 
 @interface ClockWorkViewController : GameViewController <UIPickerViewDelegate> {
+    int temp_number;
     IBOutlet UIImageView *minuteHand;
     IBOutlet UIImageView *hourHand;
     IBOutlet UILabel *resultLabel;
 }
 
 - (IBAction)checkAnswer:(id)sender;
-
 @end

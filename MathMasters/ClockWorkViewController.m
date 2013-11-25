@@ -109,7 +109,27 @@
     
     return numRows;
 }
-
+/*
+-(IBAction)play_scroll_sound
+{
+    NSString * done_effect = [[NSBundle mainBundle]pathForResource:@"scroll" ofType:@"m4a"];
+    self.optionsSingle.soundEffectsPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:done_effect] error:NULL];
+    self.optionsSingle.soundEffectsPlayer.numberOfLoops = -1;
+    [self.optionsSingle.soundEffectsPlayer setVolume:self.optionsSingle.soundeffectVolumeControl];
+    if(temp_number == 0)
+    {
+         [self.optionsSingle.soundEffectsPlayer play];
+    }
+    if(temp_number == 1)
+    {
+         [self.optionsSingle.soundEffectsPlayer play];
+    }
+    if(temp_number ==2)
+    {
+         [self.optionsSingle.soundEffectsPlayer play];
+    }
+}
+*/
 
 // Read the guessed time from the TimePicker:
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
@@ -250,6 +270,7 @@
     UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
     myPickerView.delegate = self;
     myPickerView.showsSelectionIndicator = YES;
+    
     [self.view addSubview:myPickerView];
     [self resetStats];
 }

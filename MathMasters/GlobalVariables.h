@@ -20,7 +20,10 @@
 @interface GlobalVariables : NSObject
 {
     int globalDifficultyLevel; // normal (1) and Hard (2)
+    
+    // used to play the background music of application
     AVAudioPlayer * audioPlayer;
+    // used to play sound effects of application
     AVAudioPlayer * soundEffectsPlayer;
     float musicVolumeControl;
     float soundeffectVolumeControl;

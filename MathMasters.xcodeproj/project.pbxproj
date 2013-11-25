@@ -10,6 +10,8 @@
 		9A0B9A16183E0DE700C0013A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */; };
 		9A0B9A18183E2BC100C0013A /* classicalmusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */; };
 		9A0B9A1B183E2C3200C0013A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */; };
+		9A44E8F618400CBD00730F4F /* CreditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A44E8F418400CBD00730F4F /* CreditViewController.m */; };
+		9A44E8F718400CBD00730F4F /* CreditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A44E8F518400CBD00730F4F /* CreditViewController.xib */; };
 		9A4898CB183F0032009572DE /* star_click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898CA183F0031009572DE /* star_click.mp3 */; };
 		9A4898CE183F42DA009572DE /* taDa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898CC183F42DA009572DE /* taDa.mp3 */; };
 		9A4898D1183F4851009572DE /* triumph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A4898D0183F4851009572DE /* triumph.mp3 */; };
@@ -188,6 +190,9 @@
 		9A0B9A15183E0DE700C0013A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9A0B9A17183E2BC100C0013A /* classicalmusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = classicalmusic.m4a; path = sounds/classicalmusic.m4a; sourceTree = "<group>"; };
 		9A0B9A1A183E2C3200C0013A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A44E8F318400CBD00730F4F /* CreditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditViewController.h; sourceTree = "<group>"; };
+		9A44E8F418400CBD00730F4F /* CreditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditViewController.m; sourceTree = "<group>"; };
+		9A44E8F518400CBD00730F4F /* CreditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditViewController.xib; sourceTree = "<group>"; };
 		9A4898CA183F0031009572DE /* star_click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = star_click.mp3; path = sounds/star_click.mp3; sourceTree = "<group>"; };
 		9A4898CC183F42DA009572DE /* taDa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = taDa.mp3; path = sounds/taDa.mp3; sourceTree = "<group>"; };
 		9A4898D0183F4851009572DE /* triumph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = triumph.mp3; path = sounds/triumph.mp3; sourceTree = "<group>"; };
@@ -614,6 +619,9 @@
 				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
 				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
 				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
+				9A44E8F318400CBD00730F4F /* CreditViewController.h */,
+				9A44E8F418400CBD00730F4F /* CreditViewController.m */,
+				9A44E8F518400CBD00730F4F /* CreditViewController.xib */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
@@ -1143,6 +1151,7 @@
 				9A4898D3183F5DDB009572DE /* classicalmusic2.mp3 in Resources */,
 				9A4898D5183F5EC1009572DE /* classicalmusic1.m4a in Resources */,
 				9A4898D9183F697B009572DE /* scroll.m4a in Resources */,
+				9A44E8F718400CBD00730F4F /* CreditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,6 +1183,7 @@
 				EB94942218316DEE00E4FF22 /* TutorialViewController.m in Sources */,
 				EB753C00183DB25400E81284 /* PasswordResetViewController.m in Sources */,
 				EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */,
+				9A44E8F618400CBD00730F4F /* CreditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

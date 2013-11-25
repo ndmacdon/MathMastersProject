@@ -20,7 +20,7 @@
 
 
 @implementation OptionsViewController
-@synthesize changeDifficultyButton, statisticsViewController,optionsSingle;
+@synthesize changeDifficultyButton, statisticsViewController,optionsSingle,creditViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +59,14 @@
         self.statisticsViewController = [[StatisticsViewController alloc] init];
     }
     [self.navigationController pushViewController:self.statisticsViewController animated:YES];
+}
+-(IBAction)credit_clicked:(id)sender
+{
+    if(!self.creditViewController)
+    {
+        self.creditViewController = [[CreditViewController alloc] init];
+    }
+    [self.navigationController pushViewController:self.creditViewController animated:YES];
 }
 
 - (void)viewDidLoad

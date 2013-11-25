@@ -17,6 +17,7 @@
 #import <UIKit/UIKit.h>
 #import "GlobalVariables.h"
 #import "StatisticsViewController.h"
+#import "CreditViewController.h"
 
 @interface OptionsViewController : UIViewController
 {
@@ -29,6 +30,7 @@
 -(IBAction)set_soundeffect_volume:(id)sender;
 @property(nonatomic,strong) IBOutlet UIButton *changeDifficultyButton;
 @property (nonatomic,strong) StatisticsViewController  *statisticsViewController;
+@property(nonatomic,strong)CreditViewController * creditViewController;
 @property (nonatomic,strong) GlobalVariables *optionsSingle;
 
 
