@@ -16,14 +16,12 @@
 @synthesize usernameText,
             passwordText;
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
 }
-
-
 
 - (IBAction)deleteStatisticsClicked:(id)sender {
     BOOL deleteConfirmed = FALSE;
@@ -36,31 +34,36 @@
     // IF user provided correct credentials:
     if ([[DBManager getSharedInstance] login:usernameText.text password:passwordText.text]) {
         deleteConfirmed = [[DBManager getSharedInstance] deleteStatistics:usernameText.text];
+        
+        
+        // If the deletion failed:
+        if (!deleteConfirmed) {
+            [alert setTitle:@"Deletion Failed"];
+            [alert setMessage:@"An error occurred"];
+        }
     }
     else {
         [alert setTitle:@"Deletion Failed"];
         [alert setMessage:@"Password incorrect"];
     }
+
     
-    // If the deletion failed:
-    if (!deleteConfirmed) {
-        [alert setTitle:@"Deletion Failed"];
-        [alert setMessage:@"An error occurred"];
-    }
-    else {
-        [alert show];
-        [self removeFromParentViewController];
+    [alert show];
+    
+    if (deleteConfirmed) {
+        [self close];
     }
 }
 
 // Remove the confirmation screen:
-- (IBAction)cancelClicked:(id)sender {
+- (IBAction)cancelClicked:(id)sender { [self close]; }
+
+
+-(void)close {
+    [passwordText resignFirstResponder];
+    self.view.hidden = TRUE;
     [self removeFromParentViewController];
 }
-
-
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

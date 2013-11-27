@@ -287,7 +287,7 @@ static sqlite3_stmt *statement = nil;
                           WHERE username_fk=\"%@\"", username];
     
     // IF query returns some row:
-    if ([self query:querySQL result:SQLITE_ROW]) {
+    if ([self query:querySQL result:SQLITE_DONE]) {
         deleteSuccess = TRUE;
     }
     else { NSLog(@"Statistics not deleted"); }
