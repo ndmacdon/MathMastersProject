@@ -278,6 +278,24 @@ static sqlite3_stmt *statement = nil;
     return loginSuccess;
 }
 
+// Attempt to delete statistics for [username]:
+-(BOOL) deleteStatistics:(NSString *)username {
+    BOOL deleteSuccess = FALSE; // Was the data deleted?
+    NSString *querySQL = [NSString stringWithFormat:
+                          @"DELETE \
+                          FROM sessionStats\
+                          WHERE username_fk=\"%@\"", username];
+    
+    // IF query returns some row:
+    if ([self query:querySQL result:SQLITE_DONE]) {
+        deleteSuccess = TRUE;
+    }
+    else { NSLog(@"Statistics not deleted"); }
+    
+    sqlite3_reset(statement); // Reset the returned results...
+    return deleteSuccess;
+}
+
 // Attempt to verify [username] with [secret]:
 -(BOOL) correctSecret:(NSString *)username secret:(NSString *)secret {
     

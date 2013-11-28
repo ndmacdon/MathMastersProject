@@ -35,14 +35,16 @@
 NSArray *tempDays = nil;
 
 -(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     // Load stats for CountingStars by default:
     [self clearPlot]; // Ensure the plot is clear...
     [self getDataFor:@"CountingStarsViewController"];
     gameSelected = @"CountingStarsViewController"; // Appears as the graph title
+    statisticsControl.selectedSegmentIndex = 0;
     [self initPlot];
     hardModeSwitch.on = FALSE;
+    
     
 }
 
@@ -104,6 +106,12 @@ NSArray *tempDays = nil;
 }
 
 -(void)clearPlot {
+    // We must clear this manually because sometimes the garbage collection is too slow.
+    // That can cause a crash if the user clicks another annotation too quickly...
+    if ( symbolTextAnnotation ) {
+        [graph.plotAreaFrame.plotArea removeAnnotation:symbolTextAnnotation];
+        symbolTextAnnotation = nil;
+    }
     [self.hostView removeFromSuperview];
 }
 
@@ -156,7 +164,7 @@ NSArray *tempDays = nil;
 
 // Graph is the entire area encompassing the grid, titles and plots
 -(void)configureGraph {
-    CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];  // Encompassing graph for our plot
+    /*CPTGraph **/graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];  // Encompassing graph for our plot
     NSString *title = gameSelected;                                             // Title for our graph
     CPTMutableTextStyle *titleStyle = [CPTMutableTextStyle textStyle];          // Styles for denoted elements...
     CPTMutableLineStyle *borderLineStyle = [CPTMutableLineStyle lineStyle];     // ...
@@ -211,13 +219,16 @@ NSArray *tempDays = nil;
     CPTMutableLineStyle *statsSymbolLineStyle;                              // ...
     CPTPlotSymbol *statsSymbol;                                             // Symbol placed at datapoints
     
-    
-    
+
     // Create a plot
     statsPlot.dataSource = self;
     statsPlot.identifier = @"STATS";
     [graph addPlot:statsPlot toPlotSpace:plotSpace]; // Add plot to our graph.
 
+    statsPlot.delegate = self;
+    statsPlot.plotSymbolMarginForHitDetection = 15.0f;
+    
+    
     // Set up plot space
     [plotSpace scaleToFitPlots:[NSArray arrayWithObjects:statsPlot, nil]];
     
@@ -252,7 +263,7 @@ NSArray *tempDays = nil;
     statsSymbol = [CPTPlotSymbol ellipsePlotSymbol];
     statsSymbol.fill = [CPTFill fillWithColor:statsPlotColor];
     statsSymbol.lineStyle = statsSymbolLineStyle;
-    statsSymbol.size = CGSizeMake(15.0f, 15.0f);
+    statsSymbol.size = CGSizeMake(18.0f, 18.0f);
     
     // Apply the styles to our plot:
     statsPlot.dataLineStyle = statsLineStyle;
@@ -426,6 +437,41 @@ NSArray *tempDays = nil;
     
     // Return 0 if nothing matched the passed fieldEnum...
     return [NSDecimalNumber zero];
+}
+
+// Create an annotation above the clicked plot symbol:
+-(void)scatterPlot:(CPTScatterPlot *)plot plotSymbolWasSelectedAtRecordIndex:(NSUInteger)index {
+    
+    // IF an annotation already exists: remove it.
+    if ( symbolTextAnnotation ) {
+        [graph.plotAreaFrame.plotArea removeAnnotation:symbolTextAnnotation];
+        symbolTextAnnotation = nil;
+    }
+    
+    // Setup a style for the annotation
+    CPTMutableTextStyle *hitAnnotationTextStyle = [CPTMutableTextStyle textStyle];
+    hitAnnotationTextStyle.color    = [CPTColor blackColor];
+    hitAnnotationTextStyle.fontSize = 24.0f;
+    hitAnnotationTextStyle.fontName = @"Helvetica-Bold";
+    
+    // Determine point of symbol in plot coordinates
+    
+    NSNumber *x          = [NSNumber numberWithInt:index + 1];//[[self.arrangedObjects objectAtIndex:index] valueForKey:@"x"];
+    NSNumber *y          = [sessionLengths objectAtIndex:index];
+    NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
+    
+    // Add annotation
+    // First make a string for the y value
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setMaximumFractionDigits:2];
+    NSString *yString = [formatter stringFromNumber:y];
+    
+    // Now add the annotation to the plot area
+    CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:yString style:hitAnnotationTextStyle];
+    symbolTextAnnotation              = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:graph.defaultPlotSpace anchorPlotPoint:anchorPoint];
+    symbolTextAnnotation.contentLayer = textLayer;
+    symbolTextAnnotation.displacement = CGPointMake(0.0, 20.0);
+    [graph.plotAreaFrame.plotArea addAnnotation:symbolTextAnnotation];
 }
 
 

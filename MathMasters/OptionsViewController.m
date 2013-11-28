@@ -20,44 +20,52 @@
 
 
 @implementation OptionsViewController
+@synthesize changeDifficultyButton,
+            statisticsViewController,
+            resetConfirmationViewController;
 @synthesize changeDifficultyButton, statisticsViewController,optionsSingle,creditViewController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
+
+-(void)viewDidLoad {
+    optionsSingle = [GlobalVariables singleObj];
 }
+
 // changes globalDifficultyLevel every time button is clicked
 
--(IBAction)change_difficulty:(id)sender
-{
+-(IBAction)change_difficulty:(id)sender {
+    
     // if normal (1) switch to hard (2)
-    if([[changeDifficultyButton titleForState:UIControlStateNormal] isEqual:@"Normal"])
-    {
+    if([[changeDifficultyButton titleForState:UIControlStateNormal] isEqual:@"Normal"]) {
         [changeDifficultyButton setTitle:@"Hard" forState:UIControlStateNormal];
-        optionsSingle = [GlobalVariables singleObj];
         optionsSingle.globalDifficultyLevel = 2;
-        
     }
     // if hard(2) switch to normal (1)
-    else
-    {
+    else {
         [changeDifficultyButton setTitle:@"Normal" forState:UIControlStateNormal];
-        optionsSingle = [GlobalVariables singleObj];
         optionsSingle.globalDifficultyLevel = 1;
     }
 }
 
-// Pop statisticsViewController onto the Navigation Stack:
+// Show reset confirmation view:
+- (IBAction)resetStatisticsClicked:(id)sender {
+    CGRect confirmBoxBound = CGRectMake(self.view.center.x-250, self.view.center.y-250, 500, 500);
+    
+    resetConfirmationViewController = [[ResetConfirmationViewController alloc] initWithNibName:@"ResetConfirmationViewController" bundle:nil];
+    
+    [self addChildViewController:self.resetConfirmationViewController];
+    resetConfirmationViewController.view.frame = confirmBoxBound;
+    [self.view addSubview:self.resetConfirmationViewController.view];
+    [self.resetConfirmationViewController didMoveToParentViewController:self];
+    
+    resetConfirmationViewController.usernameText.text = optionsSingle.currentUser;
+}
+
+// Display Statistics Screen:
 -(IBAction)statistics_clicked:(id)sender
 {
     if(!self.statisticsViewController)
-    {
-        self.statisticsViewController = [[StatisticsViewController alloc] init];
-    }
+    { self.statisticsViewController = [[StatisticsViewController alloc] init]; }
+    
     [self.navigationController pushViewController:self.statisticsViewController animated:YES];
 }
 -(IBAction)credit_clicked:(id)sender
@@ -69,12 +77,11 @@
     [self.navigationController pushViewController:self.creditViewController animated:YES];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.optionsSingle = [GlobalVariables singleObj];
-    
+- (void)didReceiveMemoryWarning { [super didReceiveMemoryWarning]; }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    return self;
 }
 -(IBAction)set_music_volume:(id)sender
 {
@@ -86,11 +93,6 @@
 {
     UISlider * mySlider = sender;
     optionsSingle.soundeffectVolumeControl = mySlider.value;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
 }
 
 @end

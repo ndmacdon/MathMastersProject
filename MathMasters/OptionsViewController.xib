@@ -138,7 +138,11 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{164, 384}, {474, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+<<<<<<< HEAD
 						<reference key="NSNextKeyView" ref="340205943"/>
+=======
+						<reference key="NSNextKeyView" ref="458548210"/>
+>>>>>>> DataRemoval
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -155,6 +159,7 @@
 						<reference key="IBUIFontDescription" ref="63209325"/>
 						<reference key="IBUIFont" ref="23313862"/>
 					</object>
+<<<<<<< HEAD
 					<object class="IBUISlider" id="1027527036">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
@@ -233,6 +238,12 @@
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{283, 710}, {202, 100}}</string>
+=======
+					<object class="IBUIButton" id="458548210">
+						<reference key="NSNextResponder" ref="766721923"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{164, 641}, {474, 44}}</string>
+>>>>>>> DataRemoval
 						<reference key="NSSuperview" ref="766721923"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -240,13 +251,18 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
+<<<<<<< HEAD
 						<string key="IBUINormalTitle">Credits</string>
+=======
+						<string key="IBUINormalTitle">Reset Statistics</string>
+>>>>>>> DataRemoval
 						<reference key="IBUIHighlightedTitleColor" ref="541687908"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="1019568942"/>
+<<<<<<< HEAD
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
 							<double key="pointSize">22</double>
@@ -256,6 +272,10 @@
 							<double key="NSSize">22</double>
 							<int key="NSfFlags">16</int>
 						</object>
+=======
+						<reference key="IBUIFontDescription" ref="63209325"/>
+						<reference key="IBUIFont" ref="23313862"/>
+>>>>>>> DataRemoval
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
@@ -327,6 +347,7 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+<<<<<<< HEAD
 						<string key="label">set_music_volume:</string>
 						<reference key="source" ref="1027527036"/>
 						<reference key="destination" ref="841351856"/>
@@ -351,6 +372,14 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">220</int>
+=======
+						<string key="label">resetStatisticsClicked:</string>
+						<reference key="source" ref="458548210"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">149</int>
+>>>>>>> DataRemoval
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -376,6 +405,7 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="766721923"/>
 						<array class="NSMutableArray" key="children">
+<<<<<<< HEAD
 							<object class="IBNSLayoutConstraint" id="172446312">
 								<reference key="firstItem" ref="513257306"/>
 								<int key="firstAttribute">9</int>
@@ -449,6 +479,17 @@
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
 									<double key="value">340</double>
+=======
+							<object class="IBNSLayoutConstraint" id="590545993">
+								<reference key="firstItem" ref="766721923"/>
+								<int key="firstAttribute">4</int>
+								<int key="relation">0</int>
+								<reference key="secondItem" ref="458548210"/>
+								<int key="secondAttribute">4</int>
+								<float key="multiplier">1</float>
+								<object class="IBLayoutConstant" key="constant">
+									<double key="value">320</double>
+>>>>>>> DataRemoval
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="766721923"/>
@@ -456,11 +497,19 @@
 								<float key="scoringTypeFloat">9</float>
 								<int key="contentType">3</int>
 							</object>
+<<<<<<< HEAD
 							<object class="IBNSLayoutConstraint" id="560202183">
 								<reference key="firstItem" ref="1027527036"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="218833011"/>
+=======
+							<object class="IBNSLayoutConstraint" id="767319382">
+								<reference key="firstItem" ref="458548210"/>
+								<int key="firstAttribute">5</int>
+								<int key="relation">0</int>
+								<reference key="secondItem" ref="152726976"/>
+>>>>>>> DataRemoval
 								<int key="secondAttribute">5</int>
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
@@ -472,6 +521,7 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
+<<<<<<< HEAD
 							<object class="IBNSLayoutConstraint" id="575838159">
 								<reference key="firstItem" ref="766721923"/>
 								<int key="firstAttribute">4</int>
@@ -494,6 +544,14 @@
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="340205943"/>
 								<int key="secondAttribute">5</int>
+=======
+							<object class="IBNSLayoutConstraint" id="628663189">
+								<reference key="firstItem" ref="458548210"/>
+								<int key="firstAttribute">6</int>
+								<int key="relation">0</int>
+								<reference key="secondItem" ref="152726976"/>
+								<int key="secondAttribute">6</int>
+>>>>>>> DataRemoval
 								<float key="multiplier">1</float>
 								<object class="IBLayoutConstant" key="constant">
 									<double key="value">0.0</double>
@@ -684,11 +742,15 @@
 							<reference ref="259031749"/>
 							<reference ref="955012402"/>
 							<reference ref="152726976"/>
+<<<<<<< HEAD
 							<reference ref="340205943"/>
 							<reference ref="529553673"/>
 							<reference ref="218833011"/>
 							<reference ref="1027527036"/>
 							<reference ref="513257306"/>
+=======
+							<reference ref="458548210"/>
+>>>>>>> DataRemoval
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -904,6 +966,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">130</int>
+<<<<<<< HEAD
 						<reference key="object" ref="1027527036"/>
 						<array class="NSMutableArray" key="children">
 							<object class="IBNSLayoutConstraint" id="510311201">
@@ -955,10 +1018,19 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">150</int>
+=======
+						<reference key="object" ref="458548210"/>
+						<array class="NSMutableArray" key="children"/>
+						<reference key="parent" ref="766721923"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">138</int>
+>>>>>>> DataRemoval
 						<reference key="object" ref="947065421"/>
 						<reference key="parent" ref="955012402"/>
 					</object>
 					<object class="IBObjectRecord">
+<<<<<<< HEAD
 						<int key="objectID">163</int>
 						<reference key="object" ref="1049778381"/>
 						<reference key="parent" ref="340205943"/>
@@ -1099,6 +1171,20 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">219</int>
 						<reference key="object" ref="172446312"/>
+=======
+						<int key="objectID">145</int>
+						<reference key="object" ref="628663189"/>
+						<reference key="parent" ref="766721923"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">147</int>
+						<reference key="object" ref="767319382"/>
+						<reference key="parent" ref="766721923"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">148</int>
+						<reference key="object" ref="590545993"/>
+>>>>>>> DataRemoval
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
@@ -1121,6 +1207,7 @@
 				<string key="123.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="124.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="130.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+<<<<<<< HEAD
 				<array class="NSMutableArray" key="130.IBViewMetadataConstraints">
 					<reference ref="510311201"/>
 				</array>
@@ -1145,6 +1232,13 @@
 				<string key="187.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<boolean value="NO" key="187.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="197.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+=======
+				<boolean value="NO" key="130.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
+				<string key="138.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="145.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="147.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="148.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+>>>>>>> DataRemoval
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array class="NSMutableArray" key="2.IBViewMetadataConstraints">
 					<reference ref="581285895"/>
@@ -1158,6 +1252,7 @@
 					<reference ref="492579498"/>
 					<reference ref="149014699"/>
 					<reference ref="47864114"/>
+<<<<<<< HEAD
 					<reference ref="70070690"/>
 					<reference ref="575838159"/>
 					<reference ref="560202183"/>
@@ -1166,6 +1261,11 @@
 					<reference ref="1045424261"/>
 					<reference ref="140001532"/>
 					<reference ref="172446312"/>
+=======
+					<reference ref="628663189"/>
+					<reference ref="767319382"/>
+					<reference ref="590545993"/>
+>>>>>>> DataRemoval
 				</array>
 				<string key="201.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="202.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1213,7 +1313,11 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
+<<<<<<< HEAD
 			<int key="maxID">220</int>
+=======
+			<int key="maxID">149</int>
+>>>>>>> DataRemoval
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

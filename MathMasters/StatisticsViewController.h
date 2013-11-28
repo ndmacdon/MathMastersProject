@@ -20,11 +20,13 @@
 #import "GlobalVariables.h"
 #import "DBManager.h"
 
-@interface StatisticsViewController : UIViewController <CPTPlotDataSource>
+@interface StatisticsViewController : UIViewController <CPTPlotDataSource, CPTPlotSpaceDelegate, CPTBarPlotDelegate>
 {
     IBOutlet UISegmentedControl *statisticsControl;
     IBOutlet UISwitch *hardModeSwitch;
     GlobalVariables *optionsSingle;
+    CPTPlotSpaceAnnotation *symbolTextAnnotation;
+    CPTXYGraph *graph;
 }
 
 

@@ -29,7 +29,7 @@
 //-(BOOL) deleteDB;   // For debug use ONLY.
 
 -(BOOL) addUser:(NSString*)username password:(NSString*)password secret:(NSString*)secret;
-//-(BOOL) deleteUser:(NSString*)username password:(NSString*)password;
+-(BOOL) deleteStatistics:(NSString*)username;
 -(BOOL) resetPassword:(NSString*)username newPassword:(NSString*)newPassword;
 
 -(BOOL) userExists:(NSString*)username;
