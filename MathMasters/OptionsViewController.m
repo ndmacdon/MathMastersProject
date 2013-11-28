@@ -22,8 +22,9 @@
 @implementation OptionsViewController
 @synthesize changeDifficultyButton,
             statisticsViewController,
-            resetConfirmationViewController;
-@synthesize changeDifficultyButton, statisticsViewController,optionsSingle,creditViewController;
+            resetConfirmationViewController,
+            creditViewController,
+            optionsSingle;
 
 
 -(void)viewDidLoad {

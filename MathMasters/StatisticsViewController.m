@@ -207,7 +207,7 @@ NSArray *tempDays = nil;
 
 // A plot is the sequence of ticks and lines describing the data in the graph:
 -(void)configurePlots {
-    CPTGraph *graph = self.hostView.hostedGraph;                            // Holds the plot, X/Y axis, and titles...
+    graph = (CPTXYGraph *)self.hostView.hostedGraph;                            // Holds the plot, X/Y axis, and titles...
     CPTScatterPlot *statsPlot = [[CPTScatterPlot alloc] init];              // Data points and lines visualizing data
     CPTColor *statsPlotColor = [CPTColor blueColor];                        // Color for plot
     CPTMutablePlotRange *xRange;                                            // Range of the x-axis

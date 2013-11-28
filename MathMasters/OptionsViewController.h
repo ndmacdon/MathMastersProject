@@ -20,11 +20,11 @@
 #import "ResetConfirmationViewController.h"
 #import "CreditViewController.h"
 
-@interface OptionsViewController : UIViewController
-{
+@interface OptionsViewController : UIViewController {
     IBOutlet UIButton * changeDifficultyButton;
     GlobalVariables *optionsSingle;  // used to access globalDifficultyLevel
 }
+
 - (IBAction)resetStatisticsClicked:(id)sender;
 - (IBAction)statistics_clicked:(id)sender;
 -(IBAction)change_difficulty:(id)sender;
