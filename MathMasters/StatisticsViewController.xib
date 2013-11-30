@@ -159,7 +159,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">Hard Mode Statistics</string>
+						<string key="IBUIText"> Hard Mode Statistics</string>
 						<reference key="IBUITextColor" ref="280405737"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
