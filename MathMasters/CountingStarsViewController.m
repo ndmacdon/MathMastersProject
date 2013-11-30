@@ -77,11 +77,7 @@
         [self tutorial_clicked:self];
     }
     
-    [[starMat subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
-    for (int i = 0; i < maxStars; i++) {
-        [self add_StarAt:[self getEmptyRegion]];
-    }
+    [self nextRandomStars];
     
     [self initializeGame]; // Setup the game for play...
 }
@@ -145,6 +141,12 @@
     BOOL validTotal = FALSE;
     NSInteger oldTotal = randomInteger; // Save the old total.
     
+    [[starMat subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    for (int i = 0; i < maxStars; i++) {
+        [self add_StarAt:[self getEmptyRegion]];
+    }
+    
     while (!validTotal) {
         randomInteger = arc4random() % maxStarSum + 1 ;   // equals a random integer from 1 - 10
         
@@ -161,14 +163,26 @@
         [cur setImage:emptyStarImage forState:UIControlStateNormal];
     }
     
-    starsUserMustCount.text =
-    [NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
+    // Account for a single star:
+    if (randomInteger == 1) {
+        starsUserMustCount.text =
+        [NSString stringWithFormat:@"Count %d Star", randomInteger];  // display how many stars user must count
+    }
+    else {
+        starsUserMustCount.text =
+        [NSString stringWithFormat:@"Count %d Stars", randomInteger];  // display how many stars user must count
+    }
+}
+
+// If the device rotates: reset the stars so they conform to the new bounding box.
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self nextRandomStars];
 }
 
 // Find an empty region to place a star into:
 -(CGPoint)getEmptyRegion {
     BOOL regionEmpty = FALSE;   // Is the region around chosenSpot empty?
-    int failSafe = 30;          // How many times do we try to find a spot before giving up?
+    int failSafe = 99;          // How many times do we try to find a spot before giving up?
     CGPoint chosenSpot;         // Spot in an empty region.
     
     while (!regionEmpty && failSafe > 0) {
@@ -177,7 +191,7 @@
         
         // Get a random point inside our starMat:
         chosenSpot.x = arc4random() % ((int)starMat.frame.size.width - 100);
-        chosenSpot.y = arc4random() % ((int)starMat.frame.size.height - 100);
+        chosenSpot.y = arc4random() % ((int)starMat.frame.size.height - 150);
         
         // Check for interfering objects
         for (UIButton *cur in [starMat subviews]) {

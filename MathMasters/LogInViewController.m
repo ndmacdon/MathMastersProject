@@ -90,7 +90,7 @@
 // Launch password reset screen:
 -(IBAction)resetPassword:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Password Reset Failed"
-                                                   message:@"User Does Not Exist"
+                                                   message:@"User Does Not Exist,\nEnter Your Username To Reset Your Password"
                                                   delegate:nil
                                          cancelButtonTitle:@"OK"
                                          otherButtonTitles:nil];

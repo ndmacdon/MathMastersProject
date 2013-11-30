@@ -171,20 +171,20 @@
     quarter2.inYellowBox = false;
     quarter3.inYellowBox = false;
     dollar1.inYellowBox = false;
-    dime1.frame = CGRectMake(228,400, 60,60);
-    dime2.frame = CGRectMake(145, 841, 60, 60);
-    nickel1.frame = CGRectMake(46, 506, 90, 90);
-    nickel2.frame = CGRectMake(194, 540, 90, 90);
-    quarter1.frame = CGRectMake(33, 319, 120, 120);
-    quarter2.frame = CGRectMake(28, 680, 120, 120);
-    quarter3.frame = CGRectMake(206, 695, 120, 120);
-    dollar1.frame = CGRectMake(55, 150, 140, 140);
+    dime1.frame = CGRectMake(358, 408, 60,60);
+    dime2.frame = CGRectMake(358, 340, 60, 60);
+    nickel1.frame = CGRectMake(260, 340, 90, 90);
+    nickel2.frame = CGRectMake(162, 340, 90, 90);
+    quarter1.frame = CGRectMake(34, 340, 120, 120);
+    quarter2.frame = CGRectMake(182, 183, 120, 120);
+    quarter3.frame = CGRectMake(310, 183, 120, 120);
+    dollar1.frame = CGRectMake(34, 183, 140, 140);
 }
 
 -(void)set_instructions_user {
     int random_Value = arc4random() % (maxAmount / 5) + 1;  // 1 - 20
     amountDisplayed = random_Value * 5;  // Ensure total is divisible by 5.
-    instructionsUser.text = [NSString stringWithFormat:@"Put %d cents in the box and press done", amountDisplayed];
+    instructionsUser.text = [NSString stringWithFormat:@"Put %d cents in the red box and press done", amountDisplayed];
 }
 
 

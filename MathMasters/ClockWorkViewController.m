@@ -267,11 +267,12 @@
     self.startTime = [NSDate date]; // Load the current time into startTime...
     
     // create UIPickerView
-    UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
+    //UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 650, 768, 216)];
+    UIPickerView *myPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, pickerFrame.frame.size.width, pickerFrame.frame.size.height)];
     myPickerView.delegate = self;
     myPickerView.showsSelectionIndicator = YES;
     
-    [self.view addSubview:myPickerView];
+    [pickerFrame addSubview:myPickerView];
     [self resetStats];
 }
 
