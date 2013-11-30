@@ -46,14 +46,17 @@
 		EB59F8B0183032C200BA6A7F /* SuperShopperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */; };
 		EB59F8B1183032C200BA6A7F /* SuperShopperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */; };
 		EB67AF951827324100AA3FD9 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */; };
+		EB6DF737184A03A800A8D7D2 /* hourHand.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6DF736184A03A800A8D7D2 /* hourHand.png */; };
+		EB6DF739184A048800A8D7D2 /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6DF738184A048800A8D7D2 /* clockFace.png */; };
+		EB6DF73B184A06D800A8D7D2 /* minuteHand.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6DF73A184A06D800A8D7D2 /* minuteHand.png */; };
+		EB6DF73E184A0E3B00A8D7D2 /* clockwork.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6DF73C184A0E3A00A8D7D2 /* clockwork.png */; };
+		EB6DF73F184A0E3B00A8D7D2 /* superShopper.png in Resources */ = {isa = PBXBuildFile; fileRef = EB6DF73D184A0E3A00A8D7D2 /* superShopper.png */; };
 		EB753C00183DB25400E81284 /* PasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB753BFE183DB25400E81284 /* PasswordResetViewController.m */; };
 		EB753C01183DB25400E81284 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */; };
 		EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB753C03183E9A5600E81284 /* InputFormViewController.m */; };
 		EB8C09B8181B6E29005CB751 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */; };
 		EB9493AD18316C9D00E4FF22 /* background-spring.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933118316C9D00E4FF22 /* background-spring.png */; };
 		EB9493AE18316C9D00E4FF22 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB94933218316C9D00E4FF22 /* images.jpeg */; };
-		EB9493AF18316C9D00E4FF22 /* ClockFace01.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933418316C9D00E4FF22 /* ClockFace01.png */; };
-		EB9493B018316C9D00E4FF22 /* ClockHand01.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933518316C9D00E4FF22 /* ClockHand01.png */; };
 		EB9493B118316C9D00E4FF22 /* threeStarsColor.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933718316C9D00E4FF22 /* threeStarsColor.png */; };
 		EB9493B218316C9D00E4FF22 /* threeStarsWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933818316C9D00E4FF22 /* threeStarsWhite.png */; };
 		EB9493B318316C9D00E4FF22 /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94933918316C9D00E4FF22 /* whiteStar.png */; };
@@ -258,6 +261,11 @@
 		EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperShopperViewController.m; sourceTree = "<group>"; };
 		EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperShopperViewController.xib; sourceTree = "<group>"; };
 		EB67AF941827324100AA3FD9 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "MathMasters/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		EB6DF736184A03A800A8D7D2 /* hourHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourHand.png; sourceTree = "<group>"; };
+		EB6DF738184A048800A8D7D2 /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockFace.png; sourceTree = "<group>"; };
+		EB6DF73A184A06D800A8D7D2 /* minuteHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minuteHand.png; sourceTree = "<group>"; };
+		EB6DF73C184A0E3A00A8D7D2 /* clockwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clockwork.png; path = pictures/clockwork.png; sourceTree = "<group>"; };
+		EB6DF73D184A0E3A00A8D7D2 /* superShopper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = superShopper.png; path = pictures/superShopper.png; sourceTree = "<group>"; };
 		EB753BFD183DB25400E81284 /* PasswordResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordResetViewController.h; sourceTree = "<group>"; };
 		EB753BFE183DB25400E81284 /* PasswordResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordResetViewController.m; sourceTree = "<group>"; };
 		EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordResetViewController.xib; sourceTree = "<group>"; };
@@ -266,8 +274,6 @@
 		EB8C09B7181B6E29005CB751 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EB94933118316C9D00E4FF22 /* background-spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-spring.png"; sourceTree = "<group>"; };
 		EB94933218316C9D00E4FF22 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
-		EB94933418316C9D00E4FF22 /* ClockFace01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClockFace01.png; sourceTree = "<group>"; };
-		EB94933518316C9D00E4FF22 /* ClockHand01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClockHand01.png; sourceTree = "<group>"; };
 		EB94933718316C9D00E4FF22 /* threeStarsColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threeStarsColor.png; sourceTree = "<group>"; };
 		EB94933818316C9D00E4FF22 /* threeStarsWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = threeStarsWhite.png; sourceTree = "<group>"; };
 		EB94933918316C9D00E4FF22 /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteStar.png; sourceTree = "<group>"; };
@@ -624,6 +630,8 @@
 		EB3D285418480E5500949C57 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				EB6DF73C184A0E3A00A8D7D2 /* clockwork.png */,
+				EB6DF73D184A0E3A00A8D7D2 /* superShopper.png */,
 				EBB5FCF51849F97300579A24 /* chest.png */,
 				EBB5FCF31849F50400579A24 /* beach.png */,
 				EBB5FCF11849DF9700579A24 /* dimmer.png */,
@@ -753,8 +761,9 @@
 		EB94933318316C9D00E4FF22 /* ClockWork */ = {
 			isa = PBXGroup;
 			children = (
-				EB94933418316C9D00E4FF22 /* ClockFace01.png */,
-				EB94933518316C9D00E4FF22 /* ClockHand01.png */,
+				EB6DF73A184A06D800A8D7D2 /* minuteHand.png */,
+				EB6DF738184A048800A8D7D2 /* clockFace.png */,
+				EB6DF736184A03A800A8D7D2 /* hourHand.png */,
 			);
 			path = ClockWork;
 			sourceTree = "<group>";
@@ -1106,8 +1115,6 @@
 				EB59F8B1183032C200BA6A7F /* SuperShopperViewController.xib in Resources */,
 				EB9493AD18316C9D00E4FF22 /* background-spring.png in Resources */,
 				EB9493AE18316C9D00E4FF22 /* images.jpeg in Resources */,
-				EB9493AF18316C9D00E4FF22 /* ClockFace01.png in Resources */,
-				EB9493B018316C9D00E4FF22 /* ClockHand01.png in Resources */,
 				EB9493B118316C9D00E4FF22 /* threeStarsColor.png in Resources */,
 				EB9493B218316C9D00E4FF22 /* threeStarsWhite.png in Resources */,
 				EB9493B318316C9D00E4FF22 /* whiteStar.png in Resources */,
@@ -1252,6 +1259,11 @@
 				EBB5FCF21849DF9700579A24 /* dimmer.png in Resources */,
 				EBB5FCF41849F50400579A24 /* beach.png in Resources */,
 				EBB5FCF61849F97300579A24 /* chest.png in Resources */,
+				EB6DF737184A03A800A8D7D2 /* hourHand.png in Resources */,
+				EB6DF739184A048800A8D7D2 /* clockFace.png in Resources */,
+				EB6DF73B184A06D800A8D7D2 /* minuteHand.png in Resources */,
+				EB6DF73E184A0E3B00A8D7D2 /* clockwork.png in Resources */,
+				EB6DF73F184A0E3B00A8D7D2 /* superShopper.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

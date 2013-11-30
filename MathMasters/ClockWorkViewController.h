@@ -23,6 +23,7 @@
     IBOutlet UIImageView *minuteHand;
     IBOutlet UIImageView *hourHand;
     IBOutlet UILabel *resultLabel;
+    IBOutlet UIView *pickerFrame;
 }
 
 - (IBAction)checkAnswer:(id)sender;
