@@ -27,6 +27,18 @@
 		9A95506D180179F400DFF8E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A95506C180179F400DFF8E4 /* Default-568h@2x.png */; };
 		EB0E1214183EE04F002A3CAE /* ResetConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */; };
 		EB0E1215183EE04F002A3CAE /* ResetConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */; };
+		EB3D284C1848050D00949C57 /* Comic Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3D284A1848050D00949C57 /* Comic Book.ttf */; };
+		EB3D284D1848050D00949C57 /* KOMIKAX_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB3D284B1848050D00949C57 /* KOMIKAX_.ttf */; };
+		EB3D28501848064A00949C57 /* CustomComicFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3D284F1848064A00949C57 /* CustomComicFont.m */; };
+		EB3D2853184806EB00949C57 /* CustomKomikaAxisFont.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3D2852184806EB00949C57 /* CustomKomikaAxisFont.m */; };
+		EB3D285F18480E6700949C57 /* Barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285518480E6700949C57 /* Barcode.png */; };
+		EB3D286018480E6700949C57 /* Barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285618480E6700949C57 /* Barcode@2x.png */; };
+		EB3D286118480E6700949C57 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285718480E6700949C57 /* Logo.png */; };
+		EB3D286218480E6700949C57 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285818480E6700949C57 /* Logo@2x.png */; };
+		EB3D286518480E6700949C57 /* Stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285B18480E6700949C57 /* Stamp.png */; };
+		EB3D286618480E6700949C57 /* Stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285C18480E6700949C57 /* Stamp@2x.png */; };
+		EB3D286718480E6700949C57 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285D18480E6700949C57 /* Title.png */; };
+		EB3D286818480E6700949C57 /* Title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3D285E18480E6700949C57 /* Title@2x.png */; };
 		EB59F89E182D9DB100BA6A7F /* ClockWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */; };
 		EB59F89F182D9DB100BA6A7F /* ClockWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */; };
 		EB59F8A9183032A700BA6A7F /* ImageSuperShopper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB59F8A6183032A700BA6A7F /* ImageSuperShopper.m */; };
@@ -164,6 +176,12 @@
 		EB94943418318CC800E4FF22 /* normal_cw_tut04.png in Resources */ = {isa = PBXBuildFile; fileRef = EB94942C18318CC800E4FF22 /* normal_cw_tut04.png */; };
 		EBAA44771826FBEE0038DA74 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44761826FBEE0038DA74 /* QuartzCore.framework */; };
 		EBAA44C81826FDC10038DA74 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAA44C71826FDC10038DA74 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EBB5FCEC18481B3D00579A24 /* CustomComicFontButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB5FCEB18481B3D00579A24 /* CustomComicFontButton.m */; };
+		EBB5FCEE1849AD2400579A24 /* starSky.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB5FCED1849AD2400579A24 /* starSky.png */; };
+		EBB5FCF01849B27300579A24 /* TextBox.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB5FCEF1849B27300579A24 /* TextBox.png */; };
+		EBB5FCF21849DF9700579A24 /* dimmer.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB5FCF11849DF9700579A24 /* dimmer.png */; };
+		EBB5FCF41849F50400579A24 /* beach.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB5FCF31849F50400579A24 /* beach.png */; };
+		EBB5FCF61849F97300579A24 /* chest.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB5FCF51849F97300579A24 /* chest.png */; };
 		EBF002E2182D97F400F9F3E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002BA182D97F400F9F3E8 /* AppDelegate.m */; };
 		EBF002E3182D97F400F9F3E8 /* CountingStarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */; };
 		EBF002E4182D97F400F9F3E8 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */; };
@@ -215,6 +233,20 @@
 		EB0E1211183EE04F002A3CAE /* ResetConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetConfirmationViewController.h; sourceTree = "<group>"; };
 		EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetConfirmationViewController.m; sourceTree = "<group>"; };
 		EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetConfirmationViewController.xib; sourceTree = "<group>"; };
+		EB3D284A1848050D00949C57 /* Comic Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comic Book.ttf"; path = "fonts/Comic Book.ttf"; sourceTree = "<group>"; };
+		EB3D284B1848050D00949C57 /* KOMIKAX_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KOMIKAX_.ttf; path = fonts/KOMIKAX_.ttf; sourceTree = "<group>"; };
+		EB3D284E1848064A00949C57 /* CustomComicFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComicFont.h; sourceTree = "<group>"; };
+		EB3D284F1848064A00949C57 /* CustomComicFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComicFont.m; sourceTree = "<group>"; };
+		EB3D2851184806EB00949C57 /* CustomKomikaAxisFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKomikaAxisFont.h; sourceTree = "<group>"; };
+		EB3D2852184806EB00949C57 /* CustomKomikaAxisFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKomikaAxisFont.m; sourceTree = "<group>"; };
+		EB3D285518480E6700949C57 /* Barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Barcode.png; path = pictures/Barcode.png; sourceTree = "<group>"; };
+		EB3D285618480E6700949C57 /* Barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Barcode@2x.png"; path = "pictures/Barcode@2x.png"; sourceTree = "<group>"; };
+		EB3D285718480E6700949C57 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = pictures/Logo.png; sourceTree = "<group>"; };
+		EB3D285818480E6700949C57 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo@2x.png"; path = "pictures/Logo@2x.png"; sourceTree = "<group>"; };
+		EB3D285B18480E6700949C57 /* Stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stamp.png; path = pictures/Stamp.png; sourceTree = "<group>"; };
+		EB3D285C18480E6700949C57 /* Stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stamp@2x.png"; path = "pictures/Stamp@2x.png"; sourceTree = "<group>"; };
+		EB3D285D18480E6700949C57 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = pictures/Title.png; sourceTree = "<group>"; };
+		EB3D285E18480E6700949C57 /* Title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Title@2x.png"; path = "pictures/Title@2x.png"; sourceTree = "<group>"; };
 		EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockWorkViewController.h; sourceTree = "<group>"; };
 		EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockWorkViewController.m; sourceTree = "<group>"; };
 		EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockWorkViewController.xib; sourceTree = "<group>"; };
@@ -437,6 +469,13 @@
 		EBAA44C51826FCA60038DA74 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		EBAA44C61826FCA60038DA74 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		EBAA44C71826FDC10038DA74 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		EBB5FCEA18481B3D00579A24 /* CustomComicFontButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomComicFontButton.h; sourceTree = "<group>"; };
+		EBB5FCEB18481B3D00579A24 /* CustomComicFontButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomComicFontButton.m; sourceTree = "<group>"; };
+		EBB5FCED1849AD2400579A24 /* starSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starSky.png; path = pictures/starSky.png; sourceTree = "<group>"; };
+		EBB5FCEF1849B27300579A24 /* TextBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextBox.png; path = pictures/TextBox.png; sourceTree = "<group>"; };
+		EBB5FCF11849DF9700579A24 /* dimmer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dimmer.png; path = pictures/dimmer.png; sourceTree = "<group>"; };
+		EBB5FCF31849F50400579A24 /* beach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beach.png; path = pictures/beach.png; sourceTree = "<group>"; };
+		EBB5FCF51849F97300579A24 /* chest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chest.png; path = pictures/chest.png; sourceTree = "<group>"; };
 		EBF002B9182D97F400F9F3E8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EBF002BA182D97F400F9F3E8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EBF002BB182D97F400F9F3E8 /* CountingStarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingStarsViewController.h; sourceTree = "<group>"; };
@@ -557,6 +596,8 @@
 		9A95505D180179F400DFF8E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB3D285418480E5500949C57 /* pictures */,
+				EB3D2849184804FD00949C57 /* fonts */,
 				9A0B9A19183E2BD600C0013A /* sounds */,
 				EB94932F18316C9D00E4FF22 /* Pictures for math masters */,
 				9A95505E180179F400DFF8E4 /* MathMasters-Info.plist */,
@@ -569,6 +610,35 @@
 			);
 			name = "Supporting Files";
 			path = MathMasters;
+			sourceTree = "<group>";
+		};
+		EB3D2849184804FD00949C57 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EB3D284A1848050D00949C57 /* Comic Book.ttf */,
+				EB3D284B1848050D00949C57 /* KOMIKAX_.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		EB3D285418480E5500949C57 /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				EBB5FCF51849F97300579A24 /* chest.png */,
+				EBB5FCF31849F50400579A24 /* beach.png */,
+				EBB5FCF11849DF9700579A24 /* dimmer.png */,
+				EBB5FCEF1849B27300579A24 /* TextBox.png */,
+				EBB5FCED1849AD2400579A24 /* starSky.png */,
+				EB3D285518480E6700949C57 /* Barcode.png */,
+				EB3D285618480E6700949C57 /* Barcode@2x.png */,
+				EB3D285718480E6700949C57 /* Logo.png */,
+				EB3D285818480E6700949C57 /* Logo@2x.png */,
+				EB3D285B18480E6700949C57 /* Stamp.png */,
+				EB3D285C18480E6700949C57 /* Stamp@2x.png */,
+				EB3D285D18480E6700949C57 /* Title.png */,
+				EB3D285E18480E6700949C57 /* Title@2x.png */,
+			);
+			name = pictures;
 			sourceTree = "<group>";
 		};
 		EB59F896182D9CE700BA6A7F /* Games */ = {
@@ -637,6 +707,10 @@
 		EB59F8A1182D9F5F00BA6A7F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EB3D2851184806EB00949C57 /* CustomKomikaAxisFont.h */,
+				EB3D2852184806EB00949C57 /* CustomKomikaAxisFont.m */,
+				EB3D284E1848064A00949C57 /* CustomComicFont.h */,
+				EB3D284F1848064A00949C57 /* CustomComicFont.m */,
 				EB59F8AA183032B400BA6A7F /* MyButtonMakingCents.h */,
 				EB59F8AB183032B400BA6A7F /* MyButtonMakingCents.m */,
 				EB59F8A5183032A700BA6A7F /* ImageSuperShopper.h */,
@@ -647,6 +721,8 @@
 				EBF002C0182D97F400F9F3E8 /* DBManager.h */,
 				EBF002C1182D97F400F9F3E8 /* DBManager.m */,
 				EBF002BA182D97F400F9F3E8 /* AppDelegate.m */,
+				EBB5FCEA18481B3D00579A24 /* CustomComicFontButton.h */,
+				EBB5FCEB18481B3D00579A24 /* CustomComicFontButton.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -1161,6 +1237,21 @@
 				9A4898D5183F5EC1009572DE /* classicalmusic1.m4a in Resources */,
 				9A4898D9183F697B009572DE /* scroll.m4a in Resources */,
 				9A44E8F718400CBD00730F4F /* CreditViewController.xib in Resources */,
+				EB3D284C1848050D00949C57 /* Comic Book.ttf in Resources */,
+				EB3D284D1848050D00949C57 /* KOMIKAX_.ttf in Resources */,
+				EB3D285F18480E6700949C57 /* Barcode.png in Resources */,
+				EB3D286018480E6700949C57 /* Barcode@2x.png in Resources */,
+				EB3D286118480E6700949C57 /* Logo.png in Resources */,
+				EB3D286218480E6700949C57 /* Logo@2x.png in Resources */,
+				EB3D286518480E6700949C57 /* Stamp.png in Resources */,
+				EB3D286618480E6700949C57 /* Stamp@2x.png in Resources */,
+				EB3D286718480E6700949C57 /* Title.png in Resources */,
+				EB3D286818480E6700949C57 /* Title@2x.png in Resources */,
+				EBB5FCEE1849AD2400579A24 /* starSky.png in Resources */,
+				EBB5FCF01849B27300579A24 /* TextBox.png in Resources */,
+				EBB5FCF21849DF9700579A24 /* dimmer.png in Resources */,
+				EBB5FCF41849F50400579A24 /* beach.png in Resources */,
+				EBB5FCF61849F97300579A24 /* chest.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,6 +1285,9 @@
 				EB753C04183E9A5600E81284 /* InputFormViewController.m in Sources */,
 				9A44E8F618400CBD00730F4F /* CreditViewController.m in Sources */,
 				EB0E1214183EE04F002A3CAE /* ResetConfirmationViewController.m in Sources */,
+				EB3D28501848064A00949C57 /* CustomComicFont.m in Sources */,
+				EB3D2853184806EB00949C57 /* CustomKomikaAxisFont.m in Sources */,
+				EBB5FCEC18481B3D00579A24 /* CustomComicFontButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,9 +31,11 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+        self.navigationItem.hidesBackButton = YES; // Disable back button.
     
     if (completionTime < 30) {
         cheerLabel.text = @"AWESOME!";

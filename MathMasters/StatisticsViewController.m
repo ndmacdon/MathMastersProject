@@ -209,7 +209,7 @@ NSArray *tempDays = nil;
 -(void)configurePlots {
     graph = (CPTXYGraph *)self.hostView.hostedGraph;                            // Holds the plot, X/Y axis, and titles...
     CPTScatterPlot *statsPlot = [[CPTScatterPlot alloc] init];              // Data points and lines visualizing data
-    CPTColor *statsPlotColor = [CPTColor blueColor];                        // Color for plot
+    CPTColor *statsPlotColor = [CPTColor redColor];                        // Color for plot
     CPTMutablePlotRange *xRange;                                            // Range of the x-axis
     CPTPlotRange *yRange;                                                   // ...
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *) graph.defaultPlotSpace;  // Object in our graph which will hold our plot

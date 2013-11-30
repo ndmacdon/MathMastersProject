@@ -49,7 +49,7 @@
 
 // Show reset confirmation view:
 - (IBAction)resetStatisticsClicked:(id)sender {
-    CGRect confirmBoxBound = CGRectMake(self.view.center.x-250, self.view.center.y-250, 500, 500);
+    CGRect confirmBoxBound = CGRectMake(self.view.center.x-750, self.view.center.y-750, 1500, 1500);
     
     resetConfirmationViewController = [[ResetConfirmationViewController alloc] initWithNibName:@"ResetConfirmationViewController" bundle:nil];
     
@@ -94,6 +94,10 @@
 {
     UISlider * mySlider = sender;
     optionsSingle.soundeffectVolumeControl = mySlider.value;
+}
+
+// If the device rotates: reset the stars so they conform to the new bounding box.
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
 }
 
 @end
