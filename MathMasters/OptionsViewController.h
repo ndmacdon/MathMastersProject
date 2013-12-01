@@ -30,6 +30,7 @@
 -(IBAction)change_difficulty:(id)sender;
 -(IBAction)set_music_volume:(id)sender;
 -(IBAction)set_soundeffect_volume:(id)sender;
+-(IBAction)open_credits:(id)sender;
 @property(nonatomic,strong) IBOutlet UIButton *changeDifficultyButton;
 @property (nonatomic,strong) StatisticsViewController  *statisticsViewController;
 @property (nonatomic, strong) ResetConfirmationViewController *resetConfirmationViewController;

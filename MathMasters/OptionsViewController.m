@@ -46,6 +46,14 @@
         optionsSingle.globalDifficultyLevel = 1;
     }
 }
+-(IBAction)open_credits:(id)sender
+{
+    if(!self.creditViewController)
+    {
+        creditViewController = [[CreditViewController alloc] init];
+    }
+    [self.navigationController pushViewController:self.creditViewController animated:YES];
+}
 
 // Show reset confirmation view:
 - (IBAction)resetStatisticsClicked:(id)sender {
