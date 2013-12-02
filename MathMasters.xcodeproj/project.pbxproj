@@ -649,26 +649,166 @@
 			name = pictures;
 			sourceTree = "<group>";
 		};
+		EB4304FA184D39DC00F11C4B /* Counting Stars */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002BB182D97F400F9F3E8 /* CountingStarsViewController.h */,
+				EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */,
+				EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */,
+			);
+			name = "Counting Stars";
+			sourceTree = "<group>";
+		};
+		EB4304FB184D3A0B00F11C4B /* Fish To Fish */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */,
+				EBF002C2182D97F400F9F3E8 /* FishToFishViewController.h */,
+				EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */,
+			);
+			name = "Fish To Fish";
+			sourceTree = "<group>";
+		};
+		EB4304FC184D3A3000F11C4B /* Making Cents */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002D2182D97F400F9F3E8 /* MakingCentsViewController.h */,
+				EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */,
+				EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */,
+			);
+			name = "Making Cents";
+			sourceTree = "<group>";
+		};
+		EB4304FD184D3A3B00F11C4B /* Super Shopper */ = {
+			isa = PBXGroup;
+			children = (
+				EB59F8AD183032C200BA6A7F /* SuperShopperViewController.h */,
+				EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */,
+				EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */,
+			);
+			name = "Super Shopper";
+			sourceTree = "<group>";
+		};
+		EB4304FE184D3A4600F11C4B /* ClockWork */ = {
+			isa = PBXGroup;
+			children = (
+				EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */,
+				EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */,
+				EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */,
+			);
+			name = ClockWork;
+			sourceTree = "<group>";
+		};
+		EB4304FF184D3A5F00F11C4B /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */,
+				EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */,
+				EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */,
+			);
+			name = "Create Account";
+			sourceTree = "<group>";
+		};
+		EB430500184D3A6900F11C4B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002CF182D97F400F9F3E8 /* LogInViewController.h */,
+				EBF002D0182D97F400F9F3E8 /* LogInViewController.m */,
+				EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		EB430501184D3A7100F11C4B /* Password Reset */ = {
+			isa = PBXGroup;
+			children = (
+				EB753BFD183DB25400E81284 /* PasswordResetViewController.h */,
+				EB753BFE183DB25400E81284 /* PasswordResetViewController.m */,
+				EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */,
+			);
+			name = "Password Reset";
+			sourceTree = "<group>";
+		};
+		EB430502184D3A7C00F11C4B /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002D5182D97F400F9F3E8 /* MasterViewController.h */,
+				EBF002D6182D97F400F9F3E8 /* MasterViewController.m */,
+				EBF002FB182D981100F9F3E8 /* MasterViewController.xib */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		EB430503184D3A8A00F11C4B /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002D7182D97F400F9F3E8 /* OptionsViewController.h */,
+				EBF002D8182D97F400F9F3E8 /* OptionsViewController.m */,
+				EBF002D9182D97F400F9F3E8 /* OptionsViewController.xib */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		EB430504184D3A9400F11C4B /* Session Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002DA182D97F400F9F3E8 /* SessionStatisticsViewController.h */,
+				EBF002DB182D97F400F9F3E8 /* SessionStatisticsViewController.m */,
+				EBF002DC182D97F400F9F3E8 /* SessionStatisticsViewController.xib */,
+			);
+			name = "Session Statistics";
+			sourceTree = "<group>";
+		};
+		EB430505184D3A9E00F11C4B /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				EBF002DD182D97F400F9F3E8 /* StatisticsViewController.h */,
+				EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */,
+				EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		EB430506184D3AA900F11C4B /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
+				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
+				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		EB430507184D3AB100F11C4B /* Reset Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				EB0E1211183EE04F002A3CAE /* ResetConfirmationViewController.h */,
+				EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */,
+				EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */,
+			);
+			name = "Reset Confirmation";
+			sourceTree = "<group>";
+		};
+		EB430508184D3ABC00F11C4B /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				9A44E8F318400CBD00730F4F /* CreditViewController.h */,
+				9A44E8F418400CBD00730F4F /* CreditViewController.m */,
+				9A44E8F518400CBD00730F4F /* CreditViewController.xib */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
 		EB59F896182D9CE700BA6A7F /* Games */ = {
 			isa = PBXGroup;
 			children = (
 				EBF002C5182D97F400F9F3E8 /* GameViewController.h */,
 				EBF002C6182D97F400F9F3E8 /* GameViewController.m */,
-				EBF002BB182D97F400F9F3E8 /* CountingStarsViewController.h */,
-				EBF002FE182D998500F9F3E8 /* CountingStarsViewController.m */,
-				EBF002BC182D97F400F9F3E8 /* CountingStarsViewController.xib */,
-				EBF002C2182D97F400F9F3E8 /* FishToFishViewController.h */,
-				EBF002C3182D97F400F9F3E8 /* FishToFishViewController.m */,
-				EBF002C4182D97F400F9F3E8 /* FishToFishViewController.xib */,
-				EBF002D2182D97F400F9F3E8 /* MakingCentsViewController.h */,
-				EBF002D3182D97F400F9F3E8 /* MakingCentsViewController.m */,
-				EBF002D4182D97F400F9F3E8 /* MakingCentsViewController.xib */,
-				EB59F8AD183032C200BA6A7F /* SuperShopperViewController.h */,
-				EB59F8AE183032C200BA6A7F /* SuperShopperViewController.m */,
-				EB59F8AF183032C200BA6A7F /* SuperShopperViewController.xib */,
-				EB59F89B182D9DB100BA6A7F /* ClockWorkViewController.h */,
-				EB59F89C182D9DB100BA6A7F /* ClockWorkViewController.m */,
-				EB59F89D182D9DB100BA6A7F /* ClockWorkViewController.xib */,
+				EB4304FE184D3A4600F11C4B /* ClockWork */,
+				EB4304FA184D39DC00F11C4B /* Counting Stars */,
+				EB4304FB184D3A0B00F11C4B /* Fish To Fish */,
+				EB4304FC184D3A3000F11C4B /* Making Cents */,
+				EB4304FD184D3A3B00F11C4B /* Super Shopper */,
 			);
 			name = Games;
 			sourceTree = "<group>";
@@ -678,36 +818,16 @@
 			children = (
 				EB753C02183E9A5600E81284 /* InputFormViewController.h */,
 				EB753C03183E9A5600E81284 /* InputFormViewController.m */,
-				EBF002BD182D97F400F9F3E8 /* CreateAccountViewController.h */,
-				EBF002BE182D97F400F9F3E8 /* CreateAccountViewController.m */,
-				EBF002BF182D97F400F9F3E8 /* CreateAccountViewController.xib */,
-				EBF002CF182D97F400F9F3E8 /* LogInViewController.h */,
-				EBF002D0182D97F400F9F3E8 /* LogInViewController.m */,
-				EBF002D1182D97F400F9F3E8 /* LogInViewController.xib */,
-				EB753BFD183DB25400E81284 /* PasswordResetViewController.h */,
-				EB753BFE183DB25400E81284 /* PasswordResetViewController.m */,
-				EB753BFF183DB25400E81284 /* PasswordResetViewController.xib */,
-				EBF002D5182D97F400F9F3E8 /* MasterViewController.h */,
-				EBF002D6182D97F400F9F3E8 /* MasterViewController.m */,
-				EBF002FB182D981100F9F3E8 /* MasterViewController.xib */,
-				EBF002D7182D97F400F9F3E8 /* OptionsViewController.h */,
-				EBF002D8182D97F400F9F3E8 /* OptionsViewController.m */,
-				EBF002D9182D97F400F9F3E8 /* OptionsViewController.xib */,
-				EBF002DA182D97F400F9F3E8 /* SessionStatisticsViewController.h */,
-				EBF002DB182D97F400F9F3E8 /* SessionStatisticsViewController.m */,
-				EBF002DC182D97F400F9F3E8 /* SessionStatisticsViewController.xib */,
-				EBF002DD182D97F400F9F3E8 /* StatisticsViewController.h */,
-				EBF00300182D99B800F9F3E8 /* StatisticsViewController.m */,
-				EBF002DE182D97F400F9F3E8 /* StatisticsViewController.xib */,
-				EB94941F18316DEE00E4FF22 /* TutorialViewController.h */,
-				EB94942018316DEE00E4FF22 /* TutorialViewController.m */,
-				EB94942118316DEE00E4FF22 /* TutorialViewController.xib */,
-				EB0E1211183EE04F002A3CAE /* ResetConfirmationViewController.h */,
-				EB0E1212183EE04F002A3CAE /* ResetConfirmationViewController.m */,
-				EB0E1213183EE04F002A3CAE /* ResetConfirmationViewController.xib */,
-				9A44E8F318400CBD00730F4F /* CreditViewController.h */,
-				9A44E8F418400CBD00730F4F /* CreditViewController.m */,
-				9A44E8F518400CBD00730F4F /* CreditViewController.xib */,
+				EB4304FF184D3A5F00F11C4B /* Create Account */,
+				EB430500184D3A6900F11C4B /* Login */,
+				EB430501184D3A7100F11C4B /* Password Reset */,
+				EB430502184D3A7C00F11C4B /* Master */,
+				EB430503184D3A8A00F11C4B /* Options */,
+				EB430504184D3A9400F11C4B /* Session Statistics */,
+				EB430505184D3A9E00F11C4B /* Statistics */,
+				EB430506184D3AA900F11C4B /* Tutorial */,
+				EB430507184D3AB100F11C4B /* Reset Confirmation */,
+				EB430508184D3ABC00F11C4B /* Credits */,
 			);
 			name = Menus;
 			sourceTree = "<group>";
